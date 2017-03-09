@@ -114,7 +114,7 @@ void main(void) {
 }
 
 void init(void) {
-    OSCCON = 0b11111010;
+    OSCCON = 0b01111010;        //Fosc = 16MHz,PLL4x disabled.
     ANSELA = 0x01;
     TRISA = 0x01;
     TRISB = 0x00;
@@ -123,8 +123,8 @@ void init(void) {
     ADCON1 = 0b10010000;
     ADCON0 = 0x01;
     for(unsigned char i = 0; i < 100; i++){}
-    GIE = 1;
-    PEIE = 1;
+    GIE = 1;                    //all interrupt allowed
+    PEIE = 1;                   //peripheral equipment interrupt allowed
     CCPTMRS = 0b00000000;
     CCP3CON = 0b00001100;
     T2CON = 0b00000000;

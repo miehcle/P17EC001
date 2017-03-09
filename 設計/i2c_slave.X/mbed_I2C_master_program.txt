@@ -1,0 +1,23 @@
+#include mbed.h
+
+AnalogIn light(PB_0);
+DigitalOut myled(LED1);
+I2C i2c(PB_9, PB_8);
+
+const int addr = 0b00000100;
+char data[2];
+
+int main() {
+    myled = 0;
+    int pw = 0;
+    char check = 0;
+    
+    while(1) {
+        pw = light  1023;
+        data[0] = pw  2;
+        data[1] = pw & 0b0000000011;
+        check = i2c.write(addr, data, 2);
+        if(check != 0) myled = 1;
+        wait(0.02);
+    }
+}

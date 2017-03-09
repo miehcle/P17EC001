@@ -1,0 +1,182 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"23 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\ê›åv\i2c_slave.X\main.c
+[v _interrupt_I2C interrupt_I2C `(v  1 e 1 0 ]
+"40
+[v _interruption interruption `II(v  1 e 1 0 ]
+"54
+[v _main main `(v  1 e 1 0 ]
+"64
+[v _init init `(v  1 e 1 0 ]
+"75
+[v _init_PWM init_PWM `(v  1 e 1 0 ]
+"86
+[v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
+"94
+[v _init_I2C_slave init_I2C_slave `(v  1 e 1 0 ]
+"414 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1827.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"475
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"914
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"933
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"952
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
+"1120
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1181
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1664
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2797
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3502
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3539
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3613
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S19 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3635
+[u S28 . 1 `S19 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES28  1 e 1 @532 ]
+"3734
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S42 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3763
+[s S51 . 1 `uc 1 SSPM 1 0 :4:0 
+]
+[u S53 . 1 `S42 1 . 1 0 `S51 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES53  1 e 1 @533 ]
+[s S133 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"3959
+[u S142 . 1 `S133 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES142  1 e 1 @534 ]
+"5284
+[v _CCPTMRS CCPTMRS `VEuc  1 e 1 @670 ]
+"5463
+[v _CCPR3L CCPR3L `VEuc  1 e 1 @785 ]
+"5482
+[v _CCPR3H CCPR3H `VEuc  1 e 1 @786 ]
+"5501
+[v _CCP3CON CCP3CON `VEuc  1 e 1 @787 ]
+[s S70 . 1 `uc 1 CCP3M0 1 0 :1:0 
+`uc 1 CCP3M1 1 0 :1:1 
+`uc 1 CCP3M2 1 0 :1:2 
+`uc 1 CCP3M3 1 0 :1:3 
+`uc 1 DC3B0 1 0 :1:4 
+`uc 1 DC3B1 1 0 :1:5 
+]
+"5520
+[s S77 . 1 `uc 1 CCP3M 1 0 :4:0 
+`uc 1 DC3B 1 0 :2:4 
+]
+[u S80 . 1 `S70 1 . 1 0 `S77 1 . 1 0 ]
+[v _CCP3CONbits CCP3CONbits `VES80  1 e 1 @787 ]
+"6183
+[v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
+"6202
+[v _PR4 PR4 `VEuc  1 e 1 @1046 ]
+"6221
+[v _T4CON T4CON `VEuc  1 e 1 @1047 ]
+"6682
+[v _BCL1IE BCL1IE `VEb  1 e 0 @1171 ]
+"6684
+[v _BCL1IF BCL1IF `VEb  1 e 0 @147 ]
+"6962
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"7184
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"7310
+[v _SSP1IE SSP1IE `VEb  1 e 0 @1163 ]
+"7312
+[v _SSP1IF SSP1IF `VEb  1 e 0 @139 ]
+"7442
+[v _TMR2ON TMR2ON `VEb  1 e 0 @226 ]
+"7444
+[v _TMR4IE TMR4IE `VEb  1 e 0 @1177 ]
+"7446
+[v _TMR4IF TMR4IF `VEb  1 e 0 @153 ]
+"7448
+[v _TMR4ON TMR4ON `VEb  1 e 0 @8378 ]
+"21 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\ê›åv\i2c_slave.X\main.c
+[v _recieved_data recieved_data `[2]uc  1 e 2 0 ]
+"54
+[v _main main `(v  1 e 1 0 ]
+{
+"62
+} 0
+"86
+[v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
+{
+"92
+} 0
+"75
+[v _init_PWM init_PWM `(v  1 e 1 0 ]
+{
+"84
+} 0
+"94
+[v _init_I2C_slave init_I2C_slave `(v  1 e 1 0 ]
+{
+[v init_I2C_slave@addr addr `uc  1 a 1 wreg ]
+[v init_I2C_slave@addr addr `uc  1 a 1 wreg ]
+[v init_I2C_slave@addr addr `uc  1 a 1 4 ]
+"103
+} 0
+"64
+[v _init init `(v  1 e 1 0 ]
+{
+"73
+} 0
+"40
+[v _interruption interruption `II(v  1 e 1 0 ]
+{
+"52
+} 0
+"23
+[v _interrupt_I2C interrupt_I2C `(v  1 e 1 0 ]
+{
+"24
+[v interrupt_I2C@x x `uc  1 a 1 1 ]
+"25
+[v interrupt_I2C@data_ptr data_ptr `uc  1 s 1 data_ptr ]
+"38
+} 0
