@@ -45,19 +45,19 @@ int adconv(int pin_select) {
 
 /* analog pin measurement */
 void measure(int *value, int pin_select) {
-    value = adconv(pin_select);
+    *value = adconv(pin_select);
 }
 
 /* PWM width calculation */
 void calc(int ref, int mes,int *output){
     int res;
     
-    output = 0;
+    *output = 0;
     res = ref - mes;
-    output += P_calc(res);
-    output += I_calc(res);
-//    output += D_calc(res);
-    output = CLIP(output, 255, 0);
+    *output += P_calc(res);
+    *output += I_calc(res);
+//    *output += D_calc(res);
+    *output = CLIP(output, 255, 0);
 }
 
 int P_calc(int res) {
@@ -115,8 +115,8 @@ void main(void) {
 
 void init(void) {
     OSCCON = 0b01111010;        //Fosc = 16MHz,PLL4x disabled.
-    ANSELA = 0x01;
-    TRISA = 0x01;
+    ANSELA = 0x03;
+    TRISA = 0x03;
     TRISB = 0x00;
     PORTA = 0x00;
     PORTB = 0x00;

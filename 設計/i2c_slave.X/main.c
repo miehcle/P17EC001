@@ -18,7 +18,7 @@ void init_PWM(void);
 void init_Timer4(void);
 void init_I2C_slave(char addr);
 
-char recieved_data[2];
+char received_data[2];
 
 void interrupt_I2C(void) {
     char x;
@@ -26,12 +26,12 @@ void interrupt_I2C(void) {
     if(SSP1STATbits.R_nW == 0) {
         /* write mode */
         if(SSP1STATbits.D_nA == 0) {
-            /* address recieved */
+            /* address received */
             data_ptr = 0;
             x = SSP1BUF;
         } else {
-            /* data recieved */
-            recieved_data[data_ptr] = SSP1BUF;
+            /* data received */
+            received_data[data_ptr] = SSP1BUF;
             data_ptr++;
         }
     }
@@ -45,8 +45,8 @@ void interrupt interruption(void) {
         SSP1CON1bits.CKP = 1;   //open SCL line
     } else if (TMR4IF == 1) {
         /* Timer4 interrupt */
-        CCPR3L = recieved_data[0];
-        CCP3CONbits.DC3B = recieved_data[1] & 0x03;
+        CCPR3L = received_data[0];
+        CCP3CONbits.DC3B = received_data[1] & 0x03;
         TMR4IF = 0;             //clear interrupt flag
     }
 }
