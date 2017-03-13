@@ -3759,6 +3759,7 @@ I2C_idle_check();
 SSP1BUF = addr << 1;
 while(SSP1CON2bits.ACKSTAT == 1);
 for(int i = 0; i < length; i++) {
+I2C_idle_check();
 SSP1BUF = *data;
 data++;
 while(SSP1CON2bits.ACKSTAT == 1);
@@ -3787,16 +3788,23 @@ TMR4IF = 0;
 }
 
 void main(void) {
+for(int i = 0; i < 10000; i++);
 init();
 init_Timer4();
 init_I2C_master();
 int data;
 
+<<<<<<< HEAD
 while(1){
 data = adconv(0b00000001);
 send_data[0] = 16;
 send_data[1] = data & 0x03;
 }
+=======
+
+
+while(1);
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 return;
 }
 

@@ -137,7 +137,7 @@
 "7448
 [v _TMR4ON TMR4ON `VEb  1 e 0 @8378 ]
 "21 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\ê›åv\i2c_slave.X\main.c
-[v _recieved_data recieved_data `[2]uc  1 e 2 0 ]
+[v _received_data received_data `[2]uc  1 e 2 0 ]
 "54
 [v _main main `(v  1 e 1 0 ]
 {

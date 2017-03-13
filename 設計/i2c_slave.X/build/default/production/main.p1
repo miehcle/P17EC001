@@ -2884,8 +2884,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 18: void init_Timer4(void);
 [; ;main.c: 19: void init_I2C_slave(char addr);
 "21
-[v _recieved_data `uc ~T0 @X0 -> 2 `i e ]
-[; ;main.c: 21: char recieved_data[2];
+[v _received_data `uc ~T0 @X0 -> 2 `i e ]
+[; ;main.c: 21: char received_data[2];
 "23
 [v _interrupt_I2C `(v ~T0 @X0 1 ef ]
 {
@@ -2921,9 +2921,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 353  ]
 [e :U 352 ]
 {
-[; ;main.c: 34: recieved_data[data_ptr] = SSP1BUF;
+[; ;main.c: 34: received_data[data_ptr] = SSP1BUF;
 "34
-[e = *U + &U _recieved_data * -> F2786 `ux -> -> # *U &U _recieved_data `ui `ux _SSP1BUF ]
+[e = *U + &U _received_data * -> F2786 `ux -> -> # *U &U _received_data `ui `ux _SSP1BUF ]
 [; ;main.c: 35: data_ptr++;
 "35
 [e ++ F2786 -> -> 1 `i `uc ]
@@ -2966,12 +2966,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 355 ]
 [e $ ! == -> _TMR4IF `i -> 1 `i 357  ]
 {
-[; ;main.c: 48: CCPR3L = recieved_data[0];
+[; ;main.c: 48: CCPR3L = received_data[0];
 "48
-[e = _CCPR3L *U + &U _recieved_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _recieved_data `ui `ux ]
-[; ;main.c: 49: CCP3CONbits.DC3B = recieved_data[1] & 0x03;
+[e = _CCPR3L *U + &U _received_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _received_data `ui `ux ]
+[; ;main.c: 49: CCP3CONbits.DC3B = received_data[1] & 0x03;
 "49
-[e = . . _CCP3CONbits 1 1 -> & -> *U + &U _recieved_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _recieved_data `ui `ux `i -> 3 `i `uc ]
+[e = . . _CCP3CONbits 1 1 -> & -> *U + &U _received_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _received_data `ui `ux `i -> 3 `i `uc ]
 [; ;main.c: 50: TMR4IF = 0;
 "50
 [e = _TMR4IF -> -> 0 `i `b ]
