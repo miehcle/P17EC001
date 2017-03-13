@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/16F1827/production\step_down_converter.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>4096</length>
+      <used>1775</used>
+      <free>2321</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>384</length>
+      <used>262</used>
+      <free>122</free>
+    </memory>
+  </executable>
+</project>

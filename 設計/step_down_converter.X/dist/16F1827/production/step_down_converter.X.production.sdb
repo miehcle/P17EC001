@@ -1,0 +1,309 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"66 C:\development\PIC\Programs\step_down_converter.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"76
+[v _init init `(v  1 e 1 0 ]
+"90
+[v _loop loop `(v  1 e 1 0 ]
+"94
+[v _wait wait `(v  1 e 1 0 ]
+"101
+[v _disp disp `(v  1 e 1 0 ]
+"143
+[v _set_disp set_disp `(v  1 e 1 0 ]
+"154
+[v _disp_a disp_a `(v  1 e 1 0 ]
+"155
+[v _disp_b disp_b `(v  1 e 1 0 ]
+"156
+[v _disp_c disp_c `(v  1 e 1 0 ]
+"157
+[v _disp_d disp_d `(v  1 e 1 0 ]
+"158
+[v _disp_e disp_e `(v  1 e 1 0 ]
+"159
+[v _disp_f disp_f `(v  1 e 1 0 ]
+"160
+[v _disp_g disp_g `(v  1 e 1 0 ]
+"161
+[v _disp_dp disp_dp `(v  1 e 1 0 ]
+"162
+[v _open open `(v  1 e 1 0 ]
+"181
+[v _close close `(v  1 e 1 0 ]
+"188
+[v _adconv adconv `(i  1 e 2 0 ]
+"200
+[v _daconv daconv `(d  1 e 3 0 ]
+"414 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic16f1827.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"475
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"1120
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1181
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1664
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1802
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1821
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1840
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+"1919
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2797
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2848
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"6966
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
+"7212
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
+"7214
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
+"7216
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"7218
+[v _RA3 RA3 `VEb  1 e 0 @99 ]
+"7224
+[v _RA6 RA6 `VEb  1 e 0 @102 ]
+"7226
+[v _RA7 RA7 `VEb  1 e 0 @103 ]
+"7236
+[v _RB4 RB4 `VEb  1 e 0 @108 ]
+"7238
+[v _RB5 RB5 `VEb  1 e 0 @109 ]
+"7240
+[v _RB6 RB6 `VEb  1 e 0 @110 ]
+"7242
+[v _RB7 RB7 `VEb  1 e 0 @111 ]
+"50 C:\development\PIC\Programs\step_down_converter.X\main.c
+[v _led_disp led_disp `[12][7]i  1 e 168 @8392 ]
+"66
+[v _main main `(v  1 e 1 0 ]
+{
+"74
+} 0
+"90
+[v _loop loop `(v  1 e 1 0 ]
+{
+"92
+} 0
+"101
+[v _disp disp `(v  1 e 1 0 ]
+{
+"102
+[v disp@digits digits `[4]i  1 a 8 68 ]
+"103
+[v disp@i i `i  1 a 2 76 ]
+"105
+[v disp@dp_index dp_index `i  1 a 2 66 ]
+"106
+[v disp@over over `i  1 a 2 64 ]
+"104
+[v disp@dp dp `i  1 a 2 62 ]
+"101
+[v disp@num num `d  1 p 3 53 ]
+"141
+} 0
+"94
+[v _wait wait `(v  1 e 1 0 ]
+{
+"95
+[v wait@i i `i  1 a 2 4 ]
+"94
+[v wait@wait_time wait_time `ui  1 p 2 0 ]
+"99
+} 0
+"143
+[v _set_disp set_disp `(v  1 e 1 0 ]
+{
+[v set_disp@disp disp `*.39i  1 p 2 6 ]
+[v set_disp@dp dp `i  1 p 2 8 ]
+"152
+} 0
+"160
+[v _disp_g disp_g `(v  1 e 1 0 ]
+{
+[v disp_g@sw sw `i  1 p 2 0 ]
+} 0
+"159
+[v _disp_f disp_f `(v  1 e 1 0 ]
+{
+[v disp_f@sw sw `i  1 p 2 0 ]
+} 0
+"158
+[v _disp_e disp_e `(v  1 e 1 0 ]
+{
+[v disp_e@sw sw `i  1 p 2 0 ]
+} 0
+"161
+[v _disp_dp disp_dp `(v  1 e 1 0 ]
+{
+[v disp_dp@sw sw `i  1 p 2 0 ]
+} 0
+"157
+[v _disp_d disp_d `(v  1 e 1 0 ]
+{
+[v disp_d@sw sw `i  1 p 2 0 ]
+} 0
+"156
+[v _disp_c disp_c `(v  1 e 1 0 ]
+{
+[v disp_c@sw sw `i  1 p 2 0 ]
+} 0
+"155
+[v _disp_b disp_b `(v  1 e 1 0 ]
+{
+[v disp_b@sw sw `i  1 p 2 0 ]
+} 0
+"154
+[v _disp_a disp_a `(v  1 e 1 0 ]
+{
+[v disp_a@sw sw `i  1 p 2 0 ]
+} 0
+"162
+[v _open open `(v  1 e 1 0 ]
+{
+[v open@select select `i  1 p 2 0 ]
+"180
+} 0
+"181
+[v _close close `(v  1 e 1 0 ]
+{
+"186
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 41 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 45 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 40 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 32 ]
+"73
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 52 ]
+[v ___awmod@counter counter `uc  1 a 1 51 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 46 ]
+[v ___awmod@dividend dividend `i  1 p 2 48 ]
+"35
+} 0
+"200 C:\development\PIC\Programs\step_down_converter.X\main.c
+[v _daconv daconv `(d  1 e 3 0 ]
+{
+"201
+[v daconv@analog analog `d  1 a 3 35 ]
+"200
+[v daconv@digital digital `i  1 p 2 32 ]
+"204
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"56 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 27 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 31 ]
+[v ___ftdiv@exp exp `uc  1 a 1 30 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 26 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 16 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 19 ]
+"86
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"188 C:\development\PIC\Programs\step_down_converter.X\main.c
+[v _adconv adconv `(i  1 e 2 0 ]
+{
+"190
+[v adconv@temp temp `i  1 a 2 9 ]
+"198
+} 0
+"76
+[v _init init `(v  1 e 1 0 ]
+{
+"88
+} 0
