@@ -22,7 +22,7 @@ void init(void);
 void init_Timer4(void);
 void init_I2C_master(void);
 
-char send_data[2];
+unsigned char send_data[2];
 
 int adconv(int pin_select) {
     int temp;
@@ -38,7 +38,7 @@ void I2C_idle_check(void) {
     while (( SSP1CON2 & 0x1F ) | (SSP1STAT & 0x05)) ;
 }
 
-void I2C_send_data(char addr,char *data, int length) {
+void I2C_send_data(unsigned char addr,char *data, int length) {
     I2C_idle_check();
     SSP1CON2bits.SEN = 1;                   //start condition
     I2C_idle_check();

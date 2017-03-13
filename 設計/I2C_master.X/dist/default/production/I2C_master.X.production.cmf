@@ -11,10 +11,28 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+<<<<<<< HEAD
+$dist/default/production\I2C_master.X.production.obj
+cinit CODE 0 2A 2A 7 2
+text1 CODE 0 BC BC B 2
+text2 CODE 0 AE AE E 2
+text3 CODE 0 98 98 16 2
+text4 CODE 0 31 31 48 2
+text6 CODE 0 C7 C7 A 2
+maintext CODE 0 79 79 1F 2
+cstackCOMMON COMMON 1 70 70 C 1
+cstackBANK0 BANK0 1 20 20 6 1
+intentry CODE 0 4 4 24 2
+bssBANK0 BANK0 1 26 26 2 1
+$C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+=======
 $C:\Users\yuki\AppData\Local\Temp\s1cs.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 reset_vec CODE 0 0 0 2 2
-end_init CODE 0 3B 3B 2 2
+end_init CODE 0 28 28 2 2
 config CONFIG 0 8007 8007 2 2
+<<<<<<< HEAD
+=======
 $dist/default/production\I2C_master.X.production.obj
 cinit CODE 0 3D 3D 7 2
 text1 CODE 0 EA EA B 2
@@ -28,26 +46,41 @@ cstackCOMMON COMMON 1 70 70 D 1
 cstackBANK0 BANK0 1 20 20 7 1
 intentry CODE 0 4 4 37 2
 bssBANK0 BANK0 1 27 27 2 1
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
+<<<<<<< HEAD
+RAM 28-6F 1
+=======
 RAM 29-6F 1
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
 RAM 220-24F 1
+<<<<<<< HEAD
+BANK0 28-6F 1
+=======
 BANK0 29-6F 1
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-24F 1
 CONST 2-3 2
+<<<<<<< HEAD
+CONST D1-FFF 2
+ENTRY 2-3 2
+ENTRY D1-FFF 2
+=======
 CONST FF-FFF 2
 ENTRY 2-3 2
 ENTRY FF-FFF 2
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -71,9 +104,15 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
+<<<<<<< HEAD
+STACK 2008-216F 1
+CODE 2-3 2
+CODE D1-FFF 2
+=======
 STACK 2009-216F 1
 CODE 2-3 2
 CODE FF-FFF 2
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -85,12 +124,18 @@ SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
 BIGRAM 2000-216F 1
-COMMON 7D-7D 1
+COMMON 7C-7D 1
 EEDATA F000-F0FF 2
 STRCODE 2-3 2
+<<<<<<< HEAD
+STRCODE D1-FFF 2
+STRING 2-3 2
+STRING D1-FFF 2
+=======
 STRCODE FF-FFF 2
 STRING 2-3 2
 STRING FF-FFF 2
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -105,6 +150,77 @@ STRING FF-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+2A cinit CODE >473:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+2A cinit CODE >476:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+2A cinit CODE >488:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+2B cinit CODE >489:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+2C cinit CODE >490:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+2D cinit CODE >496:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+2D cinit CODE >498:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+2E cinit CODE >499:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+2F cinit CODE >500:C:\Users\YASHIO\AppData\Local\Temp\s7qc.
+4 intentry CODE >37:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+4 intentry CODE >58:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+9 intentry CODE >59:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+B intentry CODE >63:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+E intentry CODE >64:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+10 intentry CODE >65:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+13 intentry CODE >66:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+16 intentry CODE >67:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+18 intentry CODE >68:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+1C intentry CODE >69:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+1E intentry CODE >70:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+20 intentry CODE >71:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+22 intentry CODE >73:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+24 intentry CODE >75:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+C7 text6 CODE >39:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+C7 text6 CODE >40:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+31 text4 CODE >27:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+31 text4 CODE >30:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+34 text4 CODE >31:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+52 text4 CODE >32:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+54 text4 CODE >33:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+56 text4 CODE >34:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+5E text4 CODE >35:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+74 text4 CODE >36:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+98 text3 CODE >91:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+98 text3 CODE >92:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+9B text3 CODE >93:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+9E text3 CODE >94:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+A1 text3 CODE >95:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+A3 text3 CODE >96:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+A5 text3 CODE >97:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+A6 text3 CODE >98:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+A9 text3 CODE >99:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+AB text3 CODE >100:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+AC text3 CODE >101:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+AD text3 CODE >102:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+AE text2 CODE >112:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+AE text2 CODE >113:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+B1 text2 CODE >114:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+B3 text2 CODE >115:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+B5 text2 CODE >116:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+B7 text2 CODE >117:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+B8 text2 CODE >118:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+BA text2 CODE >119:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+BB text2 CODE >120:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+BC text1 CODE >104:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+BC text1 CODE >105:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+BF text1 CODE >106:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+C1 text1 CODE >107:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+C3 text1 CODE >108:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+C5 text1 CODE >109:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+C6 text1 CODE >110:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+79 maintext CODE >77:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+79 maintext CODE >78:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+7C maintext CODE >79:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+7F maintext CODE >80:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+82 maintext CODE >84:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+8E maintext CODE >85:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+92 maintext CODE >86:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+97 maintext CODE >83:S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
+=======
 3D cinit CODE >474:C:\Users\yuki\AppData\Local\Temp\s1cs.
 3D cinit CODE >477:C:\Users\yuki\AppData\Local\Temp\s1cs.
 3D cinit CODE >489:C:\Users\yuki\AppData\Local\Temp\s1cs.
@@ -179,6 +295,7 @@ F4 text1 CODE >99:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\I2C_
 9A maintext CODE >71:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\I2C_master.X\main.c
 9D maintext CODE >72:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\I2C_master.X\main.c
 A0 maintext CODE >76:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\I2C_master.X\main.c
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -192,12 +309,12 @@ A0 maintext CODE >76:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\I
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 1 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+adconv@i 22 0 BANK0 1 cstackBANK0 dist/default/production\I2C_master.X.production.obj
 __Hspace_0 8009 0 ABS 0 - -
-__Hspace_1 7D 0 ABS 0 - -
+__Hspace_1 7C 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
-I2C_send_data@i 76 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 ltemp0 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 ltemp1 82 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
@@ -207,26 +324,50 @@ main@i 25 0 BANK0 1 cstackBANK0 dist/default/production\I2C_master.X.production.
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _TMR4 415 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+___sp 0 0 STACK 2 stack C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+_init 130 0 CODE 0 text3 dist/default/production\I2C_master.X.production.obj
+_main F2 0 CODE 0 maintext dist/default/production\I2C_master.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+ltemp 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+start 50 0 CODE 0 init C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+=======
 ___sp 0 0 STACK 2 stack C:\Users\yuki\AppData\Local\Temp\s1cs.obj
 _init 18C 0 CODE 0 text3 dist/default/production\I2C_master.X.production.obj
 _main F2 0 CODE 0 maintext dist/default/production\I2C_master.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 start 76 0 CODE 0 init C:\Users\yuki\AppData\Local\Temp\s1cs.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 ttemp 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __size_of_init 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+__end_of_I2C_idle_check 1A2 0 CODE 0 text6 dist/default/production\I2C_master.X.production.obj
+?_adconv 72 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
+=======
 I2C_send_data@addr 75 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
 I2C_send_data@data 71 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
 __end_of_I2C_idle_check 1FE 0 CODE 0 text7 dist/default/production\I2C_master.X.production.obj
 ?_adconv 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 __Hpowerup 0 0 CODE 0 powerup -
 ttemp0 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 ttemp1 81 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+intlevel0 0 0 CODE 0 functab C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+intlevel1 0 0 CODE 0 functab C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+intlevel2 0 0 CODE 0 functab C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+intlevel3 0 0 CODE 0 functab C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+intlevel4 0 0 CODE 0 functab C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+intlevel5 0 0 CODE 0 functab C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+__end_of_init_I2C_master 178 0 CODE 0 text2 dist/default/production\I2C_master.X.production.obj
+_init_Timer4 178 0 CODE 0 text1 dist/default/production\I2C_master.X.production.obj
+=======
 intlevel0 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s1cs.obj
 intlevel1 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s1cs.obj
 intlevel2 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s1cs.obj
@@ -235,6 +376,7 @@ intlevel4 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s1cs.obj
 intlevel5 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s1cs.obj
 __end_of_init_I2C_master 1D4 0 CODE 0 text2 dist/default/production\I2C_master.X.production.obj
 _init_Timer4 1D4 0 CODE 0 text1 dist/default/production\I2C_master.X.production.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 wtemp0 7E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 wtemp1 80 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 wtemp2 82 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
@@ -244,7 +386,6 @@ wtemp5 88 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 wtemp6 7F 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-_I2C_send_data 88 0 CODE 0 text6 dist/default/production\I2C_master.X.production.obj
 _ADCON0 9D 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _ADCON1 9E 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _ADRESH 9C 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
@@ -252,14 +393,21 @@ _ADRESL 9B 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _ANSELA 18C 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _BCL1IE 493 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _BCL1IF 93 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+__end_of_adconv F2 0 CODE 0 text4 dist/default/production\I2C_master.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+_init_I2C_master 15C 0 CODE 0 text2 dist/default/production\I2C_master.X.production.obj
+_send_data 26 0 BANK0 1 bssBANK0 dist/default/production\I2C_master.X.production.obj
+=======
 __end_of_adconv 18C 0 CODE 0 text5 dist/default/production\I2C_master.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 _init_I2C_master 1B8 0 CODE 0 text2 dist/default/production\I2C_master.X.production.obj
 interruption@data 7B 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
 _send_data 27 0 BANK0 1 bssBANK0 dist/default/production\I2C_master.X.production.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
-start_initialization 7A 0 CODE 0 cinit dist/default/production\I2C_master.X.production.obj
+start_initialization 54 0 CODE 0 cinit dist/default/production\I2C_master.X.production.obj
 _OSCCON 99 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _GO_nDONE 4E9 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\I2C_master.X.production.obj
@@ -268,8 +416,12 @@ _SSP1IF 8B 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _TMR4IE 499 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _TMR4IF 99 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _TMR4ON 20BA 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+___int_sp 0 0 STACK 2 stack C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+=======
 __size_of_I2C_send_data 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 ___int_sp 0 0 STACK 2 stack C:\Users\yuki\AppData\Local\Temp\s1cs.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -280,7 +432,7 @@ __Hbank6 0 0 BANK6 1 bank6 -
 __Hbank7 0 0 BANK7 1 bank7 -
 __Hbank8 0 0 BANK8 1 bank8 -
 __Hbank9 0 0 BANK9 1 bank9 -
-__Hcinit 88 0 CODE 0 cinit -
+__Hcinit 62 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -329,7 +481,7 @@ __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
-adconv@pin_select 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
+adconv@pin_select 72 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 0 config -
@@ -344,7 +496,7 @@ __Lbank6 0 0 BANK6 1 bank6 -
 __Lbank7 0 0 BANK7 1 bank7 -
 __Lbank8 0 0 BANK8 1 bank8 -
 __Lbank9 0 0 BANK9 1 bank9 -
-__Lcinit 7A 0 CODE 0 cinit -
+__Lcinit 54 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -369,10 +521,13 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
+<<<<<<< HEAD
+=======
 __end_of_I2C_send_data F2 0 CODE 0 text6 dist/default/production\I2C_master.X.production.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 76 0 CODE 0 init -
+__Hinit 50 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -386,7 +541,7 @@ __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 76 0 CODE 0 init -
+__Linit 50 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -407,15 +562,24 @@ __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _PR4 416 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __S0 8009 0 ABS 0 - -
-__S1 7D 0 ABS 0 - -
+__S1 7C 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+<<<<<<< HEAD
+_adconv 62 0 CODE 0 text4 dist/default/production\I2C_master.X.production.obj
+__size_of_I2C_idle_check 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+__end_of_init_Timer4 18E 0 CODE 0 text1 dist/default/production\I2C_master.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+=======
 _adconv 142 0 CODE 0 text5 dist/default/production\I2C_master.X.production.obj
 __size_of_I2C_idle_check 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __end_of_init_Timer4 1EA 0 CODE 0 text1 dist/default/production\I2C_master.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
 reset_vec 0 0 CODE 0 reset_vec C:\Users\yuki\AppData\Local\Temp\s1cs.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __size_of_adconv 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __Lbank10 0 0 BANK10 1 bank10 -
@@ -448,24 +612,39 @@ __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _interruption 8 0 CODE 0 intentry dist/default/production\I2C_master.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+main@data 24 0 BANK0 1 cstackBANK0 dist/default/production\I2C_master.X.production.obj
+stackhi 216F 0 ABS 0 - C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+stacklo 2008 0 ABS 0 - C:\Users\YASHIO\AppData\Local\Temp\s7qc.obj
+adconv@temp 20 0 BANK0 1 cstackBANK0 dist/default/production\I2C_master.X.production.obj
+=======
 stackhi 216F 0 ABS 0 - C:\Users\yuki\AppData\Local\Temp\s1cs.obj
 stacklo 2009 0 ABS 0 - C:\Users\yuki\AppData\Local\Temp\s1cs.obj
 adconv@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
-__Lend_init 76 0 CODE 0 end_init -
+__Lend_init 50 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 80 0 CODE 0 cinit dist/default/production\I2C_master.X.production.obj
+end_of_initialization 5A 0 CODE 0 cinit dist/default/production\I2C_master.X.production.obj
 __size_of_interruption 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
-__Hintentry 76 0 CODE 0 intentry -
+__Hintentry 50 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
+<<<<<<< HEAD
+__ptext1 178 0 CODE 0 text1 dist/default/production\I2C_master.X.production.obj
+__ptext2 15C 0 CODE 0 text2 dist/default/production\I2C_master.X.production.obj
+__ptext3 130 0 CODE 0 text3 dist/default/production\I2C_master.X.production.obj
+__ptext4 62 0 CODE 0 text4 dist/default/production\I2C_master.X.production.obj
+__ptext6 18E 0 CODE 0 text6 dist/default/production\I2C_master.X.production.obj
+__end_of_interruption 50 0 CODE 0 intentry dist/default/production\I2C_master.X.production.obj
+=======
 __ptext1 1D4 0 CODE 0 text1 dist/default/production\I2C_master.X.production.obj
 __ptext2 1B8 0 CODE 0 text2 dist/default/production\I2C_master.X.production.obj
 __ptext3 18C 0 CODE 0 text3 dist/default/production\I2C_master.X.production.obj
@@ -473,12 +652,13 @@ __ptext5 142 0 CODE 0 text5 dist/default/production\I2C_master.X.production.obj
 __ptext6 88 0 CODE 0 text6 dist/default/production\I2C_master.X.production.obj
 __ptext7 1EA 0 CODE 0 text7 dist/default/production\I2C_master.X.production.obj
 __end_of_interruption 76 0 CODE 0 intentry dist/default/production\I2C_master.X.production.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __size_of_init_Timer4 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
-__end_of__initialization 80 0 CODE 0 cinit dist/default/production\I2C_master.X.production.obj
+__end_of__initialization 5A 0 CODE 0 cinit dist/default/production\I2C_master.X.production.obj
 __Lfunctab 0 0 CODE 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 _SSP1CON2bits 216 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
@@ -487,9 +667,15 @@ __CFG_PWRTE$ON 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
 _SSP1ADD 212 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _SSP1BUF 211 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+__Hend_init 54 0 CODE 0 end_init -
+__end_of_init 15C 0 CODE 0 text3 dist/default/production\I2C_master.X.production.obj
+__end_of_main 130 0 CODE 0 maintext dist/default/production\I2C_master.X.production.obj
+=======
 __Hend_init 7A 0 CODE 0 end_init -
 __end_of_init 1B8 0 CODE 0 text3 dist/default/production\I2C_master.X.production.obj
 __end_of_main 142 0 CODE 0 maintext dist/default/production\I2C_master.X.production.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 _PORTA C 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _PORTB D 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _T4CON 417 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
@@ -498,12 +684,18 @@ _TRISB 8D 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
-I2C_send_data@length 72 0 COMMON 1 cstackCOMMON dist/default/production\I2C_master.X.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production\I2C_master.X.production.obj
+<<<<<<< HEAD
+__initialization 54 0 CODE 0 cinit dist/default/production\I2C_master.X.production.obj
+__pbssBANK0 26 0 BANK0 1 bssBANK0 dist/default/production\I2C_master.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
+_I2C_idle_check 18E 0 CODE 0 text6 dist/default/production\I2C_master.X.production.obj
+=======
 __initialization 7A 0 CODE 0 cinit dist/default/production\I2C_master.X.production.obj
 __pbssBANK0 27 0 BANK0 1 bssBANK0 dist/default/production\I2C_master.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\I2C_master.X.production.obj
 _I2C_idle_check 1EA 0 CODE 0 text7 dist/default/production\I2C_master.X.production.obj
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -529,8 +721,14 @@ _I2C_idle_check 1EA 0 CODE 0 text7 dist/default/production\I2C_master.X.producti
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
+<<<<<<< HEAD
+cstackCOMMON 1 70 70 C 1
+cstackBANK0 1 20 20 8 1
+intentry 0 4 8 CD 2
+=======
 cstackCOMMON 1 70 70 D 1
 cstackBANK0 1 20 20 9 1
 intentry 0 4 8 FB 2
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 reset_vec 0 0 0 2 2
 config 0 8007 1000E 2 2

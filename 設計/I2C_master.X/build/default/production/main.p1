@@ -2850,7 +2850,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 23: void init_I2C_master(void);
 "25
 [v _send_data `uc ~T0 @X0 -> 2 `i e ]
-[; ;main.c: 25: char send_data[2];
+[; ;main.c: 25: unsigned char send_data[2];
 "27
 [v _adconv `(i ~T0 @X0 1 ef1`i ]
 {
@@ -2864,80 +2864,111 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 30: ADCON0 = pin_select;
 "30
 [e = _ADCON0 -> _pin_select `uc ]
-[; ;main.c: 31: while(GO_nDONE);
+[; ;main.c: 31: for(int i = 0; i < 10; i++);
 "31
-[e $U 351  ]
-[e :U 352 ]
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 10 `i 351  ]
+[e $U 352  ]
 [e :U 351 ]
-[e $ _GO_nDONE 352  ]
-[e :U 353 ]
-[; ;main.c: 32: temp = ADRESH;
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 10 `i 351  ]
+[e :U 352 ]
+}
+[; ;main.c: 32: GO_nDONE = 1;
 "32
-[e = _temp -> _ADRESH `i ]
-[; ;main.c: 33: temp = (temp << 8) | ADRESL;
+[e = _GO_nDONE -> -> 1 `i `b ]
+[; ;main.c: 33: while(GO_nDONE);
 "33
-[e = _temp | << _temp -> 8 `i -> _ADRESL `i ]
-[; ;main.c: 34: return temp;
+[e $U 354  ]
+[e :U 355 ]
+[e :U 354 ]
+[e $ _GO_nDONE 355  ]
+[e :U 356 ]
+[; ;main.c: 34: temp = ADRESH;
 "34
+[e = _temp -> _ADRESH `i ]
+[; ;main.c: 35: temp = (temp << 8) | ADRESL;
+"35
+[e = _temp | << _temp -> 8 `i -> _ADRESL `i ]
+[; ;main.c: 36: return temp;
+"36
 [e ) _temp ]
 [e $UE 350  ]
-[; ;main.c: 35: }
-"35
+[; ;main.c: 37: }
+"37
 [e :UE 350 ]
 }
-"37
+"39
 [v _I2C_idle_check `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 37: void I2C_idle_check(void) {
+[; ;main.c: 39: void I2C_idle_check(void) {
 [e :U _I2C_idle_check ]
 [f ]
-[; ;main.c: 38: while (( SSP1CON2 & 0x1F ) | (SSP1STAT & 0x05)) ;
-"38
-[e $U 355  ]
-[e :U 356 ]
-[e :U 355 ]
-[e $ != | & -> _SSP1CON2 `i -> 31 `i & -> _SSP1STAT `i -> 5 `i -> 0 `i 356  ]
-[e :U 357 ]
-[; ;main.c: 39: }
-"39
-[e :UE 354 ]
-}
+[; ;main.c: 40: while (( SSP1CON2 & 0x1F ) | (SSP1STAT & 0x05)) ;
+"40
+[e $U 358  ]
+[e :U 359 ]
+[e :U 358 ]
+[e $ != | & -> _SSP1CON2 `i -> 31 `i & -> _SSP1STAT `i -> 5 `i -> 0 `i 359  ]
+[e :U 360 ]
+[; ;main.c: 41: }
 "41
+[e :UE 357 ]
+}
+"43
 [v _I2C_send_data `(v ~T0 @X0 1 ef3`uc`*uc`i ]
 {
-[; ;main.c: 41: void I2C_send_data(char addr,char *data, int length) {
+[; ;main.c: 43: void I2C_send_data(char addr,char *data, int length) {
 [e :U _I2C_send_data ]
 [v _addr `uc ~T0 @X0 1 r1 ]
 [v _data `*uc ~T0 @X0 1 r2 ]
 [v _length `i ~T0 @X0 1 r3 ]
 [f ]
-[; ;main.c: 42: I2C_idle_check();
-"42
-[e ( _I2C_idle_check ..  ]
-[; ;main.c: 43: SSP1CON2bits.SEN = 1;
-"43
-[e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
 [; ;main.c: 44: I2C_idle_check();
 "44
 [e ( _I2C_idle_check ..  ]
-[; ;main.c: 45: SSP1BUF = addr << 1;
+[; ;main.c: 45: SSP1CON2bits.SEN = 1;
 "45
-[e = _SSP1BUF -> << -> _addr `i -> 1 `i `uc ]
-[; ;main.c: 46: while(SSP1CON2bits.ACKSTAT == 1);
+[e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 46: I2C_idle_check();
 "46
-[e $U 359  ]
-[e :U 360 ]
-[e :U 359 ]
-[e $ == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 360  ]
-[e :U 361 ]
-[; ;main.c: 47: for(int i = 0; i < length; i++) {
+[e ( _I2C_idle_check ..  ]
+[; ;main.c: 47: SSP1BUF = addr << 1;
 "47
+[e = _SSP1BUF -> << -> _addr `i -> 1 `i `uc ]
+[; ;main.c: 48: while(SSP1CON2bits.ACKSTAT == 1);
+"48
+[e $U 362  ]
+[e :U 363 ]
+[e :U 362 ]
+[e $ == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 363  ]
+[e :U 364 ]
+[; ;main.c: 49: for(int i = 0; i < length; i++) {
+"49
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 365  ]
-[e :U 362 ]
+[e $U 368  ]
+[e :U 365 ]
 {
+<<<<<<< HEAD
+[; ;main.c: 50: SSP1BUF = *data;
+"50
+[e = _SSP1BUF *U _data ]
+[; ;main.c: 51: data++;
+"51
+[e ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
+[; ;main.c: 52: while(SSP1CON2bits.ACKSTAT == 1);
+"52
+[e $U 369  ]
+[e :U 370 ]
+[e :U 369 ]
+[e $ == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 370  ]
+[e :U 371 ]
+"53
+=======
 [; ;main.c: 48: I2C_idle_check();
 "48
 [e ( _I2C_idle_check ..  ]
@@ -2955,9 +2986,225 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $ == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 367  ]
 [e :U 368 ]
 "52
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 }
-"47
+"49
 [e ++ _i -> 1 `i ]
+<<<<<<< HEAD
+[e :U 368 ]
+[e $ < _i _length 365  ]
+[e :U 366 ]
+"53
+}
+[; ;main.c: 53: }
+[; ;main.c: 54: I2C_idle_check();
+"54
+[e ( _I2C_idle_check ..  ]
+[; ;main.c: 55: SSP1CON2bits.PEN = 1;
+"55
+[e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 56: }
+"56
+[e :UE 361 ]
+}
+[v F2780 `(v ~T0 @X0 1 tf ]
+"58
+[v _interruption `IF2780 ~T0 @X0 1 e ]
+{
+[; ;main.c: 58: void interrupt interruption(void) {
+[e :U _interruption ]
+[f ]
+[; ;main.c: 59: if (TMR4IF == 1) {
+"59
+[e $ ! == -> _TMR4IF `i -> 1 `i 373  ]
+{
+[; ;main.c: 63: I2C_idle_check();
+"63
+[e ( _I2C_idle_check ..  ]
+[; ;main.c: 64: SSP1CON2bits.SEN = 1;
+"64
+[e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 65: I2C_idle_check();
+"65
+[e ( _I2C_idle_check ..  ]
+[; ;main.c: 66: SSP1BUF = 0x04;
+"66
+[e = _SSP1BUF -> -> 4 `i `uc ]
+[; ;main.c: 67: while(SSP1CON2bits.ACKSTAT == 1);
+"67
+[e $U 374  ]
+[e :U 375 ]
+[e :U 374 ]
+[e $ == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 375  ]
+[e :U 376 ]
+[; ;main.c: 68: SSP1BUF = send_data[0];
+"68
+[e = _SSP1BUF *U + &U _send_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _send_data `ui `ux ]
+[; ;main.c: 69: while(SSP1CON2bits.ACKSTAT == 1);
+"69
+[e $U 377  ]
+[e :U 378 ]
+[e :U 377 ]
+[e $ == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 378  ]
+[e :U 379 ]
+[; ;main.c: 70: I2C_idle_check();
+"70
+[e ( _I2C_idle_check ..  ]
+[; ;main.c: 71: SSP1CON2bits.PEN = 1;
+"71
+[e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 73: TMR4IF = 0;
+"73
+[e = _TMR4IF -> -> 0 `i `b ]
+"74
+}
+[e :U 373 ]
+[; ;main.c: 74: }
+[; ;main.c: 75: }
+"75
+[e :UE 372 ]
+}
+"77
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 77: void main(void) {
+[e :U _main ]
+[f ]
+[; ;main.c: 78: init();
+"78
+[e ( _init ..  ]
+[; ;main.c: 79: init_Timer4();
+"79
+[e ( _init_Timer4 ..  ]
+[; ;main.c: 80: init_I2C_master();
+"80
+[e ( _init_I2C_master ..  ]
+"81
+[v _data `i ~T0 @X0 1 a ]
+[; ;main.c: 81: int data;
+[; ;main.c: 83: while(1){
+"83
+[e :U 382 ]
+{
+[; ;main.c: 84: data = adconv(0b00000001);
+"84
+[e = _data ( _adconv (1 -> 1 `i ]
+[; ;main.c: 85: send_data[0] = 16;
+"85
+[e = *U + &U _send_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _send_data `ui `ux -> -> 16 `i `uc ]
+[; ;main.c: 86: send_data[1] = data & 0x03;
+"86
+[e = *U + &U _send_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _send_data `ui `ux -> & _data -> 3 `i `uc ]
+"87
+}
+[e :U 381 ]
+"83
+[e $U 382  ]
+[e :U 383 ]
+[; ;main.c: 87: }
+[; ;main.c: 88: return;
+"88
+[e $UE 380  ]
+[; ;main.c: 89: }
+"89
+[e :UE 380 ]
+}
+"91
+[v _init `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 91: void init(void) {
+[e :U _init ]
+[f ]
+[; ;main.c: 92: OSCCON = 0b01111010;
+"92
+[e = _OSCCON -> -> 122 `i `uc ]
+[; ;main.c: 93: ANSELA = 0x03;
+"93
+[e = _ANSELA -> -> 3 `i `uc ]
+[; ;main.c: 94: TRISA = 0x03;
+"94
+[e = _TRISA -> -> 3 `i `uc ]
+[; ;main.c: 95: TRISB = 0b00010010;
+"95
+[e = _TRISB -> -> 18 `i `uc ]
+[; ;main.c: 96: PORTA = 0x00;
+"96
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;main.c: 97: PORTB = 0x00;
+"97
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 98: ADCON1 = 0b10010000;
+"98
+[e = _ADCON1 -> -> 144 `i `uc ]
+[; ;main.c: 99: ADCON0 = 0x01;
+"99
+[e = _ADCON0 -> -> 1 `i `uc ]
+[; ;main.c: 100: GIE = 1;
+"100
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 101: PEIE = 1;
+"101
+[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 102: }
+"102
+[e :UE 384 ]
+}
+"104
+[v _init_Timer4 `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 104: void init_Timer4(void) {
+[e :U _init_Timer4 ]
+[f ]
+[; ;main.c: 105: T4CON = 0b00000010;
+"105
+[e = _T4CON -> -> 2 `i `uc ]
+[; ;main.c: 106: PR4 = 249;
+"106
+[e = _PR4 -> -> 249 `i `uc ]
+[; ;main.c: 107: TMR4IE = 1;
+"107
+[e = _TMR4IE -> -> 1 `i `b ]
+[; ;main.c: 108: TMR4 = 0;
+"108
+[e = _TMR4 -> -> 0 `i `uc ]
+[; ;main.c: 109: TMR4ON = 1;
+"109
+[e = _TMR4ON -> -> 1 `i `b ]
+[; ;main.c: 110: }
+"110
+[e :UE 385 ]
+}
+"112
+[v _init_I2C_master `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 112: void init_I2C_master(void) {
+[e :U _init_I2C_master ]
+[f ]
+[; ;main.c: 113: SSP1STAT = 0b10000000;
+"113
+[e = _SSP1STAT -> -> 128 `i `uc ]
+[; ;main.c: 114: SSP1CON1 = 0b00101000;
+"114
+[e = _SSP1CON1 -> -> 40 `i `uc ]
+[; ;main.c: 115: SSP1ADD = 0x27;
+"115
+[e = _SSP1ADD -> -> 39 `i `uc ]
+[; ;main.c: 116: SSP1IE = 1;
+"116
+[e = _SSP1IE -> -> 1 `i `b ]
+[; ;main.c: 117: BCL1IE = 1;
+"117
+[e = _BCL1IE -> -> 1 `i `b ]
+[; ;main.c: 118: SSP1IF = 0;
+"118
+[e = _SSP1IF -> -> 0 `i `b ]
+[; ;main.c: 119: BCL1IF = 0;
+"119
+[e = _BCL1IF -> -> 0 `i `b ]
+[; ;main.c: 120: }
+"120
+[e :UE 386 ]
+=======
 [e :U 365 ]
 [e $ < _i _length 362  ]
 [e :U 363 ]
@@ -3144,4 +3391,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 109: }
 "109
 [e :UE 380 ]
+>>>>>>> 88a855160cf98786b66e5fcd8b8745b8176f650c
 }
