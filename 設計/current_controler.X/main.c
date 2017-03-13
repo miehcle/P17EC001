@@ -12,7 +12,7 @@
 #pragma config WRT = OFF, PLLEN = OFF, STVREN = ON, BORV = HI, LVP = OFF
 
 #define CURRENT_READ_PIN 0b00000011   //RA0pin
-#define VOLUME_READ_PIN 0b00001011    //RA1pin http://rikei60.web.fc2.com/toybox/balancer/16F1827adc.htm refer to number5
+#define VOLUME_READ_PIN 0b00000111    //RA1pin http://rikei60.web.fc2.com/toybox/balancer/16F1827adc.htm refer to number5
 /* controler value */
 #define KP 1.0       //proportional controler value
 #define KI 0.01      //integral controler value

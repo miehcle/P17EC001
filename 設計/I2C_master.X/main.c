@@ -12,7 +12,7 @@
 #pragma config WRT = OFF, PLLEN = OFF, STVREN = ON, BORV = HI, LVP = OFF
 
 #define RA0_PIN 0b00000011   //RA0pin
-#define RA1_PIN 0b00001011    //RA1pin
+#define RA1_PIN 0b00000111    //RA1pin
 
 int adconv(int pin_select);
 void I2C_idle_check(void);
@@ -45,6 +45,7 @@ void I2C_send_data(char addr,char *data, int length) {
     SSP1BUF = addr << 1;                    //address set
     while(SSP1CON2bits.ACKSTAT == 1);
     for(int i = 0; i < length; i++) {
+        I2C_idle_check();
         SSP1BUF = *data;                    //send data set
         data++;                             //next data point
         while(SSP1CON2bits.ACKSTAT == 1);
@@ -65,10 +66,13 @@ void interrupt interruption(void) {
 }
 
 void main(void) {
+    for(int i = 0; i < 10000; i++);
     init();
     init_Timer4();
     init_I2C_master();
     
+    
+
     while(1);
     return;
 }
@@ -97,7 +101,7 @@ void init_Timer4(void) {
 void init_I2C_master(void) {
     SSP1STAT = 0b10000000;      //I2C 100kbps mode
     SSP1CON1 = 0b00101000;      //I2C slave mode
-    SSP1ADD = 0x27;        //I2C clock 100kHz
+    SSP1ADD = 0x27;             //I2C clock 100kHz
     SSP1IE = 1;                 //I2C interrupt enabled
     BCL1IE = 1;                 //I2C bus clash interrupt enabled
     SSP1IF = 0;                 //I2C interrupt flag cleared
