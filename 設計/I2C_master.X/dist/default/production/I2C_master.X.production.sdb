@@ -11,21 +11,19 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"27 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\I2C_master.X\main.c
+"27 S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
 [v _adconv adconv `(i  1 e 2 0 ]
-"37
+"39
 [v _I2C_idle_check I2C_idle_check `(v  1 e 1 0 ]
-"41
-[v _I2C_send_data I2C_send_data `(v  1 e 1 0 ]
-"56
+"58
 [v _interruption interruption `II(v  1 e 1 0 ]
-"67
+"77
 [v _main main `(v  1 e 1 0 ]
-"76
+"91
 [v _init init `(v  1 e 1 0 ]
-"89
+"104
 [v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
-"97
+"112
 [v _init_I2C_master init_I2C_master `(v  1 e 1 0 ]
 "414 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1827.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -95,59 +93,48 @@
 [v _TMR4IF TMR4IF `VEb  1 e 0 @153 ]
 "7448
 [v _TMR4ON TMR4ON `VEb  1 e 0 @8378 ]
-"25 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\I2C_master.X\main.c
+"25 S:\mbed\miehcle\2017\P17EC001_PIC_Controler\P17EC001\設計\I2C_master.X\main.c
 [v _send_data send_data `[2]uc  1 e 2 0 ]
-"67
+"77
 [v _main main `(v  1 e 1 0 ]
 {
-"74
-} 0
+"81
+[v main@data data `i  1 a 2 4 ]
 "89
+} 0
+"104
 [v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
 {
-"95
+"110
 } 0
-"97
+"112
 [v _init_I2C_master init_I2C_master `(v  1 e 1 0 ]
 {
-"105
+"120
 } 0
-"76
+"91
 [v _init init `(v  1 e 1 0 ]
 {
-"87
-} 0
-"56
-[v _interruption interruption `II(v  1 e 1 0 ]
-{
-"59
-[v interruption@data data `i  1 a 2 11 ]
-"65
+"102
 } 0
 "27
 [v _adconv adconv `(i  1 e 2 0 ]
 {
+"31
+[v adconv@i i `i  1 a 2 2 ]
 "28
-[v adconv@temp temp `i  1 a 2 9 ]
+[v adconv@temp temp `i  1 a 2 0 ]
 "27
-[v adconv@pin_select pin_select `i  1 p 2 0 ]
-"35
-} 0
-"41
-[v _I2C_send_data I2C_send_data `(v  1 e 1 0 ]
-{
-[v I2C_send_data@addr addr `uc  1 a 1 wreg ]
-"47
-[v I2C_send_data@i i `i  1 a 2 6 ]
-"41
-[v I2C_send_data@addr addr `uc  1 a 1 wreg ]
-[v I2C_send_data@data data `*.4uc  1 p 1 1 ]
-[v I2C_send_data@length length `i  1 p 2 2 ]
-[v I2C_send_data@addr addr `uc  1 a 1 5 ]
-"54
-} 0
+[v adconv@pin_select pin_select `i  1 p 2 2 ]
 "37
+} 0
+"58
+[v _interruption interruption `II(v  1 e 1 0 ]
+{
+"75
+} 0
+"39
 [v _I2C_idle_check I2C_idle_check `(v  1 e 1 0 ]
 {
-"39
+"41
 } 0

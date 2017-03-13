@@ -3734,12 +3734,14 @@ void init(void);
 void init_Timer4(void);
 void init_I2C_master(void);
 
-char send_data[2];
+unsigned char send_data[2];
 
 int adconv(int pin_select) {
 int temp;
 
 ADCON0 = pin_select;
+for(int i = 0; i < 10; i++);
+GO_nDONE = 1;
 while(GO_nDONE);
 temp = ADRESH;
 temp = (temp << 8) | ADRESL;
@@ -3768,10 +3770,18 @@ SSP1CON2bits.PEN = 1;
 void interrupt interruption(void) {
 if (TMR4IF == 1) {
 
-int data = adconv(0b00000011);
-send_data[0] = data >> 2;
-send_data[1] = data & 0x03;
-I2C_send_data(0x02, send_data, 2);
+
+
+I2C_idle_check();
+SSP1CON2bits.SEN = 1;
+I2C_idle_check();
+SSP1BUF = 0x04;
+while(SSP1CON2bits.ACKSTAT == 1);
+SSP1BUF = send_data[0];
+while(SSP1CON2bits.ACKSTAT == 1);
+I2C_idle_check();
+SSP1CON2bits.PEN = 1;
+
 TMR4IF = 0;
 }
 }
@@ -3780,8 +3790,13 @@ void main(void) {
 init();
 init_Timer4();
 init_I2C_master();
+int data;
 
-while(1);
+while(1){
+data = adconv(0b00000001);
+send_data[0] = 16;
+send_data[1] = data & 0x03;
+}
 return;
 }
 
