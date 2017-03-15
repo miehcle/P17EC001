@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\shu\AppData\Local\Temp\sh20.obj
+$C:\Users\shu\AppData\Local\Temp\si58.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 2 2
@@ -117,114 +117,114 @@ STRING 800-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Display.X.production.obj
-7EE cinit CODE >810:C:\Users\shu\AppData\Local\Temp\sh20.
-7EE cinit CODE >813:C:\Users\shu\AppData\Local\Temp\sh20.
-7EE cinit CODE >855:C:\Users\shu\AppData\Local\Temp\sh20.
-7EF cinit CODE >856:C:\Users\shu\AppData\Local\Temp\sh20.
-7F0 cinit CODE >857:C:\Users\shu\AppData\Local\Temp\sh20.
-7F1 cinit CODE >858:C:\Users\shu\AppData\Local\Temp\sh20.
-7F2 cinit CODE >859:C:\Users\shu\AppData\Local\Temp\sh20.
-7F3 cinit CODE >860:C:\Users\shu\AppData\Local\Temp\sh20.
-7F4 cinit CODE >861:C:\Users\shu\AppData\Local\Temp\sh20.
-7F5 cinit CODE >862:C:\Users\shu\AppData\Local\Temp\sh20.
-7F6 cinit CODE >863:C:\Users\shu\AppData\Local\Temp\sh20.
-7F7 cinit CODE >864:C:\Users\shu\AppData\Local\Temp\sh20.
-7F9 cinit CODE >869:C:\Users\shu\AppData\Local\Temp\sh20.
-7FA cinit CODE >870:C:\Users\shu\AppData\Local\Temp\sh20.
-7FB cinit CODE >871:C:\Users\shu\AppData\Local\Temp\sh20.
-7FC cinit CODE >872:C:\Users\shu\AppData\Local\Temp\sh20.
-7FD cinit CODE >878:C:\Users\shu\AppData\Local\Temp\sh20.
-7FD cinit CODE >880:C:\Users\shu\AppData\Local\Temp\sh20.
-7FE cinit CODE >881:C:\Users\shu\AppData\Local\Temp\sh20.
-55A text16 CODE >105:C:\Users\shu\Desktop\Display.X\display.c
-55A text16 CODE >106:C:\Users\shu\Desktop\Display.X\display.c
-55C text16 CODE >107:C:\Users\shu\Desktop\Display.X\display.c
-55D text16 CODE >108:C:\Users\shu\Desktop\Display.X\display.c
-5C4 text15 CODE >96:C:\Users\shu\Desktop\Display.X\display.c
-5C4 text15 CODE >97:C:\Users\shu\Desktop\Display.X\display.c
-5C7 text15 CODE >98:C:\Users\shu\Desktop\Display.X\display.c
-5CD text15 CODE >99:C:\Users\shu\Desktop\Display.X\display.c
-56B text14 CODE >83:C:\Users\shu\Desktop\Display.X\display.c
-573 text13 CODE >84:C:\Users\shu\Desktop\Display.X\display.c
-57B text12 CODE >85:C:\Users\shu\Desktop\Display.X\display.c
-583 text11 CODE >86:C:\Users\shu\Desktop\Display.X\display.c
-58B text10 CODE >87:C:\Users\shu\Desktop\Display.X\display.c
-593 text9 CODE >88:C:\Users\shu\Desktop\Display.X\display.c
-59B text8 CODE >89:C:\Users\shu\Desktop\Display.X\display.c
-5A3 text7 CODE >90:C:\Users\shu\Desktop\Display.X\display.c
-668 text6 CODE >68:C:\Users\shu\Desktop\Display.X\display.c
-668 text6 CODE >69:C:\Users\shu\Desktop\Display.X\display.c
-671 text6 CODE >70:C:\Users\shu\Desktop\Display.X\display.c
-681 text6 CODE >71:C:\Users\shu\Desktop\Display.X\display.c
-694 text6 CODE >72:C:\Users\shu\Desktop\Display.X\display.c
-6AA text6 CODE >73:C:\Users\shu\Desktop\Display.X\display.c
-6BE text6 CODE >74:C:\Users\shu\Desktop\Display.X\display.c
-6D2 text6 CODE >75:C:\Users\shu\Desktop\Display.X\display.c
-6E6 text6 CODE >76:C:\Users\shu\Desktop\Display.X\display.c
-6F9 text6 CODE >77:C:\Users\shu\Desktop\Display.X\display.c
-5D4 text5 CODE >114:C:\Users\shu\Desktop\Display.X\display.c
-5D4 text5 CODE >116:C:\Users\shu\Desktop\Display.X\display.c
-5DE text5 CODE >117:C:\Users\shu\Desktop\Display.X\display.c
-5E7 text5 CODE >116:C:\Users\shu\Desktop\Display.X\display.c
-6FA text4 CODE >22:C:\Users\shu\Desktop\Display.X\display.c
-6FC text4 CODE >25:C:\Users\shu\Desktop\Display.X\display.c
-709 text4 CODE >26:C:\Users\shu\Desktop\Display.X\display.c
-70C text4 CODE >29:C:\Users\shu\Desktop\Display.X\display.c
-718 text4 CODE >30:C:\Users\shu\Desktop\Display.X\display.c
-727 text4 CODE >31:C:\Users\shu\Desktop\Display.X\display.c
-736 text4 CODE >32:C:\Users\shu\Desktop\Display.X\display.c
-745 text4 CODE >33:C:\Users\shu\Desktop\Display.X\display.c
-754 text4 CODE >34:C:\Users\shu\Desktop\Display.X\display.c
-763 text4 CODE >35:C:\Users\shu\Desktop\Display.X\display.c
-772 text4 CODE >36:C:\Users\shu\Desktop\Display.X\display.c
-781 text4 CODE >37:C:\Users\shu\Desktop\Display.X\display.c
-790 text4 CODE >38:C:\Users\shu\Desktop\Display.X\display.c
-79F text4 CODE >39:C:\Users\shu\Desktop\Display.X\display.c
-7AF text4 CODE >40:C:\Users\shu\Desktop\Display.X\display.c
-7BA text4 CODE >41:C:\Users\shu\Desktop\Display.X\display.c
-7BE text4 CODE >44:C:\Users\shu\Desktop\Display.X\display.c
-7CF text4 CODE >46:C:\Users\shu\Desktop\Display.X\display.c
-7D6 text4 CODE >47:C:\Users\shu\Desktop\Display.X\display.c
-7DE text4 CODE >48:C:\Users\shu\Desktop\Display.X\display.c
-7E5 text4 CODE >49:C:\Users\shu\Desktop\Display.X\display.c
-7E8 text4 CODE >25:C:\Users\shu\Desktop\Display.X\display.c
-5EC text3 CODE >58:C:\Users\shu\Desktop\Display.X\display.c
-5EC text3 CODE >59:C:\Users\shu\Desktop\Display.X\display.c
-5F5 text3 CODE >60:C:\Users\shu\Desktop\Display.X\display.c
-5FD text3 CODE >61:C:\Users\shu\Desktop\Display.X\display.c
-604 text3 CODE >62:C:\Users\shu\Desktop\Display.X\display.c
-605 text2 CODE >52:C:\Users\shu\Desktop\Display.X\main.c
-605 text2 CODE >57:C:\Users\shu\Desktop\Display.X\main.c
-613 text2 CODE >58:C:\Users\shu\Desktop\Display.X\main.c
-618 text2 CODE >59:C:\Users\shu\Desktop\Display.X\main.c
-61C text2 CODE >60:C:\Users\shu\Desktop\Display.X\main.c
-629 text2 CODE >63:C:\Users\shu\Desktop\Display.X\main.c
-631 text2 CODE >60:C:\Users\shu\Desktop\Display.X\main.c
-641 text2 CODE >57:C:\Users\shu\Desktop\Display.X\main.c
-651 text2 CODE >67:C:\Users\shu\Desktop\Display.X\main.c
-65F text2 CODE >69:C:\Users\shu\Desktop\Display.X\main.c
-662 text2 CODE >67:C:\Users\shu\Desktop\Display.X\main.c
-5B7 text1 CODE >42:C:\Users\shu\Desktop\Display.X\main.c
-5B7 text1 CODE >43:C:\Users\shu\Desktop\Display.X\main.c
-5BA text1 CODE >44:C:\Users\shu\Desktop\Display.X\main.c
-5BC text1 CODE >45:C:\Users\shu\Desktop\Display.X\main.c
-5BD text1 CODE >46:C:\Users\shu\Desktop\Display.X\main.c
-5BF text1 CODE >47:C:\Users\shu\Desktop\Display.X\main.c
-5C0 text1 CODE >48:C:\Users\shu\Desktop\Display.X\main.c
-5C2 text1 CODE >49:C:\Users\shu\Desktop\Display.X\main.c
-5C3 text1 CODE >50:C:\Users\shu\Desktop\Display.X\main.c
-564 maintext CODE >32:C:\Users\shu\Desktop\Display.X\main.c
-564 maintext CODE >33:C:\Users\shu\Desktop\Display.X\main.c
-567 maintext CODE >36:C:\Users\shu\Desktop\Display.X\main.c
-56A maintext CODE >35:C:\Users\shu\Desktop\Display.X\main.c
-55E inittext CODE >844:C:\Users\shu\AppData\Local\Temp\sh20.
-55E inittext CODE >845:C:\Users\shu\AppData\Local\Temp\sh20.
-55F inittext CODE >846:C:\Users\shu\AppData\Local\Temp\sh20.
-55F inittext CODE >847:C:\Users\shu\AppData\Local\Temp\sh20.
-560 inittext CODE >848:C:\Users\shu\AppData\Local\Temp\sh20.
-561 inittext CODE >849:C:\Users\shu\AppData\Local\Temp\sh20.
-562 inittext CODE >850:C:\Users\shu\AppData\Local\Temp\sh20.
-563 inittext CODE >851:C:\Users\shu\AppData\Local\Temp\sh20.
+7EE cinit CODE >810:C:\Users\shu\AppData\Local\Temp\si58.
+7EE cinit CODE >813:C:\Users\shu\AppData\Local\Temp\si58.
+7EE cinit CODE >855:C:\Users\shu\AppData\Local\Temp\si58.
+7EF cinit CODE >856:C:\Users\shu\AppData\Local\Temp\si58.
+7F0 cinit CODE >857:C:\Users\shu\AppData\Local\Temp\si58.
+7F1 cinit CODE >858:C:\Users\shu\AppData\Local\Temp\si58.
+7F2 cinit CODE >859:C:\Users\shu\AppData\Local\Temp\si58.
+7F3 cinit CODE >860:C:\Users\shu\AppData\Local\Temp\si58.
+7F4 cinit CODE >861:C:\Users\shu\AppData\Local\Temp\si58.
+7F5 cinit CODE >862:C:\Users\shu\AppData\Local\Temp\si58.
+7F6 cinit CODE >863:C:\Users\shu\AppData\Local\Temp\si58.
+7F7 cinit CODE >864:C:\Users\shu\AppData\Local\Temp\si58.
+7F9 cinit CODE >869:C:\Users\shu\AppData\Local\Temp\si58.
+7FA cinit CODE >870:C:\Users\shu\AppData\Local\Temp\si58.
+7FB cinit CODE >871:C:\Users\shu\AppData\Local\Temp\si58.
+7FC cinit CODE >872:C:\Users\shu\AppData\Local\Temp\si58.
+7FD cinit CODE >878:C:\Users\shu\AppData\Local\Temp\si58.
+7FD cinit CODE >880:C:\Users\shu\AppData\Local\Temp\si58.
+7FE cinit CODE >881:C:\Users\shu\AppData\Local\Temp\si58.
+55A text16 CODE >105:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+55A text16 CODE >106:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+55C text16 CODE >107:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+55D text16 CODE >108:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5C4 text15 CODE >96:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5C4 text15 CODE >97:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5C7 text15 CODE >98:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5CD text15 CODE >99:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+56B text14 CODE >83:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+573 text13 CODE >84:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+57B text12 CODE >85:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+583 text11 CODE >86:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+58B text10 CODE >87:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+593 text9 CODE >88:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+59B text8 CODE >89:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5A3 text7 CODE >90:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+668 text6 CODE >68:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+668 text6 CODE >69:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+671 text6 CODE >70:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+681 text6 CODE >71:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+694 text6 CODE >72:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+6AA text6 CODE >73:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+6BE text6 CODE >74:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+6D2 text6 CODE >75:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+6E6 text6 CODE >76:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+6F9 text6 CODE >77:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5D4 text5 CODE >114:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5D4 text5 CODE >116:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5DE text5 CODE >117:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5E7 text5 CODE >116:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+6FA text4 CODE >22:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+6FC text4 CODE >25:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+709 text4 CODE >26:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+70C text4 CODE >29:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+718 text4 CODE >30:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+727 text4 CODE >31:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+736 text4 CODE >32:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+745 text4 CODE >33:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+754 text4 CODE >34:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+763 text4 CODE >35:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+772 text4 CODE >36:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+781 text4 CODE >37:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+790 text4 CODE >38:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+79F text4 CODE >39:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+7AF text4 CODE >40:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+7BA text4 CODE >41:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+7BE text4 CODE >44:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+7CF text4 CODE >46:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+7D6 text4 CODE >47:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+7DE text4 CODE >48:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+7E5 text4 CODE >49:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+7E8 text4 CODE >25:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5EC text3 CODE >58:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5EC text3 CODE >59:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5F5 text3 CODE >60:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+5FD text3 CODE >61:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+604 text3 CODE >62:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
+605 text2 CODE >52:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+605 text2 CODE >57:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+613 text2 CODE >58:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+618 text2 CODE >59:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+61C text2 CODE >60:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+629 text2 CODE >61:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+631 text2 CODE >60:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+641 text2 CODE >57:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+651 text2 CODE >65:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+65F text2 CODE >66:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+662 text2 CODE >65:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5B7 text1 CODE >42:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5B7 text1 CODE >43:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5BA text1 CODE >44:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5BC text1 CODE >45:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5BD text1 CODE >46:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5BF text1 CODE >47:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5C0 text1 CODE >48:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5C2 text1 CODE >49:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+5C3 text1 CODE >50:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+564 maintext CODE >32:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+564 maintext CODE >33:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+567 maintext CODE >36:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+56A maintext CODE >35:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+55E inittext CODE >844:C:\Users\shu\AppData\Local\Temp\si58.
+55E inittext CODE >845:C:\Users\shu\AppData\Local\Temp\si58.
+55F inittext CODE >846:C:\Users\shu\AppData\Local\Temp\si58.
+55F inittext CODE >847:C:\Users\shu\AppData\Local\Temp\si58.
+560 inittext CODE >848:C:\Users\shu\AppData\Local\Temp\si58.
+561 inittext CODE >849:C:\Users\shu\AppData\Local\Temp\si58.
+562 inittext CODE >850:C:\Users\shu\AppData\Local\Temp\si58.
+563 inittext CODE >851:C:\Users\shu\AppData\Local\Temp\si58.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -252,14 +252,14 @@ ltemp2 86 0 ABS 0 - dist/default/production\Display.X.production.obj
 ltemp3 80 0 ABS 0 - dist/default/production\Display.X.production.obj
 set_num@num 72 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\shu\AppData\Local\Temp\sh20.obj
+___sp 0 0 STACK 2 stack C:\Users\shu\AppData\Local\Temp\si58.obj
 _demo C0A 0 CODE 0 text2 dist/default/production\Display.X.production.obj
 _init B6E 0 CODE 0 text1 dist/default/production\Display.X.production.obj
 _main AC8 0 CODE 0 maintext dist/default/production\Display.X.production.obj
 _wait BA8 0 CODE 0 text5 dist/default/production\Display.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
-start 4 0 CODE 0 init C:\Users\shu\AppData\Local\Temp\sh20.obj
+start 4 0 CODE 0 init C:\Users\shu\AppData\Local\Temp\si58.obj
 ttemp 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
 __size_of_demo 0 0 ABS 0 - dist/default/production\Display.X.production.obj
@@ -276,12 +276,12 @@ ttemp1 81 0 ABS 0 - dist/default/production\Display.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production\Display.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\Display.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\Display.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\sh20.obj
-intlevel1 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\sh20.obj
-intlevel2 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\sh20.obj
-intlevel3 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\sh20.obj
-intlevel4 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\sh20.obj
-intlevel5 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\sh20.obj
+intlevel0 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\si58.obj
+intlevel1 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\si58.obj
+intlevel2 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\si58.obj
+intlevel3 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\si58.obj
+intlevel4 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\si58.obj
+intlevel5 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\si58.obj
 __size_of_set_num 0 0 ABS 0 - dist/default/production\Display.X.production.obj
 wait@i 74 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
@@ -320,7 +320,7 @@ __end_of_light2 FDC 0 CODE 0 text4 dist/default/production\Display.X.production.
 light2@digit 22 0 BANK0 1 cstackBANK0 dist/default/production\Display.X.production.obj
 set_g@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Display.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\shu\AppData\Local\Temp\sh20.obj
+___int_sp 0 0 STACK 2 stack C:\Users\shu\AppData\Local\Temp\si58.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -473,7 +473,7 @@ set_e@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.produc
 _close2 AB4 0 CODE 0 text16 dist/default/production\Display.X.production.obj
 _error2 BD8 0 CODE 0 text3 dist/default/production\Display.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\shu\AppData\Local\Temp\sh20.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\shu\AppData\Local\Temp\si58.obj
 __pdataBANK0 31 0 BANK0 1 dataBANK0 dist/default/production\Display.X.production.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 set_d@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
@@ -519,8 +519,8 @@ __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Display.X.production.obj
 __Hinittext 0 0 ABS 0 inittext -
 set_p@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
 set_c@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
-stackhi 216F 0 ABS 0 - C:\Users\shu\AppData\Local\Temp\sh20.obj
-stacklo 2021 0 ABS 0 - C:\Users\shu\AppData\Local\Temp\sh20.obj
+stackhi 216F 0 ABS 0 - C:\Users\shu\AppData\Local\Temp\si58.obj
+stacklo 2021 0 ABS 0 - C:\Users\shu\AppData\Local\Temp\si58.obj
 _set_num CD0 0 CODE 0 text6 dist/default/production\Display.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Display.X.production.obj
 light2@i 23 0 BANK0 1 cstackBANK0 dist/default/production\Display.X.production.obj

@@ -5,6 +5,7 @@
  * Created on 2017/03/13, 23:34
  */
 
+// Include Guard
 #ifndef DISPLAY_H
 #define	DISPLAY_H
 

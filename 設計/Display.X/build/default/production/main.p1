@@ -2927,48 +2927,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 360  ]
 [e :U 359 ]
 {
-[; ;main.c: 63: light2( nums, dots );
-"63
+[; ;main.c: 61: light2( nums, dots );
+"61
 [e ( _light2 (2 , &U F2801 &U F2802 ]
-"64
+"62
 }
 "60
 [e ++ _j -> 1 `i ]
 [e $ < _j -> 100 `i 359  ]
 [e :U 360 ]
-"64
+"62
 }
-"65
+"63
 }
 "57
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 11 `i 356  ]
 [e :U 357 ]
-"65
+"63
 }
-[; ;main.c: 64: }
-[; ;main.c: 65: }
-[; ;main.c: 67: for (i = 0; i < 100; i++) {
-"67
+[; ;main.c: 62: }
+[; ;main.c: 63: }
+[; ;main.c: 65: for (i = 0; i < 100; i++) {
+"65
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 100 `i 362  ]
 [e $U 363  ]
 [e :U 362 ]
 {
-[; ;main.c: 69: error2();
-"69
+[; ;main.c: 66: error2();
+"66
 [e ( _error2 ..  ]
-"70
-}
 "67
+}
+"65
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 100 `i 362  ]
 [e :U 363 ]
-"70
+"67
 }
-[; ;main.c: 70: }
-[; ;main.c: 71: }
-"71
+[; ;main.c: 67: }
+[; ;main.c: 68: }
+"68
 [e :UE 355 ]
 }

@@ -11,7 +11,7 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"22 C:\Users\shu\Desktop\Display.X\display.c
+"22 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
 [v _light2 light2 `(v  1 e 1 0 ]
 "58
 [v _error2 error2 `(v  1 e 1 0 ]
@@ -39,7 +39,7 @@
 [v _close2 close2 `(v  1 e 1 0 ]
 "114
 [v _wait wait `(v  1 e 1 0 ]
-"32 C:\Users\shu\Desktop\Display.X\main.c
+"32 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "42
 [v _init init `(v  1 e 1 0 ]
@@ -79,7 +79,7 @@
 [v _RB6 RB6 `VEb  1 e 0 @110 ]
 "7242
 [v _RB7 RB7 `VEb  1 e 0 @111 ]
-"32 C:\Users\shu\Desktop\Display.X\main.c
+"32 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "40
@@ -99,9 +99,9 @@
 [v demo@nums nums `[2]i  1 s 4 nums ]
 "54
 [v demo@dots dots `[2]i  1 s 4 dots ]
-"71
+"68
 } 0
-"58 C:\Users\shu\Desktop\Display.X\display.c
+"58 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
 [v _error2 error2 `(v  1 e 1 0 ]
 {
 "59

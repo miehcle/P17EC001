@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
-                                                                                               Wed Mar 15 18:18:19 2017
+                                                                                               Wed Mar 15 18:37:23 2017
 
 Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
      1                           	processor	16F1827
@@ -837,7 +837,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    831  0628  2E41               	goto	l920
    832  0629                     l914:	
    833                           
-   834                           ;main.c: 63: light2( nums, dots );
+   834                           ;main.c: 61: light2( nums, dots );
    835  0629  3039               	movlw	(low (demo@dots| 0))& (0+255)
    836  062A  00FC               	movwf	??_demo
    837  062B  087C               	movf	??_demo,w
@@ -881,9 +881,9 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    875  0650  2E13               	goto	l906
    876  0651                     l922:	
    877                           
-   878                           ;main.c: 64: }
-   879                           ;main.c: 65: }
-   880                           ;main.c: 67: for (i = 0; i < 100; i++) {
+   878                           ;main.c: 62: }
+   879                           ;main.c: 63: }
+   880                           ;main.c: 65: for (i = 0; i < 100; i++) {
    881  0651  0020               	movlb	0	; select bank0
    882  0652  01AF               	clrf	demo@i
    883  0653  01B0               	clrf	demo@i+1
@@ -901,7 +901,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    895  065D  1803               	btfsc	3,0
    896  065E  0008               	return
    897                           
-   898                           ;main.c: 69: error2();
+   898                           ;main.c: 66: error2();
    899  065F  3185  25EC  3186   	fcall	_error2
    900  0662  3001               	movlw	1
    901  0663  0020               	movlb	0	; select bank0
@@ -2373,7 +2373,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.38 build -256452561 
-Symbol Table                                                                                   Wed Mar 15 18:18:19 2017
+Symbol Table                                                                                   Wed Mar 15 18:37:23 2017
 
              __CFG_CP$ON 0000              __CFG_CPD$ON 0000                      l121 05D6  
                     l816 05CD                      l840 0727                      l920 0641  

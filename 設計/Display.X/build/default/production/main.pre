@@ -3796,14 +3796,11 @@ for (i = 0; i < 11; i++) {
 nums[0] = i;
 nums[1] = i;
 for (j = 0; j < 100; j++) {
-
-
 light2( nums, dots );
 }
 }
 
 for (i = 0; i < 100; i++) {
-
 error2();
 }
 }

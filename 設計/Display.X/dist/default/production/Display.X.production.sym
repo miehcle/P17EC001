@@ -384,7 +384,7 @@ inittext ABC AC7 CODE ABC 0
 text16 AB4 ABB CODE AB4 0
 %locals
 dist/default/production\Display.X.production.obj
-C:\Users\shu\AppData\Local\Temp\sh20.
+C:\Users\shu\AppData\Local\Temp\si58.
 810 7EE 0 CODE 0
 813 7EE 0 CODE 0
 855 7EE 0 CODE 0
@@ -431,12 +431,12 @@ main.c
 58 613 0 CODE 0
 59 618 0 CODE 0
 60 61C 0 CODE 0
-63 629 0 CODE 0
+61 629 0 CODE 0
 60 631 0 CODE 0
 57 641 0 CODE 0
-67 651 0 CODE 0
-69 65F 0 CODE 0
-67 662 0 CODE 0
+65 651 0 CODE 0
+66 65F 0 CODE 0
+65 662 0 CODE 0
 display.c
 58 5EC 0 CODE 0
 59 5EC 0 CODE 0
