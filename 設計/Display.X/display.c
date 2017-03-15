@@ -14,7 +14,7 @@
 /**
  * Call this function.
  * 
- * When you throw {0, 2} as digit and {OFF, ON} as digit[1] to this function,
+ * When you throw {0, 2} as digit and {OFF, ON} as dot to this function,
  * you will see [2.0]
  * @param digit
  * @param dotm.,
