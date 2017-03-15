@@ -1,0 +1,197 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"22 C:\Users\shu\Desktop\Display.X\display.c
+[v _light2 light2 `(v  1 e 1 0 ]
+"58
+[v _error2 error2 `(v  1 e 1 0 ]
+"68
+[v _set_num set_num `(v  1 e 1 0 ]
+"83
+[v _set_a set_a `(v  1 e 1 0 ]
+"84
+[v _set_b set_b `(v  1 e 1 0 ]
+"85
+[v _set_c set_c `(v  1 e 1 0 ]
+"86
+[v _set_d set_d `(v  1 e 1 0 ]
+"87
+[v _set_e set_e `(v  1 e 1 0 ]
+"88
+[v _set_f set_f `(v  1 e 1 0 ]
+"89
+[v _set_g set_g `(v  1 e 1 0 ]
+"90
+[v _set_p set_p `(v  1 e 1 0 ]
+"96
+[v _open2 open2 `(v  1 e 1 0 ]
+"105
+[v _close2 close2 `(v  1 e 1 0 ]
+"114
+[v _wait wait `(v  1 e 1 0 ]
+"32 C:\Users\shu\Desktop\Display.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"42
+[v _init init `(v  1 e 1 0 ]
+"52
+[v _demo demo `(v  1 e 1 0 ]
+"414 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1827.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"475
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"1120
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1181
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1664
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2797
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2848
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"7212
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
+"7214
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
+"7216
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"7218
+[v _RA3 RA3 `VEb  1 e 0 @99 ]
+"7226
+[v _RA7 RA7 `VEb  1 e 0 @103 ]
+"7230
+[v _RB1 RB1 `VEb  1 e 0 @105 ]
+"7232
+[v _RB2 RB2 `VEb  1 e 0 @106 ]
+"7238
+[v _RB5 RB5 `VEb  1 e 0 @109 ]
+"7240
+[v _RB6 RB6 `VEb  1 e 0 @110 ]
+"7242
+[v _RB7 RB7 `VEb  1 e 0 @111 ]
+"32 C:\Users\shu\Desktop\Display.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"40
+} 0
+"42
+[v _init init `(v  1 e 1 0 ]
+{
+"50
+} 0
+"52
+[v _demo demo `(v  1 e 1 0 ]
+{
+"55
+[v demo@i i `i  1 a 2 15 ]
+[v demo@j j `i  1 a 2 13 ]
+"53
+[v demo@nums nums `[2]i  1 s 4 nums ]
+"54
+[v demo@dots dots `[2]i  1 s 4 dots ]
+"71
+} 0
+"58 C:\Users\shu\Desktop\Display.X\display.c
+[v _error2 error2 `(v  1 e 1 0 ]
+{
+"59
+[v error2@error_digit error_digit `[2]i  1 a 4 9 ]
+"60
+[v error2@error_dot error_dot `[2]i  1 a 4 5 ]
+"58
+[v error2@F2802 F2802 `[2]i  1 s 4 F2802 ]
+"59
+[v error2@F2804 F2804 `[2]i  1 s 4 F2804 ]
+"62
+} 0
+"22
+[v _light2 light2 `(v  1 e 1 0 ]
+{
+[v light2@digit digit `*.4i  1 a 1 wreg ]
+"23
+[v light2@i i `i  1 a 2 3 ]
+"24
+[v light2@num num `i  1 a 2 0 ]
+"22
+[v light2@digit digit `*.4i  1 a 1 wreg ]
+[v light2@dot dot `*.4i  1 p 1 7 ]
+"25
+[v light2@digit digit `*.4i  1 a 1 2 ]
+"51
+} 0
+"114
+[v _wait wait `(v  1 e 1 0 ]
+{
+"115
+[v wait@i i `i  1 a 2 4 ]
+"114
+[v wait@wait_time wait_time `ui  1 p 2 0 ]
+"119
+} 0
+"68
+[v _set_num set_num `(v  1 e 1 0 ]
+{
+[v set_num@num num `i  1 p 2 2 ]
+"77
+} 0
+"90
+[v _set_p set_p `(v  1 e 1 0 ]
+{
+[v set_p@on_off on_off `i  1 p 2 0 ]
+} 0
+"89
+[v _set_g set_g `(v  1 e 1 0 ]
+{
+[v set_g@on_off on_off `i  1 p 2 0 ]
+} 0
+"88
+[v _set_f set_f `(v  1 e 1 0 ]
+{
+[v set_f@on_off on_off `i  1 p 2 0 ]
+} 0
+"87
+[v _set_e set_e `(v  1 e 1 0 ]
+{
+[v set_e@on_off on_off `i  1 p 2 0 ]
+} 0
+"86
+[v _set_d set_d `(v  1 e 1 0 ]
+{
+[v set_d@on_off on_off `i  1 p 2 0 ]
+} 0
+"85
+[v _set_c set_c `(v  1 e 1 0 ]
+{
+[v set_c@on_off on_off `i  1 p 2 0 ]
+} 0
+"84
+[v _set_b set_b `(v  1 e 1 0 ]
+{
+[v set_b@on_off on_off `i  1 p 2 0 ]
+} 0
+"83
+[v _set_a set_a `(v  1 e 1 0 ]
+{
+[v set_a@on_off on_off `i  1 p 2 0 ]
+} 0
+"96
+[v _open2 open2 `(v  1 e 1 0 ]
+{
+[v open2@digit_select digit_select `i  1 p 2 0 ]
+"100
+} 0
+"105
+[v _close2 close2 `(v  1 e 1 0 ]
+{
+"108
+} 0

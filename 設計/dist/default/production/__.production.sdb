@@ -1,0 +1,325 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"74 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\main.c
+[v _set_A set_A `(v  1 e 1 0 ]
+"75
+[v _set_B set_B `(v  1 e 1 0 ]
+"76
+[v _set_C set_C `(v  1 e 1 0 ]
+"77
+[v _set_D set_D `(v  1 e 1 0 ]
+"78
+[v _set_E set_E `(v  1 e 1 0 ]
+"79
+[v _set_F set_F `(v  1 e 1 0 ]
+"80
+[v _set_G set_G `(v  1 e 1 0 ]
+"81
+[v _set_DP set_DP `(v  1 e 1 0 ]
+"82
+[v _set_BIT0 set_BIT0 `(v  1 e 1 0 ]
+"83
+[v _set_BIT1 set_BIT1 `(v  1 e 1 0 ]
+"85
+[v _main main `(i  1 e 2 0 ]
+"93
+[v _init init `(v  1 e 1 0 ]
+"105
+[v _loop loop `(v  1 e 1 0 ]
+"109
+[v _ad_conv ad_conv `(i  1 e 2 0 ]
+"121
+[v _da_conv da_conv `(d  1 e 3 0 ]
+"127
+[v _wait wait `(v  1 e 1 0 ]
+"134
+[v _set_disp set_disp `(v  1 e 1 0 ]
+"145
+[v _disp disp `(v  1 e 1 0 ]
+"187
+[v _open open `(v  1 e 1 0 ]
+"201
+[v _close close `(v  1 e 1 0 ]
+"414 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1827.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"475
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"1120
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1181
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1664
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1802
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1821
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1840
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+"1919
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2797
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2848
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"6966
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
+"7212
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
+"7214
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
+"7216
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"7218
+[v _RA3 RA3 `VEb  1 e 0 @99 ]
+"7224
+[v _RA6 RA6 `VEb  1 e 0 @102 ]
+"7226
+[v _RA7 RA7 `VEb  1 e 0 @103 ]
+"7236
+[v _RB4 RB4 `VEb  1 e 0 @108 ]
+"7238
+[v _RB5 RB5 `VEb  1 e 0 @109 ]
+"7240
+[v _RB6 RB6 `VEb  1 e 0 @110 ]
+"7242
+[v _RB7 RB7 `VEb  1 e 0 @111 ]
+"46 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\main.c
+[v _led_disp led_disp `[12][7]i  1 e 168 @8392 ]
+"85
+[v _main main `(i  1 e 2 0 ]
+{
+"91
+} 0
+"105
+[v _loop loop `(v  1 e 1 0 ]
+{
+"107
+} 0
+"145
+[v _disp disp `(v  1 e 1 0 ]
+{
+"146
+[v disp@digits digits `[4]i  1 a 8 64 ]
+"147
+[v disp@i i `i  1 a 2 72 ]
+"149
+[v disp@dp_index dp_index `i  1 a 2 62 ]
+"150
+[v disp@over over `i  1 a 2 60 ]
+"148
+[v disp@dp dp `i  1 a 2 58 ]
+"145
+[v disp@num num `d  1 p 3 53 ]
+"185
+} 0
+"127
+[v _wait wait `(v  1 e 1 0 ]
+{
+"128
+[v wait@i i `i  1 a 2 4 ]
+"127
+[v wait@wait_time wait_time `ui  1 p 2 0 ]
+"132
+} 0
+"134
+[v _set_disp set_disp `(v  1 e 1 0 ]
+{
+[v set_disp@disp disp `*.39i  1 p 2 6 ]
+[v set_disp@dp dp `i  1 p 2 8 ]
+"143
+} 0
+"80
+[v _set_G set_G `(v  1 e 1 0 ]
+{
+[v set_G@on_off on_off `i  1 p 2 0 ]
+} 0
+"79
+[v _set_F set_F `(v  1 e 1 0 ]
+{
+[v set_F@on_off on_off `i  1 p 2 0 ]
+} 0
+"78
+[v _set_E set_E `(v  1 e 1 0 ]
+{
+[v set_E@on_off on_off `i  1 p 2 0 ]
+} 0
+"81
+[v _set_DP set_DP `(v  1 e 1 0 ]
+{
+[v set_DP@on_off on_off `i  1 p 2 0 ]
+} 0
+"77
+[v _set_D set_D `(v  1 e 1 0 ]
+{
+[v set_D@on_off on_off `i  1 p 2 0 ]
+} 0
+"76
+[v _set_C set_C `(v  1 e 1 0 ]
+{
+[v set_C@on_off on_off `i  1 p 2 0 ]
+} 0
+"75
+[v _set_B set_B `(v  1 e 1 0 ]
+{
+[v set_B@on_off on_off `i  1 p 2 0 ]
+} 0
+"74
+[v _set_A set_A `(v  1 e 1 0 ]
+{
+[v set_A@on_off on_off `i  1 p 2 0 ]
+} 0
+"187
+[v _open open `(v  1 e 1 0 ]
+{
+[v open@select select `i  1 p 2 2 ]
+"199
+} 0
+"201
+[v _close close `(v  1 e 1 0 ]
+{
+"204
+} 0
+"83
+[v _set_BIT1 set_BIT1 `(v  1 e 1 0 ]
+{
+[v set_BIT1@open_close open_close `i  1 p 2 0 ]
+} 0
+"82
+[v _set_BIT0 set_BIT0 `(v  1 e 1 0 ]
+{
+[v set_BIT0@open_close open_close `i  1 p 2 0 ]
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 41 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 45 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 40 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 32 ]
+"73
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 52 ]
+[v ___awmod@counter counter `uc  1 a 1 51 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 46 ]
+[v ___awmod@dividend dividend `i  1 p 2 48 ]
+"35
+} 0
+"121 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\main.c
+[v _da_conv da_conv `(d  1 e 3 0 ]
+{
+"122
+[v da_conv@analog analog `d  1 a 3 35 ]
+"121
+[v da_conv@digital digital `i  1 p 2 32 ]
+"125
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"56 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 27 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 31 ]
+[v ___ftdiv@exp exp `uc  1 a 1 30 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 26 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 16 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 19 ]
+"86
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"109 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\main.c
+[v _ad_conv ad_conv `(i  1 e 2 0 ]
+{
+"110
+[v ad_conv@temp temp `i  1 a 2 9 ]
+"109
+[v ad_conv@pin_select pin_select `i  1 p 2 0 ]
+"119
+} 0
+"93
+[v _init init `(v  1 e 1 0 ]
+{
+"103
+} 0
