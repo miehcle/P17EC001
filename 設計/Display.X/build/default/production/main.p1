@@ -18,9 +18,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PORTA `Vuc ~T0 @X0 0 e@12 ]
 "475
 [v _PORTB `Vuc ~T0 @X0 0 e@13 ]
-"43 display.h
+"44 display.h
 [v _light2 `(v ~T0 @X0 0 ef2`*i`*i ]
-"47
+"48
 [v _error2 `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -2776,20 +2776,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 186: extern unsigned char __resetbits;
 [; ;pic.h: 187: extern __bit __powerdown;
 [; ;pic.h: 188: extern __bit __timeout;
-[; ;display.h: 43: void light2(int digit[2], int dot[2]);
-[; ;display.h: 47: void error2();
-[; ;display.h: 50: void set_num(int num);
-[; ;display.h: 51: void set_a(int on_off);
-[; ;display.h: 52: void set_b(int on_off);
-[; ;display.h: 53: void set_c(int on_off);
-[; ;display.h: 54: void set_d(int on_off);
-[; ;display.h: 55: void set_e(int on_off);
-[; ;display.h: 56: void set_f(int on_off);
-[; ;display.h: 57: void set_g(int on_off);
-[; ;display.h: 58: void set_p(int on_off);
-[; ;display.h: 60: void open2(int digit_select);
-[; ;display.h: 64: void close2();
-[; ;display.h: 67: void wait(unsigned int wait_time);
+[; ;display.h: 44: void light2(int digit[2], int dot[2]);
+[; ;display.h: 48: void error2();
+[; ;display.h: 51: void set_num(int num);
+[; ;display.h: 52: void set_a(int on_off);
+[; ;display.h: 53: void set_b(int on_off);
+[; ;display.h: 54: void set_c(int on_off);
+[; ;display.h: 55: void set_d(int on_off);
+[; ;display.h: 56: void set_e(int on_off);
+[; ;display.h: 57: void set_f(int on_off);
+[; ;display.h: 58: void set_g(int on_off);
+[; ;display.h: 59: void set_p(int on_off);
+[; ;display.h: 61: void open2(int digit_select);
+[; ;display.h: 65: void close2();
+[; ;display.h: 68: void wait(unsigned int wait_time);
 "12 main.c
 [p x FOSC=INTOSC ]
 "13

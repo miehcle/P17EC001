@@ -1,27 +1,27 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"50 display.h
+"51 display.h
 [v _set_num `(v ~T0 @X0 0 ef1`i ]
-"60
+"61
 [v _open2 `(v ~T0 @X0 0 ef1`i ]
-"67
+"68
 [v _wait `(v ~T0 @X0 0 ef1`ui ]
-"64
+"65
 [v _close2 `(v ~T0 @X0 0 ef ]
-"51
-[v _set_a `(v ~T0 @X0 0 ef1`i ]
 "52
-[v _set_b `(v ~T0 @X0 0 ef1`i ]
+[v _set_a `(v ~T0 @X0 0 ef1`i ]
 "53
-[v _set_c `(v ~T0 @X0 0 ef1`i ]
+[v _set_b `(v ~T0 @X0 0 ef1`i ]
 "54
-[v _set_d `(v ~T0 @X0 0 ef1`i ]
+[v _set_c `(v ~T0 @X0 0 ef1`i ]
 "55
-[v _set_e `(v ~T0 @X0 0 ef1`i ]
+[v _set_d `(v ~T0 @X0 0 ef1`i ]
 "56
-[v _set_f `(v ~T0 @X0 0 ef1`i ]
+[v _set_e `(v ~T0 @X0 0 ef1`i ]
 "57
-[v _set_g `(v ~T0 @X0 0 ef1`i ]
+[v _set_f `(v ~T0 @X0 0 ef1`i ]
 "58
+[v _set_g `(v ~T0 @X0 0 ef1`i ]
+"59
 [v _set_p `(v ~T0 @X0 0 ef1`i ]
 "7232 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1827.h
 [v _RB2 `Vb ~T0 @X0 0 e@106 ]
@@ -2801,20 +2801,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 186: extern unsigned char __resetbits;
 [; ;pic.h: 187: extern __bit __powerdown;
 [; ;pic.h: 188: extern __bit __timeout;
-[; ;display.h: 43: void light2(int digit[2], int dot[2]);
-[; ;display.h: 47: void error2();
-[; ;display.h: 50: void set_num(int num);
-[; ;display.h: 51: void set_a(int on_off);
-[; ;display.h: 52: void set_b(int on_off);
-[; ;display.h: 53: void set_c(int on_off);
-[; ;display.h: 54: void set_d(int on_off);
-[; ;display.h: 55: void set_e(int on_off);
-[; ;display.h: 56: void set_f(int on_off);
-[; ;display.h: 57: void set_g(int on_off);
-[; ;display.h: 58: void set_p(int on_off);
-[; ;display.h: 60: void open2(int digit_select);
-[; ;display.h: 64: void close2();
-[; ;display.h: 67: void wait(unsigned int wait_time);
+[; ;display.h: 44: void light2(int digit[2], int dot[2]);
+[; ;display.h: 48: void error2();
+[; ;display.h: 51: void set_num(int num);
+[; ;display.h: 52: void set_a(int on_off);
+[; ;display.h: 53: void set_b(int on_off);
+[; ;display.h: 54: void set_c(int on_off);
+[; ;display.h: 55: void set_d(int on_off);
+[; ;display.h: 56: void set_e(int on_off);
+[; ;display.h: 57: void set_f(int on_off);
+[; ;display.h: 58: void set_g(int on_off);
+[; ;display.h: 59: void set_p(int on_off);
+[; ;display.h: 61: void open2(int digit_select);
+[; ;display.h: 65: void close2();
+[; ;display.h: 68: void wait(unsigned int wait_time);
 "22 display.c
 [v _light2 `(v ~T0 @X0 1 ef2`*i`*i ]
 {
