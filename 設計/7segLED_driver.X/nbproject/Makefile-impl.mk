@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=8segLED_driver.X
+PROJECTNAME=7segLED_driver.X
 
 # Active Configuration
 DEFAULTCONF=default
