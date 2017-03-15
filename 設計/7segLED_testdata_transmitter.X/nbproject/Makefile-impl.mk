@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=8segLED_testdata_transmitter.X
+PROJECTNAME=7segLED_testdata_transmitter.X
 
 # Active Configuration
 DEFAULTCONF=default

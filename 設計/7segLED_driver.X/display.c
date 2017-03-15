@@ -9,7 +9,7 @@
 #include "display.h"
 
 // For using __delay_ms()
-#define _XTAL_FREQ  16000000
+#define _XTAL_FREQ  8000000
 
 /**
  * Call this function.
@@ -84,7 +84,7 @@ void set_a(int on_off) { RB2 = on_off; }
 void set_b(int on_off) { RB5 = on_off; }
 void set_c(int on_off) { RB6 = on_off; }
 void set_d(int on_off) { RB7 = on_off; }
-void set_e(int on_off) { RA6 = on_off; }
+void set_e(int on_off) { RB1 = on_off; }
 void set_f(int on_off) { RA7 = on_off; }
 void set_g(int on_off) { RA0 = on_off; }
 void set_p(int on_off) { RA1 = on_off; }

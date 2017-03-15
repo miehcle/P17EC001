@@ -3,12 +3,12 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>8segLED_testdata_transmitter</name>
-            <creation-uuid>0d5b99c2-e262-47fb-8474-119aabb39a70</creation-uuid>
+            <name>7segLED_driver</name>
+            <creation-uuid>18401131-342b-45ff-9a57-39fac8d39a80</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

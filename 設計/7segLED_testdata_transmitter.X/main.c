@@ -12,7 +12,7 @@
 #pragma config WRT = OFF, PLLEN = OFF, STVREN = ON, BORV = HI, LVP = OFF
 
 #define RA0_PIN 0b00000011   //RA0pin
-#define RA1_PIN 0b00001011    //RA1pin
+#define RA1_PIN 0b00000111    //RA1pin
 #define ADDR 0x02
 
 int adconv(int pin_select);
