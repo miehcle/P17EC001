@@ -7,13 +7,13 @@
 
 
 #include <xc.h>
+#include "display.h"
 
 #pragma config FOSC = INTOSC, WDTE = OFF, PWRTE = ON, MCLRE = OFF, CP = OFF, CPD = OFF, BOREN = ON, CLKOUTEN = OFF, IESO = OFF, FCMEN = OFF
 #pragma config WRT = OFF, PLLEN = OFF, STVREN = ON, BORV = HI, LVP = OFF
 
 #define ADDR 0x02
 #define MAX_NUM_MUL_TEN 150             //max num * 10, int num
-#define _XTAL_FREQ 16000000
 
 void interrupt_I2C(void);
 void interrupt interruption(void);
@@ -22,39 +22,9 @@ void init_Timer4(void);
 void init_I2C_slave(char addr);
 void loop(void);
 void num_digits_conv(unsigned char data,char *digits);
-void disp(char digit_one, char digit_ten, bit dp_check);
-void error(void);
-void open(bit digit);
-void close(void);
 
 unsigned char received_data = 0;
 unsigned char counter = 0;
-unsigned char paternA[11][2] = {    //left = dp off, right = dp on
-    { 0b11000000, 0b11000010 },     //0
-    { 0b00000000, 0b00000010 },     //1
-    { 0b01000001, 0b01000011 },     //2
-    { 0b00000001, 0b00000011 },     //3
-    { 0b10000001, 0b10000011 },     //4
-    { 0b10000001, 0b10000011 },     //5
-    { 0b11000001, 0b11000011 },     //6
-    { 0b00000000, 0b00000010 },     //7
-    { 0b11000001, 0b11000011 },     //8
-    { 0b10000001, 0b10000011 },     //9
-    { 0b11000001, 0b11000011 }      //E
-};
-unsigned char paternB[11] = {
-    0b11100100,                     //0
-    0b01100000,                     //1
-    0b10100100,                     //2
-    0b11100100,                     //3
-    0b01100000,                     //4
-    0b11000100,                     //5
-    0b11000100,                     //6
-    0b01100100,                     //7
-    0b11100100,                     //8
-    0b11100100,                     //9
-    0b10000100                      //E
-};
 
 
 void interrupt_I2C(void) {
@@ -111,7 +81,7 @@ void init(void) {
 
 void init_Timer4(void) {
     T4CON = 0b01111011;         //1:16 postscaler, Timer4 off, prescaler is 64
-    PR4 = 249;                  //15.625Hz timer
+    PR4 = 243;                  //16Hz timer
     TMR4IE = 1;                 //Timer4 interrupt enabled
     TMR4 = 0;                   //Timer4 init
     TMR4ON = 1;                 //Timer4 on
@@ -129,54 +99,29 @@ void init_I2C_slave(char addr) {
 }
 
 void loop(void) {
-    char digits[3];
+    int digit[2];
+    int dot[2];
     
     if (counter < 16) {
-        num_digits_conv(received_data, digits);
-        if(digits[2] == 0) disp(digits[0],digits[1],0);     //under 10
-        else disp(digits[1],digits[2],1);                   //over 10
+        num_digits_conv(received_data, digit, dot);
+        light2(digit, dot);
     } else {
-        error();
+        error2();
     }
 }
 
-void num_digits_conv(unsigned char data,char *digits) {
+void num_digits_conv(unsigned char data, int digit[2], int dot[2]) {
     int num = (data * MAX_NUM_MUL_TEN) / 255;
-    for(int i = 0; i < 3; i++) {
-        *digits = num % 10;
+    
+    if (num >= 100) {
         num /= 10;
-        digits++;
+        dot[0] = ON;
+        dot[1] = OFF;
+    } else {
+        dot[0] = OFF;
+        dot[1] = ON;
     }
-}
-
-void disp(char digit_one, char digit_ten, bit dp_check) {
-    PORTA = paternA[digit_one][dp_check];
-    PORTB = paternB[digit_one];
-    open(0);
-    __Delay_ms(1);
-    close();
-    PORTA = paternA[digit_ten][!dp_check];
-    PORTB = paternB[digit_ten];
-    open(0);
-    __Delay_ms(1);
-    close();
-}
-
-void error() {
-    PORTA = paternA[10][1];
-    PORTB = paternB[10];
-    open(0);
-    open(1);
-    __delay_ms(2);
-    close();
-}
-
-void open(bit digit) {
-    if (digit = 0) RA2 = 1;
-    else RA3 = 1;
-}
-
-void close() {
-    PORTA = 0x00;
-    PORTB = 0x00;
+    
+        digit[0] = num % 10;
+        digit[1] = (num / 10) % 10;
 }
