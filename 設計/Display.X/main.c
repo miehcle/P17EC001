@@ -51,7 +51,7 @@ void init() {
 
 void demo() {
     static int nums[2];
-    static int dots[2] = { ON, OFF };
+    static int dots[2] = { ON, _OFF };
     int i, j;
     
     for (i = 0; i < 11; i++) {

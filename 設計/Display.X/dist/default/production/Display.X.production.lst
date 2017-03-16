@@ -1,7 +1,15 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
+<<<<<<< HEAD
                                                                                                Thu Mar 16 10:21:40 2017
+=======
+<<<<<<< HEAD
+                                                                                               Thu Mar 16 10:22:40 2017
+=======
+                                                                                               Thu Mar 16 00:17:57 2017
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
+>>>>>>> 0b802d8e495badb8d77397d7ca69d3756262a0df
 
 Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
      1                           	processor	16F1827
@@ -2373,7 +2381,15 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.38 build -256452561 
+<<<<<<< HEAD
 Symbol Table                                                                                   Thu Mar 16 10:21:40 2017
+=======
+<<<<<<< HEAD
+Symbol Table                                                                                   Thu Mar 16 10:22:40 2017
+=======
+Symbol Table                                                                                   Thu Mar 16 00:17:57 2017
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
+>>>>>>> 0b802d8e495badb8d77397d7ca69d3756262a0df
 
              __CFG_CP$ON 0000              __CFG_CPD$ON 0000                      l121 05D6  
                     l816 05CD                      l840 0727                      l920 0641  
@@ -2439,18 +2455,18 @@ Symbol Table                                                                    
                 __ptext4 06FA                  __ptext5 05D4                  __ptext6 0668  
                 __ptext7 05A3                  __ptext8 059B                  __ptext9 0593  
                 _set_num 0668     end_of_initialization 07FD                  light2@i 0023  
-                init_ram 055E                  initloop 055F         __CFG_CLKOUTEN$ON 0000  
-       __CFG_FOSC$INTOSC 0000           __end_of_close2 055E           __end_of_light2 07EE  
-         __end_of_error2 0605      start_initialization 07EE                 ??_close2 0070  
-            __pdataBANK0 0031                 ??_light2 0078                 ??_error2 007B  
-              ___latbits 0001            __pcstackBANK0 0020            wait@wait_time 0070  
-        error2@error_dot 0025                 ?_set_num 0072           __size_of_open2 0010  
-         __size_of_set_a 0008           __size_of_set_b 0008           __size_of_set_c 0008  
-         __size_of_set_d 0008           __size_of_set_e 0008           __size_of_set_f 0008  
-         __size_of_set_g 0008           __size_of_set_p 0008               set_num@num 0072  
-      error2@error_digit 0029                light2@dot 0077                light2@num 0020  
-               __ptext10 058B                 __ptext11 0583                 __ptext12 057B  
-               __ptext13 0573                 __ptext14 056B                 __ptext15 05C4  
-               __ptext16 055A         __size_of_set_num 0092            __size_of_demo 0063  
-          __size_of_main 0007            __size_of_init 000D            __size_of_wait 0018  
-               demo@dots 0039                 demo@nums 003D        __CFG_BOREN$SBODEN 0000  
+                init_ram 055E                  initloop 055F         __CFG_FOSC$INTOSC 0000  
+         __end_of_close2 055E           __end_of_light2 07EE           __end_of_error2 0605  
+    start_initialization 07EE                 ??_close2 0070              __pdataBANK0 0031  
+               ??_light2 0078                 ??_error2 007B                ___latbits 0001  
+          __pcstackBANK0 0020            wait@wait_time 0070          error2@error_dot 0025  
+               ?_set_num 0072           __size_of_open2 0010           __size_of_set_a 0008  
+         __size_of_set_b 0008           __size_of_set_c 0008           __size_of_set_d 0008  
+         __size_of_set_e 0008           __size_of_set_f 0008           __size_of_set_g 0008  
+         __size_of_set_p 0008               set_num@num 0072        error2@error_digit 0029  
+              light2@dot 0077                light2@num 0020                 __ptext10 058B  
+               __ptext11 0583                 __ptext12 057B                 __ptext13 0573  
+               __ptext14 056B                 __ptext15 05C4                 __ptext16 055A  
+       __size_of_set_num 0092            __size_of_demo 0063            __size_of_main 0007  
+          __size_of_init 000D            __size_of_wait 0018                 demo@dots 0039  
+               demo@nums 003D        __CFG_BOREN$SBODEN 0000        __CFG_CLKOUTEN$OFF 0000  

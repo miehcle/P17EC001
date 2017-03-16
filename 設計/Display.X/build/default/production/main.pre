@@ -3754,7 +3754,7 @@ void wait(unsigned int wait_time);
 #pragma config CP = 0
 #pragma config CPD = 0
 #pragma config BOREN = 1
-#pragma config CLKOUTEN = 0
+#pragma config CLKOUTEN = 1
 #pragma config IESO = 0
 #pragma config FCMEN = 0
 

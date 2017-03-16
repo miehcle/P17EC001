@@ -53,20 +53,29 @@ void I2C_send_data(unsigned char addr, unsigned char data) {
 }
 
 void interrupt interruption(void) {
+    static int counter = 0;
     if (TMR4IF == 1) {
+        if(counter < 250) {
+            counter++;
+        } else {
         /* Timer4 interrupt */
-        int data = adconv(RA0_PIN);
-        send_data = data >> 2;
-        I2C_send_data(ADDR, send_data);
+            int data = adconv(RA0_PIN);
+            send_data = data >> 2;
+            I2C_send_data(ADDR, send_data);
+            counter = 0;
+        }
         TMR4IF = 0;             //clear interrupt flag
     }
 }
 
 void main(void) {
     init();
-    init_Timer4();
+    for(int i = 0; i < 10000; i++);
     init_I2C_master();
+    init_Timer4();
+
     
+    RB3 = 1;
     while(1);
     return;
 }
@@ -94,8 +103,8 @@ void init_Timer4(void) {
 
 void init_I2C_master(void) {
     SSP1STAT = 0b10000000;      //I2C 100kbps mode
-    SSP1CON1 = 0b00101000;      //I2C slave mode
-    SSP1ADD = 0x27;        //I2C clock 100kHz
+    SSP1CON1 = 0b00111000;      //I2C master mode
+    SSP1ADD = 0x27;             //I2C clock 100kHz
     SSP1IE = 1;                 //I2C interrupt enabled
     BCL1IE = 1;                 //I2C bus clash interrupt enabled
     SSP1IF = 0;                 //I2C interrupt flag cleared

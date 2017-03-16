@@ -9,12 +9,12 @@
 #include "display.h"
 
 // For using __delay_ms()
-#define _XTAL_FREQ  8000000
+#define _XTAL_FREQ  16000000
 
 /**
  * Call this function.
  * 
- * When you throw {0, 2} as digit and {OFF, ON} as digit[1] to this function,
+ * When you throw {0, 2} as digit and {_OFF, _ON} as digit[1] to this function,
  * you will see [2.0]
  * @param digit
  * @param dotm.,
@@ -41,7 +41,7 @@ void light2(int digit[2], int dot[2]) {
         else                     { num = ERROR; }
         
         // Add dot
-        if (dot[i] == ON) { num += DOT; }
+        if (dot[i] == _ON) { num += DOT; }
         
         set_num(num);       // Set ports
         open2(i);           // Open port
@@ -57,7 +57,7 @@ void light2(int digit[2], int dot[2]) {
  */
 void error2() {
     int error_digit[2] = { 11, 11 };
-    int error_dot[2] = { ON, ON };
+    int error_dot[2] = { _ON, _ON };
     light2(error_digit, error_dot);
 }
 
@@ -84,7 +84,7 @@ void set_a(int on_off) { RB2 = on_off; }
 void set_b(int on_off) { RB5 = on_off; }
 void set_c(int on_off) { RB6 = on_off; }
 void set_d(int on_off) { RB7 = on_off; }
-void set_e(int on_off) { RB1 = on_off; }
+void set_e(int on_off) { RA6 = on_off; }
 void set_f(int on_off) { RA7 = on_off; }
 void set_g(int on_off) { RA0 = on_off; }
 void set_p(int on_off) { RA1 = on_off; }
@@ -95,16 +95,16 @@ void set_p(int on_off) { RA1 = on_off; }
  */
 void open2(int digit_select) {
     close2();
-    if (digit_select == 0) { RA3 = ON; }    // digit0 ON
-    if (digit_select == 1) { RA2 = ON; }    // digit1 ON
+    if (digit_select == 0) { RA3 = _ON; }    // digit0 _ON
+    if (digit_select == 1) { RA2 = _ON; }    // digit1 _ON
 }
 
 /**
  * You don't have to warry about this function.
  */
 void close2() {
-    RA3 = OFF;  // digit0 off
-    RA2 = OFF;  // digit1 off
+    RA3 = _OFF;  // digit0 off
+    RA2 = _OFF;  // digit1 off
 }
 
 /**

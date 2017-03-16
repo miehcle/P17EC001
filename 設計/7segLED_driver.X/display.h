@@ -13,8 +13,8 @@
 extern "C" {
 #endif
     
-#define ON 1
-#define OFF 0
+#define _ON 1
+#define _OFF 0
     
 #define A     0b00000001
 #define B     0b00000010

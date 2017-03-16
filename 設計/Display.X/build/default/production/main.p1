@@ -2805,7 +2805,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "18
 [p x BOREN=SBODEN ]
 "19
-[p x CLKOUTEN=ON ]
+[p x CLKOUTEN=OFF ]
 "20
 [p x IESO=OFF ]
 "21

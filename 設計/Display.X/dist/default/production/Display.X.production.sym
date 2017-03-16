@@ -81,8 +81,8 @@ __Hcommon 0 0 ABS 0
 __Lcommon 0 0 ABS 0
 __Heeprom_data 0 0 EEDATA 3
 __Leeprom_data 0 0 EEDATA 3
-__CFG_CLKOUTEN$ON 0 0 ABS 0
 ___int_sp 0 0 STACK 2
+__CFG_CLKOUTEN$OFF 0 0 ABS 0
 _ANSELA 18C 0 ABS 0
 _ANSELB 18D 0 ABS 0
 demo@nums 3D 0 BANK0 1
@@ -384,7 +384,15 @@ inittext ABC AC7 CODE ABC 0
 text16 AB4 ABB CODE AB4 0
 %locals
 dist/default/production\Display.X.production.obj
+<<<<<<< HEAD
 C:\Users\shu\AppData\Local\Temp\s6d8.
+=======
+<<<<<<< HEAD
+C:\Users\yuki\AppData\Local\Temp\s3n4.
+=======
+C:\Users\shu\AppData\Local\Temp\s6ks.
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
+>>>>>>> 0b802d8e495badb8d77397d7ca69d3756262a0df
 810 7EE 0 CODE 0
 813 7EE 0 CODE 0
 855 7EE 0 CODE 0
