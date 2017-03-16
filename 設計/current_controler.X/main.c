@@ -7,12 +7,11 @@
 
 
 #include <xc.h>
+#include "adcon.h"
 
 #pragma config FOSC = INTOSC, WDTE = OFF, PWRTE = ON, MCLRE = OFF, CP = OFF, CPD = OFF, BOREN = ON, CLKOUTEN = OFF, IESO = OFF, FCMEN = OFF
 #pragma config WRT = OFF, PLLEN = OFF, STVREN = ON, BORV = HI, LVP = OFF
 
-#define CURRENT_READ_PIN 0b00000011   //RA0pin
-#define VOLUME_READ_PIN 0b00000111    //RA1pin http://rikei60.web.fc2.com/toybox/balancer/16F1827adc.htm refer to number5
 /* controler value */
 #define KP 1.0       //proportional controler value
 #define KI 0.01      //integral controler value
@@ -22,7 +21,6 @@
 #define MIN(int A, int B) ((A<=B) ? (A) : (B))
 #define CLIP(int x, int TOP, int BOTTOM) MIN(MAX(x, BOTTOM), TOP)       //BOTTOM <= x <= TOP calculation
 
-int adconv(int pin_select);
 void measure(int* value, int pin_select);
 void calc(int ref, int mes,int *output);
 int P_calc(int res);
@@ -31,17 +29,6 @@ int D_calc(int res);
 void output(int output);
 void interrupt controler(void);
 void init(void);
-
-/* A/D converter */
-int adconv(int pin_select) {
-    int temp;
-    
-    ADCON0 = pin_select;
-    while(GO_nDONE);
-    temp = ADRESH;
-    temp = (temp << 8) | ADRESL;
-    return temp;
-}
 
 /* analog pin measurement */
 void measure(int *value, int pin_select) {
@@ -57,7 +44,7 @@ void calc(int ref, int mes,int *output){
     *output += P_calc(res);
     *output += I_calc(res);
 //    *output += D_calc(res);
-    *output = CLIP(output, 255, 0);
+    *output = CLIP(output, 1023, 0);
 }
 
 int P_calc(int res) {
@@ -72,7 +59,7 @@ int I_calc(int res) {
     static int sum = 0;
     
     sum += res;
-    sum = CLIP(sum, 255, 0);
+    sum = CLIP(sum, 1023, 0);
     temp = sum * KI;
     return temp;
 }
@@ -88,7 +75,8 @@ int D_calc(int res) {
 
 /* PWM width output */
 void output(int output) {
-    CCPR3L = output;
+    CCPR3L = output >> 2;
+    CCP3CONbits.DC3B = output & 0x03;
 }
 
 /* timer interrupt */
@@ -97,8 +85,8 @@ void interrupt controler(void) {
         int current;
         int volume;
         int output;
-        measure(&current, CURRENT_READ_PIN);
-        measure(&volume, VOLUME_READ_PIN);
+        measure(&current, ADCON_RA1);
+        measure(&volume, ADCON_RA0);
         calc(current,volume,&output);
         output(output);
         TMR2IF = 0;
@@ -115,16 +103,18 @@ void main(void) {
 
 void init(void) {
     OSCCON = 0b01111010;        //Fosc = 16MHz,PLL4x disabled.
-    ANSELA = 0x03;
     TRISA = 0x03;
     TRISB = 0x00;
     PORTA = 0x00;
     PORTB = 0x00;
-    ADCON1 = 0b10010000;
-    ADCON0 = 0x01;
     for(unsigned char i = 0; i < 100; i++){}
     GIE = 1;                    //all interrupt allowed
     PEIE = 1;                   //peripheral equipment interrupt allowed
+    init_adcon(0x03,0x00);
+    init_PWM();
+}
+
+void init_PWM(void) {
     CCPTMRS = 0b00000000;
     CCP3CON = 0b00001100;
     T2CON = 0b00000000;

@@ -1,0 +1,155 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"28 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\ê›åv\7segLED_testdata_transmitter.X\main.c
+[v _adconv adconv `(i  1 e 2 0 ]
+"38
+[v _I2C_idle_check I2C_idle_check `(v  1 e 1 0 ]
+"42
+[v _I2C_send_data I2C_send_data `(v  1 e 1 0 ]
+"55
+[v _interruption interruption `II(v  1 e 1 0 ]
+"71
+[v _main main `(v  1 e 1 0 ]
+"83
+[v _init init `(v  1 e 1 0 ]
+"96
+[v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
+"104
+[v _init_I2C_master init_I2C_master `(v  1 e 1 0 ]
+"414 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1827.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"475
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"1120
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1181
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1664
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1802
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1821
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1840
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+"1919
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2797
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3502
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3539
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3613
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+"3734
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+"3937
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+[s S25 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"3959
+[u S34 . 1 `S25 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES34  1 e 1 @534 ]
+"6183
+[v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
+"6202
+[v _PR4 PR4 `VEuc  1 e 1 @1046 ]
+"6221
+[v _T4CON T4CON `VEuc  1 e 1 @1047 ]
+"6682
+[v _BCL1IE BCL1IE `VEb  1 e 0 @1171 ]
+"6684
+[v _BCL1IF BCL1IF `VEb  1 e 0 @147 ]
+"6962
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"6966
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
+"7184
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"7234
+[v _RB3 RB3 `VEb  1 e 0 @107 ]
+"7310
+[v _SSP1IE SSP1IE `VEb  1 e 0 @1163 ]
+"7312
+[v _SSP1IF SSP1IF `VEb  1 e 0 @139 ]
+"7444
+[v _TMR4IE TMR4IE `VEb  1 e 0 @1177 ]
+"7446
+[v _TMR4IF TMR4IF `VEb  1 e 0 @153 ]
+"7448
+[v _TMR4ON TMR4ON `VEb  1 e 0 @8378 ]
+"26 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\ê›åv\7segLED_testdata_transmitter.X\main.c
+[v _send_data send_data `uc  1 e 1 0 ]
+"71
+[v _main main `(v  1 e 1 0 ]
+{
+"73
+[v main@i i `i  1 a 2 5 ]
+"81
+} 0
+"96
+[v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
+{
+"102
+} 0
+"104
+[v _init_I2C_master init_I2C_master `(v  1 e 1 0 ]
+{
+"112
+} 0
+"83
+[v _init init `(v  1 e 1 0 ]
+{
+"94
+} 0
+"55
+[v _interruption interruption `II(v  1 e 1 0 ]
+{
+"62
+[v interruption@data data `i  1 a 2 11 ]
+"56
+[v interruption@counter counter `i  1 s 2 counter ]
+"69
+} 0
+"28
+[v _adconv adconv `(i  1 e 2 0 ]
+{
+"29
+[v adconv@temp temp `i  1 a 2 9 ]
+"28
+[v adconv@pin_select pin_select `i  1 p 2 0 ]
+"36
+} 0
+"42
+[v _I2C_send_data I2C_send_data `(v  1 e 1 0 ]
+{
+[v I2C_send_data@addr addr `uc  1 a 1 wreg ]
+[v I2C_send_data@addr addr `uc  1 a 1 wreg ]
+[v I2C_send_data@data data `uc  1 p 1 1 ]
+[v I2C_send_data@addr addr `uc  1 a 1 2 ]
+"53
+} 0
+"38
+[v _I2C_idle_check I2C_idle_check `(v  1 e 1 0 ]
+{
+"40
+} 0

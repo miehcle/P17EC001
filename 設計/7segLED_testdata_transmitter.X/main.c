@@ -7,15 +7,13 @@
 
 
 #include <xc.h>
+#include "adcon.h"
 
 #pragma config FOSC = INTOSC, WDTE = OFF, PWRTE = ON, MCLRE = OFF, CP = OFF, CPD = OFF, BOREN = ON, CLKOUTEN = OFF, IESO = OFF, FCMEN = OFF
 #pragma config WRT = OFF, PLLEN = OFF, STVREN = ON, BORV = HI, LVP = OFF
 
-#define RA0_PIN 0b00000011   //RA0pin
-#define RA1_PIN 0b00000111    //RA1pin
 #define ADDR 0x02
 
-int adconv(int pin_select);
 void I2C_idle_check(void);
 void I2C_send_data(char addr, unsigned char data);
 void interrupt interruption(void);
@@ -24,16 +22,6 @@ void init_Timer4(void);
 void init_I2C_master(void);
 
 unsigned char send_data = 0;
-
-int adconv(int pin_select) {
-    int temp;
-    
-    ADCON0 = pin_select;
-    while(GO_nDONE);
-    temp = ADRESH;
-    temp = (temp << 8) | ADRESL;
-    return temp;
-}
 
 void I2C_idle_check(void) {
     while (( SSP1CON2 & 0x1F ) | (SSP1STAT & 0x05)) ;
@@ -59,7 +47,7 @@ void interrupt interruption(void) {
             counter++;
         } else {
         /* Timer4 interrupt */
-            int data = adconv(RA0_PIN);
+            int data = adconv(ADCON_RA0);
             send_data = data >> 2;
             I2C_send_data(ADDR, send_data);
             counter = 0;
@@ -70,11 +58,7 @@ void interrupt interruption(void) {
 
 void main(void) {
     init();
-    for(int i = 0; i < 10000; i++);
-    init_I2C_master();
-    init_Timer4();
-
-    
+   
     RB3 = 1;
     while(1);
     return;
@@ -82,15 +66,16 @@ void main(void) {
 
 void init(void) {
     OSCCON = 0b01111010;        //Fosc = 16MHz,PLL4x disabled
-    ANSELA = 0x03;              //RA0 and RA1 analog mode, others digital mode
-    TRISA = 0x03;               //RA0 and RA1 input mode, others output mode
+    TRISA = 0x01;               //RA0 and RA1 input mode, others output mode
     TRISB = 0b00010010;         //RB1(SDA1) and RB4(SCL1) input mode, others output mode
     PORTA = 0x00;               //A pins init
     PORTB = 0x00;               //B pins init
-    ADCON1 = 0b10010000;
-    ADCON0 = 0x01;              //A/D converter setting
     GIE = 1;                    //all interrupt allowed
     PEIE = 1;                   //peripheral equipment interrupt allowed
+    init_adcon(0b00000001,0x00);
+    for(int i = 0; i < 10000; i++);
+    init_I2C_master();
+    init_Timer4();
 }
 
 void init_Timer4(void) {
@@ -103,7 +88,7 @@ void init_Timer4(void) {
 
 void init_I2C_master(void) {
     SSP1STAT = 0b10000000;      //I2C 100kbps mode
-    SSP1CON1 = 0b00111000;      //I2C master mode
+    SSP1CON1 = 0b00101000;      //I2C master mode
     SSP1ADD = 0x27;             //I2C clock 100kHz
     SSP1IE = 1;                 //I2C interrupt enabled
     BCL1IE = 1;                 //I2C bus clash interrupt enabled

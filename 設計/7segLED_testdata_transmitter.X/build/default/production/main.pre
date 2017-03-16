@@ -3718,13 +3718,17 @@ extern unsigned char __resetbits;
 extern __bit __powerdown;
 extern __bit __timeout;
 
+# 34 "adcon.h"
+int adconv(int pin_select);
+void init_adcon(int anselA, int anselB);
 
-# 11 "main.c"
+
+# 12 "main.c"
 #pragma config FOSC = INTOSC, WDTE = OFF, PWRTE = ON, MCLRE = OFF, CP = OFF, CPD = OFF, BOREN = ON, CLKOUTEN = OFF, IESO = OFF, FCMEN = OFF
 #pragma config WRT = OFF, PLLEN = OFF, STVREN = ON, BORV = HI, LVP = OFF
 
-# 18
-int adconv(int pin_select);
+
+
 void I2C_idle_check(void);
 void I2C_send_data(char addr, unsigned char data);
 void interrupt interruption(void);
@@ -3733,16 +3737,6 @@ void init_Timer4(void);
 void init_I2C_master(void);
 
 unsigned char send_data = 0;
-
-int adconv(int pin_select) {
-int temp;
-
-ADCON0 = pin_select;
-while(GO_nDONE);
-temp = ADRESH;
-temp = (temp << 8) | ADRESL;
-return temp;
-}
 
 void I2C_idle_check(void) {
 while (( SSP1CON2 & 0x1F ) | (SSP1STAT & 0x05)) ;
@@ -3768,7 +3762,7 @@ if(counter < 250) {
 counter++;
 } else {
 
-int data = adconv(0b00000011);
+int data = adconv(0b00000001);
 send_data = data >> 2;
 I2C_send_data(0x02, send_data);
 counter = 0;
@@ -3779,6 +3773,7 @@ TMR4IF = 0;
 
 void main(void) {
 init();
+init_adcon(0b00000001,0x00);
 for(int i = 0; i < 10000; i++);
 init_I2C_master();
 init_Timer4();
@@ -3791,13 +3786,10 @@ return;
 
 void init(void) {
 OSCCON = 0b01111010;
-ANSELA = 0x03;
 TRISA = 0x03;
 TRISB = 0b00010010;
 PORTA = 0x00;
 PORTB = 0x00;
-ADCON1 = 0b10010000;
-ADCON0 = 0x01;
 GIE = 1;
 PEIE = 1;
 }

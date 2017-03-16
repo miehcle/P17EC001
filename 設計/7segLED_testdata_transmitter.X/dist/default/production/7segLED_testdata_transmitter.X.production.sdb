@@ -3,6 +3,10 @@
 [d edition pro ]
 [d chip 16F1827 ]
 [d frameptr 6 ]
+"14 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\adcon.c
+[v _adconv adconv `(i  1 e 2 0 ]
+"26
+[v _init_adcon init_adcon `(v  1 e 1 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
@@ -11,21 +15,19 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"28 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
-[v _adconv adconv `(i  1 e 2 0 ]
-"38
+"26 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
 [v _I2C_idle_check I2C_idle_check `(v  1 e 1 0 ]
-"42
+"30
 [v _I2C_send_data I2C_send_data `(v  1 e 1 0 ]
-"55
+"43
 [v _interruption interruption `II(v  1 e 1 0 ]
-"71
+"59
 [v _main main `(v  1 e 1 0 ]
-"83
+"72
 [v _init init `(v  1 e 1 0 ]
-"96
+"82
 [v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
-"104
+"90
 [v _init_I2C_master init_I2C_master `(v  1 e 1 0 ]
 "414 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1827.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -47,6 +49,8 @@
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2797
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2848
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
 "3502
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
 "3539
@@ -57,7 +61,7 @@
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
 "3937
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
-[s S25 . 1 `uc 1 SEN 1 0 :1:0 
+[s S21 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -67,8 +71,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "3959
-[u S34 . 1 `S25 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES34  1 e 1 @534 ]
+[u S30 . 1 `S21 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES30  1 e 1 @534 ]
 "6183
 [v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
 "6202
@@ -97,59 +101,66 @@
 [v _TMR4IF TMR4IF `VEb  1 e 0 @153 ]
 "7448
 [v _TMR4ON TMR4ON `VEb  1 e 0 @8378 ]
-"26 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
+"24 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
 [v _send_data send_data `uc  1 e 1 0 ]
-"71
+"59
 [v _main main `(v  1 e 1 0 ]
 {
-"73
-[v main@i i `i  1 a 2 5 ]
-"81
+"62
+[v main@i i `i  1 a 2 9 ]
+"70
 } 0
-"96
+"26 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\adcon.c
+[v _init_adcon init_adcon `(v  1 e 1 0 ]
+{
+[v init_adcon@anselA anselA `i  1 p 2 4 ]
+[v init_adcon@anselB anselB `i  1 p 2 6 ]
+"31
+} 0
+"82 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
 [v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
 {
-"102
+"88
 } 0
-"104
+"90
 [v _init_I2C_master init_I2C_master `(v  1 e 1 0 ]
 {
-"112
+"98
 } 0
-"83
+"72
 [v _init init `(v  1 e 1 0 ]
 {
-"94
+"80
 } 0
-"55
+"43
 [v _interruption interruption `II(v  1 e 1 0 ]
 {
-"62
+"50
 [v interruption@data data `i  1 a 2 11 ]
-"56
+"44
 [v interruption@counter counter `i  1 s 2 counter ]
-"69
+"57
 } 0
-"28
+"14 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\adcon.c
 [v _adconv adconv `(i  1 e 2 0 ]
 {
-"29
+"15
 [v adconv@temp temp `i  1 a 2 9 ]
-"28
+"14
 [v adconv@pin_select pin_select `i  1 p 2 0 ]
-"36
+"24
 } 0
-"42
+"30 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
 [v _I2C_send_data I2C_send_data `(v  1 e 1 0 ]
 {
 [v I2C_send_data@addr addr `uc  1 a 1 wreg ]
 [v I2C_send_data@addr addr `uc  1 a 1 wreg ]
 [v I2C_send_data@data data `uc  1 p 1 1 ]
 [v I2C_send_data@addr addr `uc  1 a 1 2 ]
-"53
+"41
 } 0
-"38
+"26
 [v _I2C_idle_check I2C_idle_check `(v  1 e 1 0 ]
 {
-"40
+"28
 } 0

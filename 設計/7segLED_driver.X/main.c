@@ -58,8 +58,6 @@ void interrupt interruption(void) {
 
 void main(void) {
     init();
-    init_Timer4();
-    init_I2C_slave(ADDR);
     
     while(1){
         loop();
@@ -77,6 +75,8 @@ void init(void) {
     PORTB = 0x00;               //B pins init
     GIE = 1;                    //all interrupt allowed
     PEIE = 1;                   //peripheral equipment interrupt allowed
+    init_Timer4();
+    init_I2C_slave(ADDR);
 }
 
 void init_Timer4(void) {
