@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.38\dat\en_msgs.txt -cs \
   -h+dist/default/production\Display.X.production.sym \
   --cmf=dist/default/production\Display.X.production.cmf -z -Q16F1827 \
-  -oC:\Users\shu\AppData\Local\Temp\s6ks.2 \
+  -oC:\Users\shu\AppData\Local\Temp\s6d8.2 \
   -Mdist/default/production/Display.X.production.map -E1 -ver=XC8 \
   -ASTACK=02021h-0216fh -pstack=STACK -ACODE=00h-07FFhx2 \
   -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 \
@@ -29,7 +29,7 @@ Linker command line:
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\shu\AppData\Local\Temp\s6ks.obj \
+  C:\Users\shu\AppData\Local\Temp\s6d8.obj \
   dist/default/production\Display.X.production.obj 
 
 Object code version is 3.11
@@ -39,7 +39,7 @@ Machine type is 16F1827
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\shu\AppData\Local\Temp\s6ks.obj
+C:\Users\shu\AppData\Local\Temp\s6d8.obj
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
@@ -354,8 +354,8 @@ _RA0                     (abs)        00060
 _RA1                     (abs)        00061
 _RA2                     (abs)        00062
 _RA3                     (abs)        00063
+_RA6                     (abs)        00066
 _RA7                     (abs)        00067
-_RB1                     (abs)        00069
 _RB2                     (abs)        0006A
 _RB5                     (abs)        0006D
 _RB6                     (abs)        0006E

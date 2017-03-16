@@ -3,11 +3,11 @@ __end_of_light2 7EE 0 CODE 0
 __size_of_set_e 0 0 ABS 0
 _RA0 60 0 ABS 0
 _RA1 61 0 ABS 0
-_RB1 69 0 ABS 0
 _RA2 62 0 ABS 0
 _RB2 6A 0 ABS 0
 _RA3 63 0 ABS 0
 _RB5 6D 0 ABS 0
+_RA6 66 0 ABS 0
 _RB6 6E 0 ABS 0
 _RA7 67 0 ABS 0
 _RB7 6F 0 ABS 0
@@ -384,7 +384,7 @@ inittext ABC AC7 CODE ABC 0
 text16 AB4 ABB CODE AB4 0
 %locals
 dist/default/production\Display.X.production.obj
-C:\Users\shu\AppData\Local\Temp\s6ks.
+C:\Users\shu\AppData\Local\Temp\s6d8.
 810 7EE 0 CODE 0
 813 7EE 0 CODE 0
 855 7EE 0 CODE 0

@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
-                                                                                               Thu Mar 16 00:17:57 2017
+                                                                                               Thu Mar 16 10:21:40 2017
 
 Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
      1                           	processor	16F1827
@@ -375,8 +375,8 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    369  0061                     _RA1	set	97
    370  0062                     _RA2	set	98
    371  0063                     _RA3	set	99
-   372  0067                     _RA7	set	103
-   373  0069                     _RB1	set	105
+   372  0066                     _RA6	set	102
+   373  0067                     _RA7	set	103
    374  006A                     _RB2	set	106
    375  006D                     _RB5	set	109
    376  006E                     _RB6	set	110
@@ -1380,17 +1380,17 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
   1374  05DC  1803               	btfsc	3,0
   1375  05DD  0008               	return
   1376                           
-  1377                           ;display.c: 117: _delay((unsigned long)((1)*(8000000/4000.0)));
-  1378  05DE  3003               	movlw	3
+  1377                           ;display.c: 117: _delay((unsigned long)((1)*(16000000/4000.0)));
+  1378  05DE  3006               	movlw	6
   1379  05DF  00F3               	movwf	??_wait+1
-  1380  05E0  3097               	movlw	151
+  1380  05E0  3030               	movlw	48
   1381  05E1  00F2               	movwf	??_wait
   1382  05E2                     u897:	
   1383  05E2  0BF2               	decfsz	??_wait,f
   1384  05E3  2DE2               	goto	u897
   1385  05E4  0BF3               	decfsz	??_wait+1,f
   1386  05E5  2DE2               	goto	u897
-  1387  05E6  3200               	nop2
+  1387  05E6  0000               	nop
   1388  05E7  3001               	movlw	1
   1389  05E8  07F4               	addwf	wait@i,f
   1390  05E9  3000               	movlw	0
@@ -1780,11 +1780,11 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
   1774  058B  1C70               	btfss	set_e@on_off,0
   1775  058C  2D90               	goto	u530
   1776  058D  0020               	movlb	0	; select bank0
-  1777  058E  148D               	bsf	13,1	;volatile
+  1777  058E  170C               	bsf	12,6	;volatile
   1778  058F  0008               	return
   1779  0590                     u530:	
   1780  0590  0020               	movlb	0	; select bank0
-  1781  0591  108D               	bcf	13,1	;volatile
+  1781  0591  130C               	bcf	12,6	;volatile
   1782  0592  0008               	return
   1783  0593                     __end_of_set_e:	
   1784                           
@@ -2373,7 +2373,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.38 build -256452561 
-Symbol Table                                                                                   Thu Mar 16 00:17:57 2017
+Symbol Table                                                                                   Thu Mar 16 10:21:40 2017
 
              __CFG_CP$ON 0000              __CFG_CPD$ON 0000                      l121 05D6  
                     l816 05CD                      l840 0727                      l920 0641  
@@ -2383,8 +2383,8 @@ Symbol Table                                                                    
                     l856 0763                      l848 0745                      l936 0567  
                     l882 07BE                      l876 07AF                      l868 0790  
                     l886 07CF                      _RA0 0060                      _RA1 0061  
-                    _RA2 0062                      _RB1 0069                      _RA3 0063  
-                    _RB2 006A                      _RB5 006D                      _RA7 0067  
+                    _RA2 0062                      _RA3 0063                      _RB2 006A  
+                    _RA6 0066                      _RB5 006D                      _RA7 0067  
                     _RB6 006E                      _RB7 006F                      u510 0588  
                     u450 0570                      u530 0590                      u470 0578  
                     u550 0598                      u615 06B0                      u625 06C4  

@@ -31,8 +31,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RB6 `Vb ~T0 @X0 0 e@110 ]
 "7242
 [v _RB7 `Vb ~T0 @X0 0 e@111 ]
-"7230
-[v _RB1 `Vb ~T0 @X0 0 e@105 ]
+"7224
+[v _RA6 `Vb ~T0 @X0 0 e@102 ]
 "7226
 [v _RA7 `Vb ~T0 @X0 0 e@103 ]
 "7212
@@ -3098,11 +3098,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "87
 [v _set_e `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;display.c: 87: void set_e(int on_off) { RB1 = on_off; }
+[; ;display.c: 87: void set_e(int on_off) { RA6 = on_off; }
 [e :U _set_e ]
 [v _on_off `i ~T0 @X0 1 r1 ]
 [f ]
-[e = _RB1 -> _on_off `b ]
+[e = _RA6 -> _on_off `b ]
 [e :UE 385 ]
 }
 "88
@@ -3196,9 +3196,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 397  ]
 [e :U 394 ]
 {
-[; ;display.c: 117: _delay((unsigned long)((1)*(8000000/4000.0)));
+[; ;display.c: 117: _delay((unsigned long)((1)*(16000000/4000.0)));
 "117
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "118
 }
 "116
