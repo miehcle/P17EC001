@@ -13,7 +13,7 @@
 #pragma config WRT = OFF, PLLEN = OFF, STVREN = ON, BORV = HI, LVP = OFF
 
 #define ADDR 0x02
-#define MAX_NUM_MUL_TEN 150             //max num * 10, int num
+#define MAX_NUM_MUL_TEN 120             //max num * 10, int num
 
 void interrupt_I2C(void);
 void interrupt interruption(void);
@@ -21,7 +21,7 @@ void init(void);
 void init_Timer4(void);
 void init_I2C_slave(char addr);
 void loop(void);
-void num_digits_conv(unsigned char data,char *digits);
+void num_digits_conv(unsigned char data, int digit[2], int dot[2]);
 
 unsigned char received_data = 0;
 unsigned char counter = 0;
@@ -111,15 +111,15 @@ void loop(void) {
 }
 
 void num_digits_conv(unsigned char data, int digit[2], int dot[2]) {
-    int num = (data * MAX_NUM_MUL_TEN) / 255;
+    unsigned int num = ((unsigned int)data * MAX_NUM_MUL_TEN) / 255;
     
     if (num >= 100) {
         num /= 10;
-        dot[0] = ON;
-        dot[1] = OFF;
+        dot[0] = _ON;
+        dot[1] = _OFF;
     } else {
-        dot[0] = OFF;
-        dot[1] = ON;
+        dot[0] = _OFF;
+        dot[1] = _ON;
     }
     
         digit[0] = num % 10;
