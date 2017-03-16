@@ -11,7 +11,11 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+<<<<<<< HEAD
 $C:\Users\yuki\AppData\Local\Temp\s3n4.obj
+=======
+$C:\Users\shu\AppData\Local\Temp\s6ks.obj
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 2 2
@@ -117,6 +121,7 @@ STRING 800-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Display.X.production.obj
+<<<<<<< HEAD
 7EE cinit CODE >810:C:\Users\yuki\AppData\Local\Temp\s3n4.
 7EE cinit CODE >813:C:\Users\yuki\AppData\Local\Temp\s3n4.
 7EE cinit CODE >855:C:\Users\yuki\AppData\Local\Temp\s3n4.
@@ -136,6 +141,27 @@ $dist/default/production\Display.X.production.obj
 7FD cinit CODE >878:C:\Users\yuki\AppData\Local\Temp\s3n4.
 7FD cinit CODE >880:C:\Users\yuki\AppData\Local\Temp\s3n4.
 7FE cinit CODE >881:C:\Users\yuki\AppData\Local\Temp\s3n4.
+=======
+7EE cinit CODE >810:C:\Users\shu\AppData\Local\Temp\s6ks.
+7EE cinit CODE >813:C:\Users\shu\AppData\Local\Temp\s6ks.
+7EE cinit CODE >855:C:\Users\shu\AppData\Local\Temp\s6ks.
+7EF cinit CODE >856:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F0 cinit CODE >857:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F1 cinit CODE >858:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F2 cinit CODE >859:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F3 cinit CODE >860:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F4 cinit CODE >861:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F5 cinit CODE >862:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F6 cinit CODE >863:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F7 cinit CODE >864:C:\Users\shu\AppData\Local\Temp\s6ks.
+7F9 cinit CODE >869:C:\Users\shu\AppData\Local\Temp\s6ks.
+7FA cinit CODE >870:C:\Users\shu\AppData\Local\Temp\s6ks.
+7FB cinit CODE >871:C:\Users\shu\AppData\Local\Temp\s6ks.
+7FC cinit CODE >872:C:\Users\shu\AppData\Local\Temp\s6ks.
+7FD cinit CODE >878:C:\Users\shu\AppData\Local\Temp\s6ks.
+7FD cinit CODE >880:C:\Users\shu\AppData\Local\Temp\s6ks.
+7FE cinit CODE >881:C:\Users\shu\AppData\Local\Temp\s6ks.
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 55A text16 CODE >105:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
 55A text16 CODE >106:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
 55C text16 CODE >107:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\display.c
@@ -217,6 +243,7 @@ $dist/default/production\Display.X.production.obj
 564 maintext CODE >33:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
 567 maintext CODE >36:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
 56A maintext CODE >35:C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\Display.X\main.c
+<<<<<<< HEAD
 55E inittext CODE >844:C:\Users\yuki\AppData\Local\Temp\s3n4.
 55E inittext CODE >845:C:\Users\yuki\AppData\Local\Temp\s3n4.
 55F inittext CODE >846:C:\Users\yuki\AppData\Local\Temp\s3n4.
@@ -225,6 +252,16 @@ $dist/default/production\Display.X.production.obj
 561 inittext CODE >849:C:\Users\yuki\AppData\Local\Temp\s3n4.
 562 inittext CODE >850:C:\Users\yuki\AppData\Local\Temp\s3n4.
 563 inittext CODE >851:C:\Users\yuki\AppData\Local\Temp\s3n4.
+=======
+55E inittext CODE >844:C:\Users\shu\AppData\Local\Temp\s6ks.
+55E inittext CODE >845:C:\Users\shu\AppData\Local\Temp\s6ks.
+55F inittext CODE >846:C:\Users\shu\AppData\Local\Temp\s6ks.
+55F inittext CODE >847:C:\Users\shu\AppData\Local\Temp\s6ks.
+560 inittext CODE >848:C:\Users\shu\AppData\Local\Temp\s6ks.
+561 inittext CODE >849:C:\Users\shu\AppData\Local\Temp\s6ks.
+562 inittext CODE >850:C:\Users\shu\AppData\Local\Temp\s6ks.
+563 inittext CODE >851:C:\Users\shu\AppData\Local\Temp\s6ks.
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -252,14 +289,22 @@ ltemp2 86 0 ABS 0 - dist/default/production\Display.X.production.obj
 ltemp3 80 0 ABS 0 - dist/default/production\Display.X.production.obj
 set_num@num 72 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
+<<<<<<< HEAD
 ___sp 0 0 STACK 2 stack C:\Users\yuki\AppData\Local\Temp\s3n4.obj
+=======
+___sp 0 0 STACK 2 stack C:\Users\shu\AppData\Local\Temp\s6ks.obj
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 _demo C0A 0 CODE 0 text2 dist/default/production\Display.X.production.obj
 _init B6E 0 CODE 0 text1 dist/default/production\Display.X.production.obj
 _main AC8 0 CODE 0 maintext dist/default/production\Display.X.production.obj
 _wait BA8 0 CODE 0 text5 dist/default/production\Display.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
+<<<<<<< HEAD
 start 4 0 CODE 0 init C:\Users\yuki\AppData\Local\Temp\s3n4.obj
+=======
+start 4 0 CODE 0 init C:\Users\shu\AppData\Local\Temp\s6ks.obj
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 ttemp 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
 __size_of_demo 0 0 ABS 0 - dist/default/production\Display.X.production.obj
@@ -275,12 +320,21 @@ ttemp1 81 0 ABS 0 - dist/default/production\Display.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production\Display.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\Display.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\Display.X.production.obj
+<<<<<<< HEAD
 intlevel0 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s3n4.obj
 intlevel1 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s3n4.obj
 intlevel2 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s3n4.obj
 intlevel3 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s3n4.obj
 intlevel4 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s3n4.obj
 intlevel5 0 0 CODE 0 functab C:\Users\yuki\AppData\Local\Temp\s3n4.obj
+=======
+intlevel0 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\s6ks.obj
+intlevel1 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\s6ks.obj
+intlevel2 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\s6ks.obj
+intlevel3 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\s6ks.obj
+intlevel4 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\s6ks.obj
+intlevel5 0 0 CODE 0 functab C:\Users\shu\AppData\Local\Temp\s6ks.obj
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 __size_of_set_num 0 0 ABS 0 - dist/default/production\Display.X.production.obj
 wait@i 74 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\Display.X.production.obj
@@ -319,7 +373,11 @@ __end_of_light2 FDC 0 CODE 0 text4 dist/default/production\Display.X.production.
 light2@digit 22 0 BANK0 1 cstackBANK0 dist/default/production\Display.X.production.obj
 set_g@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Display.X.production.obj
+<<<<<<< HEAD
 ___int_sp 0 0 STACK 2 stack C:\Users\yuki\AppData\Local\Temp\s3n4.obj
+=======
+___int_sp 0 0 STACK 2 stack C:\Users\shu\AppData\Local\Temp\s6ks.obj
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -472,7 +530,11 @@ set_e@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.produc
 _close2 AB4 0 CODE 0 text16 dist/default/production\Display.X.production.obj
 _error2 BD8 0 CODE 0 text3 dist/default/production\Display.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
+<<<<<<< HEAD
 reset_vec 0 0 CODE 0 reset_vec C:\Users\yuki\AppData\Local\Temp\s3n4.obj
+=======
+reset_vec 0 0 CODE 0 reset_vec C:\Users\shu\AppData\Local\Temp\s6ks.obj
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 __pdataBANK0 31 0 BANK0 1 dataBANK0 dist/default/production\Display.X.production.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 set_d@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
@@ -518,8 +580,13 @@ __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Display.X.production.obj
 __Hinittext 0 0 ABS 0 inittext -
 set_p@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
 set_c@on_off 70 0 COMMON 1 cstackCOMMON dist/default/production\Display.X.production.obj
+<<<<<<< HEAD
 stackhi 216F 0 ABS 0 - C:\Users\yuki\AppData\Local\Temp\s3n4.obj
 stacklo 2021 0 ABS 0 - C:\Users\yuki\AppData\Local\Temp\s3n4.obj
+=======
+stackhi 216F 0 ABS 0 - C:\Users\shu\AppData\Local\Temp\s6ks.obj
+stacklo 2021 0 ABS 0 - C:\Users\shu\AppData\Local\Temp\s6ks.obj
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 _set_num CD0 0 CODE 0 text6 dist/default/production\Display.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Display.X.production.obj
 light2@i 23 0 BANK0 1 cstackBANK0 dist/default/production\Display.X.production.obj

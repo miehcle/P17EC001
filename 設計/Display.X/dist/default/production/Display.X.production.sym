@@ -384,7 +384,11 @@ inittext ABC AC7 CODE ABC 0
 text16 AB4 ABB CODE AB4 0
 %locals
 dist/default/production\Display.X.production.obj
+<<<<<<< HEAD
 C:\Users\yuki\AppData\Local\Temp\s3n4.
+=======
+C:\Users\shu\AppData\Local\Temp\s6ks.
+>>>>>>> 2aaffc999d4d7dd4f898f3e7f00095944da3a505
 810 7EE 0 CODE 0
 813 7EE 0 CODE 0
 855 7EE 0 CODE 0
