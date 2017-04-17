@@ -1,0 +1,31 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"22 config.h
+[p x FOSC=INTOSC ]
+"23
+[p x WDTE=OFF ]
+"24
+[p x PWRTE=ON ]
+"25
+[p x MCLRE=OFF ]
+"26
+[p x CP=OFF ]
+"27
+[p x CPD=OFF ]
+"28
+[p x BOREN=ON ]
+"29
+[p x CLKOUTEN=OFF ]
+"30
+[p x IESO=OFF ]
+"31
+[p x FCMEN=OFF ]
+"34
+[p x WRT=OFF ]
+"35
+[p x PLLEN=OFF ]
+"36
+[p x STVREN=ON ]
+"37
+[p x BORV=HI ]
+"38
+[p x LVP=OFF ]
