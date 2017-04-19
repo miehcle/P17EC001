@@ -3,63 +3,163 @@
 [d edition pro ]
 [d chip 16F1827 ]
 [d frameptr 6 ]
-"14 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\adcon.c
+"14 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\others\7segLED_testdata_transmitter.X\adcon.c
 [v _adconv adconv `(i  1 e 2 0 ]
 "26
-[v _init_adcon init_adcon `(v  1 e 1 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v _init_adcon init_adcon `(v  1 e 0 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"33 C:\isaka\application\compiler\xc\xc8\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\isaka\application\compiler\xc\xc8\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"42 C:\isaka\application\compiler\xc\xc8\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 C:\isaka\application\compiler\xc\xc8\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\isaka\application\compiler\xc\xc8\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 C:\isaka\application\compiler\xc\xc8\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+"86 C:\isaka\application\compiler\xc\xc8\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
-[v _eecpymem eecpymem `(v  1 e 1 0 ]
-"39
-[v _memcpyee memcpyee `(v  1 e 1 0 ]
-"26 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
-[v _I2C_idle_check I2C_idle_check `(v  1 e 1 0 ]
-"30
-[v _I2C_send_data I2C_send_data `(v  1 e 1 0 ]
-"43
-[v _interruption interruption `II(v  1 e 1 0 ]
-"59
-[v _main main `(v  1 e 1 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\isaka\application\compiler\xc\xc8\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 C:\isaka\application\compiler\xc\xc8\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\isaka\application\compiler\xc\xc8\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\isaka\application\compiler\xc\xc8\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\isaka\application\compiler\xc\xc8\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\isaka\application\compiler\xc\xc8\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\isaka\application\compiler\xc\xc8\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"48
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+"56
+[v ___eetoi __eetoi `(ui  1 e 2 0 ]
+"64
+[v ___eetom __eetom `(um  1 e 3 0 ]
 "72
-[v _init init `(v  1 e 1 0 ]
-"82
-[v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
-"90
-[v _init_I2C_master init_I2C_master `(v  1 e 1 0 ]
-"414 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1827.h
+[v ___eetol __eetol `(ul  1 e 4 0 ]
+"80
+[v ___ctoee __ctoee `(uc  1 e 1 0 ]
+"87
+[v ___itoee __itoee `(ui  1 e 2 0 ]
+"94
+[v ___mtoee __mtoee `(um  1 e 3 0 ]
+"101
+[v ___ltoee __ltoee `(ul  1 e 4 0 ]
+"108
+[v ___eetoft __eetoft `(f  1 e 3 0 ]
+"116
+[v ___eetofl __eetofl `(d  1 e 3 0 ]
+"124
+[v ___fttoee __fttoee `(f  1 e 3 0 ]
+"131
+[v ___fltoee __fltoee `(d  1 e 3 0 ]
+"49 C:\isaka\application\compiler\xc\xc8\sources\pic\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"26 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\others\7segLED_testdata_transmitter.X\main.c
+[v _I2C_idle_check I2C_idle_check `(v  1 e 0 0 ]
+"30
+[v _I2C_send_data I2C_send_data `(v  1 e 0 0 ]
+"43
+[v _interruption interruption `II(v  1 e 0 0 ]
+"59
+[v _main main `(v  1 e 0 0 ]
+"67
+[v _init init `(v  1 e 0 0 ]
+"81
+[v _init_Timer4 init_Timer4 `(v  1 e 0 0 ]
+"89
+[v _init_I2C_master init_I2C_master `(v  1 e 0 0 ]
+"412 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
-"475
+"473
 [v _PORTB PORTB `VEuc  1 e 1 @13 ]
-"1120
+"1118
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-"1181
+"1179
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
-"1664
+"1662
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
-"1802
+"1800
 [v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
-"1821
+"1819
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
-"1840
+"1838
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-"1919
+"1917
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
-"2797
+"2795
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-"2848
+"2846
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
-"3502
+"2910
+[v _EEADR EEADR `VEus  1 e 2 @401 ]
+"2965
+[v _EEDATA EEDATA `VEuc  1 e 1 @403 ]
+"3016
+[v _EECON1 EECON1 `VEuc  1 e 1 @405 ]
+"3077
+[v _EECON2 EECON2 `VEuc  1 e 1 @406 ]
+"3500
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
-"3539
+"3537
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
-"3613
+"3611
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
-"3734
+"3732
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-"3937
+"3935
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
 [s S21 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
@@ -70,70 +170,78 @@
 `uc 1 ACKSTAT 1 0 :1:6 
 `uc 1 GCEN 1 0 :1:7 
 ]
-"3959
+"3957
 [u S30 . 1 `S21 1 . 1 0 ]
 [v _SSP1CON2bits SSP1CON2bits `VES30  1 e 1 @534 ]
-"6183
+"6181
 [v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
-"6202
+"6200
 [v _PR4 PR4 `VEuc  1 e 1 @1046 ]
-"6221
+"6219
 [v _T4CON T4CON `VEuc  1 e 1 @1047 ]
-"6682
+"6680
 [v _BCL1IE BCL1IE `VEb  1 e 0 @1171 ]
-"6684
+"6682
 [v _BCL1IF BCL1IF `VEb  1 e 0 @147 ]
-"6962
+"6780
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"6960
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"6966
+"6964
 [v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
-"7184
+"7182
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"7234
+"7232
 [v _RB3 RB3 `VEb  1 e 0 @107 ]
-"7310
+"7248
+[v _RD RD `VEb  1 e 0 @3240 ]
+"7308
 [v _SSP1IE SSP1IE `VEb  1 e 0 @1163 ]
-"7312
+"7310
 [v _SSP1IF SSP1IF `VEb  1 e 0 @139 ]
-"7444
+"7442
 [v _TMR4IE TMR4IE `VEb  1 e 0 @1177 ]
-"7446
+"7444
 [v _TMR4IF TMR4IF `VEb  1 e 0 @153 ]
-"7448
+"7446
 [v _TMR4ON TMR4ON `VEb  1 e 0 @8378 ]
-"24 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
+"7544
+[v _WR WR `VEb  1 e 0 @3241 ]
+"7546
+[v _WREN WREN `VEb  1 e 0 @3242 ]
+"24 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\others\7segLED_testdata_transmitter.X\main.c
 [v _send_data send_data `uc  1 e 1 0 ]
 "59
-[v _main main `(v  1 e 1 0 ]
+[v _main main `(v  1 e 0 0 ]
 {
-"62
-[v main@i i `i  1 a 2 9 ]
-"70
+"65
 } 0
-"26 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\adcon.c
-[v _init_adcon init_adcon `(v  1 e 1 0 ]
+"67
+[v _init init `(v  1 e 0 0 ]
+{
+"76
+[v init@i i `i  1 a 2 9 ]
+"79
+} 0
+"26 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\others\7segLED_testdata_transmitter.X\adcon.c
+[v _init_adcon init_adcon `(v  1 e 0 0 ]
 {
 [v init_adcon@anselA anselA `i  1 p 2 4 ]
 [v init_adcon@anselB anselB `i  1 p 2 6 ]
 "31
 } 0
-"82 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
-[v _init_Timer4 init_Timer4 `(v  1 e 1 0 ]
+"81 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\others\7segLED_testdata_transmitter.X\main.c
+[v _init_Timer4 init_Timer4 `(v  1 e 0 0 ]
 {
-"88
+"87
 } 0
-"90
-[v _init_I2C_master init_I2C_master `(v  1 e 1 0 ]
+"89
+[v _init_I2C_master init_I2C_master `(v  1 e 0 0 ]
 {
-"98
-} 0
-"72
-[v _init init `(v  1 e 1 0 ]
-{
-"80
+"97
 } 0
 "43
-[v _interruption interruption `II(v  1 e 1 0 ]
+[v _interruption interruption `II(v  1 e 0 0 ]
 {
 "50
 [v interruption@data data `i  1 a 2 11 ]
@@ -141,7 +249,7 @@
 [v interruption@counter counter `i  1 s 2 counter ]
 "57
 } 0
-"14 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\adcon.c
+"14 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\others\7segLED_testdata_transmitter.X\adcon.c
 [v _adconv adconv `(i  1 e 2 0 ]
 {
 "15
@@ -150,8 +258,8 @@
 [v adconv@pin_select pin_select `i  1 p 2 0 ]
 "24
 } 0
-"30 C:\git\miehcle\2017\P17EC001_PIC_Controller\P17EC001\設計\7segLED_testdata_transmitter.X\main.c
-[v _I2C_send_data I2C_send_data `(v  1 e 1 0 ]
+"30 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\others\7segLED_testdata_transmitter.X\main.c
+[v _I2C_send_data I2C_send_data `(v  1 e 0 0 ]
 {
 [v I2C_send_data@addr addr `uc  1 a 1 wreg ]
 [v I2C_send_data@addr addr `uc  1 a 1 wreg ]
@@ -160,7 +268,7 @@
 "41
 } 0
 "26
-[v _I2C_idle_check I2C_idle_check `(v  1 e 1 0 ]
+[v _I2C_idle_check I2C_idle_check `(v  1 e 0 0 ]
 {
 "28
 } 0

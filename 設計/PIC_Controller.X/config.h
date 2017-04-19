@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+#include <xc.h>
+
 /* to use __delay_us(), Ajust this number to your xtal frequency. */
 #define _XTAL_FREQ 16000000
 

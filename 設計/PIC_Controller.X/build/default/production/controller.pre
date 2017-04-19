@@ -1,6 +1,27 @@
 
 # 1 "controller.c"
 
+# 33 "adcon.h"
+int adconv(int pin_select);
+void init_adcon(int anselA, int anselB);
+
+# 36 "controller.h"
+void measure(int* value, int pin_select);
+void calc(int ref, int mes,int *output);
+int P_calc(int res);
+int I_calc(int res);
+int D_calc(int res);
+void output(int out);
+void interrupt_controller(void);
+void init_PWM(void);
+
+
+int current_conversion(int measured_value);
+
+
+void set_current_limit(int current_limit);
+int get_current_limit(void);
+
 # 21 "C:\isaka\application\compiler\xc\xc8\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -3709,22 +3730,8 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 33 "adcon.h"
-int adconv(int pin_select);
-void init_adcon(int anselA, int anselB);
 
-# 24 "controller.h"
-void measure(int* value, int pin_select);
-void calc(int ref, int mes,int *output);
-int P_calc(int res);
-int I_calc(int res);
-int D_calc(int res);
-void output(int output);
-void interrupt_controller(void);
-void init_PWM(void);
-
-
-# 22 "config.h"
+# 24 "config.h"
 #pragma config FOSC = INTOSC
 #pragma config WDTE = OFF
 #pragma config PWRTE = ON
@@ -3743,7 +3750,10 @@ void init_PWM(void);
 #pragma config BORV = HI
 #pragma config LVP = OFF
 
-# 15 "controller.c"
+# 14 "controller.c"
+int controller_current_limit = 0;
+
+
 void measure(int *value, int pin_select) {
 *value = adconv(pin_select);
 }
@@ -3757,14 +3767,14 @@ res = ref - mes;
 *output += P_calc(res);
 *output += I_calc(res);
 
-*output = ;
+*output = ((((*output>=0) ? (*output) : (0))<=1023) ? (((*output>=0) ? (*output) : (0))) : (1023));
 }
 
 
 int P_calc(int res) {
 int temp;
 
-temp = res * 1.0;
+temp = (int) (res * 1.0);
 return temp;
 }
 
@@ -3773,8 +3783,8 @@ int temp;
 static int sum = 0;
 
 sum += res;
-sum = ;
-temp = sum * 0.01;
+sum = ((((sum>=0) ? (sum) : (0))<=1023) ? (((sum>=0) ? (sum) : (0))) : (1023));
+temp = (int) (sum * 0.01);
 return temp;
 }
 
@@ -3782,15 +3792,15 @@ int D_calc(int res) {
 int temp;
 static int previous = 0;
 
-temp = (res - previous) * 0.0;
+temp = (int) ((res - previous) * 0.0);
 previous = res;
 return temp;
 }
 
 
-void output(int output) {
-CCPR3L = output >> 2;
-CCP3CONbits.DC3B = output & 0x03;
+void output(int out) {
+CCPR3L = out >> 2;
+CCP3CONbits.DC3B = out & 0x03;
 }
 
 
@@ -3798,11 +3808,13 @@ void interrupt_controller(void) {
 if(TMR2IF == 1) {
 int current;
 int volume;
-int output;
+int out;
 measure(&current, 0b00000101);
 measure(&volume, 0b00000001);
-calc(current,volume,&output);
-output(output);
+current = current_conversion(current);
+set_current_limit(volume);
+calc(current,volume,&out);
+output(out);
 TMR2IF = 0;
 }
 }
@@ -3817,4 +3829,21 @@ CCPR3L = 0;
 CCPR3H = 0;
 TMR2 = 0;
 TMR2ON = 1;
+}
+
+# 99
+int current_conversion(int measured_value) {
+
+# 104
+int current = (((long) (measured_value - 0x0200)) * ((long) 1000) * ((long) 20)) >> 10;
+
+return ((((long) current) * ((long) 12000)) >> 10);
+}
+
+void set_current_limit(int current_limit) {
+controller_current_limit = current_limit;
+}
+
+int get_current_limit(void) {
+return controller_current_limit;
 }

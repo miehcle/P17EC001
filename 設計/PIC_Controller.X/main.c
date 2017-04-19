@@ -5,6 +5,7 @@
  * Created on 2017/04/17
  */
 
+#include <xc.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -39,8 +40,10 @@ void init(void) {
     for(unsigned char i = 0; i < 100; i++){}
     GIE = 1;                    //all interrupt allowed
     PEIE = 1;                   //peripheral equipment interrupt allowed
+    init_I2C_master();
     init_adcon(0x03,0x00);
     init_PWM();
+    RB3 = 1;
 }
 
 void loop(void) {
@@ -50,4 +53,5 @@ void loop(void) {
 
 void interrupt inter(void) {
     interrupt_controller();
+    interrupt_I2C();
 }

@@ -1,0 +1,27 @@
+_set_e: CODE, 948 0 8
+_light2: CODE, 57 0 260
+_loop: CODE, 754 0 29
+_init: CODE, 834 0 22
+_open2: CODE, 856 0 17
+_set_f: CODE, 940 0 8
+_init_I2C_slave: CODE, 873 0 16
+_main: CODE, 988 0 7
+_set_a: CODE, 980 0 8
+_set_g: CODE, 932 0 8
+_num_digits_conv: CODE, 470 0 150
+_set_b: CODE, 972 0 8
+__initialization: CODE, 40 0 13
+___lwdiv: CODE, 620 0 55
+_init_Timer4: CODE, 905 0 11
+_interruption: CODE, 4 0 34
+_interrupt_I2C: CODE, 889 0 16
+_set_c: CODE, 964 0 8
+_close2: CODE, 1001 0 4
+___lwmod: CODE, 675 0 47
+_set_num: CODE, 317 0 153
+_set_d: CODE, 956 0 8
+_error2: CODE, 809 0 25
+_set_p: CODE, 924 0 8
+___wmul: CODE, 722 0 32
+_wait: CODE, 783 0 26
+Total: 981

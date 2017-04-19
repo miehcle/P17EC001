@@ -2769,35 +2769,35 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
 [; ;adcon.h: 33: int adconv(int pin_select);
 [; ;adcon.h: 34: void init_adcon(int anselA, int anselB);
-"22 config.h
+"24 config.h
 [p x FOSC=INTOSC ]
-"23
-[p x WDTE=OFF ]
-"24
-[p x PWRTE=ON ]
 "25
-[p x MCLRE=OFF ]
+[p x WDTE=OFF ]
 "26
-[p x CP=OFF ]
+[p x PWRTE=ON ]
 "27
-[p x CPD=OFF ]
+[p x MCLRE=OFF ]
 "28
-[p x BOREN=ON ]
+[p x CP=OFF ]
 "29
-[p x CLKOUTEN=OFF ]
+[p x CPD=OFF ]
 "30
-[p x IESO=OFF ]
+[p x BOREN=ON ]
 "31
+[p x CLKOUTEN=OFF ]
+"32
+[p x IESO=OFF ]
+"33
 [p x FCMEN=OFF ]
-"34
-[p x WRT=OFF ]
-"35
-[p x PLLEN=OFF ]
 "36
-[p x STVREN=ON ]
+[p x WRT=OFF ]
 "37
-[p x BORV=HI ]
+[p x PLLEN=OFF ]
 "38
+[p x STVREN=ON ]
+"39
+[p x BORV=HI ]
+"40
 [p x LVP=OFF ]
 "13 adcon.c
 [v _adconv `(i ~T0 @X0 1 ef1`i ]

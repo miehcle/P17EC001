@@ -1,0 +1,11 @@
+_I2C_idle_check: CODE, 248 0 10
+_init: CODE, 80 0 59
+_main: CODE, 258 0 6
+_I2C_send_data: CODE, 182 0 27
+_init_I2C_master: CODE, 223 0 14
+__initialization: CODE, 73 0 3
+_init_Timer4: CODE, 237 0 11
+_init_adcon: CODE, 209 0 14
+_adconv: CODE, 139 0 43
+_interruption: CODE, 4 0 67
+Total: 254

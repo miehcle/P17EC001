@@ -3714,7 +3714,7 @@ int adconv(int pin_select);
 void init_adcon(int anselA, int anselB);
 
 
-# 22 "config.h"
+# 24 "config.h"
 #pragma config FOSC = INTOSC
 #pragma config WDTE = OFF
 #pragma config PWRTE = ON
