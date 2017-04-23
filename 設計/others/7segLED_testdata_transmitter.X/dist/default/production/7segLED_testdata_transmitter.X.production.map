@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\isaka\application\compiler\xc\xc8\dat\en_msgs.txt -cs \
   -h+dist/default/production\7segLED_testdata_transmitter.X.production.sym \
   --cmf=dist/default/production\7segLED_testdata_transmitter.X.production.cmf \
-  -z -Q16F1827 -oC:\Users\shuh7\AppData\Local\Temp\s8l8.6 \
+  -z -Q16F1827 -oC:\Users\shuh7\AppData\Local\Temp\sc2k.6 \
   -Mdist/default/production/7segLED_testdata_transmitter.X.production.map \
   -E1 -ver=XC8 -ASTACK=0200Dh-0216fh -pstack=STACK -ACONST=00h-0FFhx16 \
   -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh -AENTRY=00h-0FFhx16 \
@@ -29,7 +29,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\shuh7\AppData\Local\Temp\s8l8.obj \
+  C:\Users\shuh7\AppData\Local\Temp\sc2k.obj \
   dist/default/production\7segLED_testdata_transmitter.X.production.obj 
 
 Object code version is 3.11
@@ -39,7 +39,7 @@ Machine type is 16F1827
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\shuh7\AppData\Local\Temp\s8l8.obj
+C:\Users\shuh7\AppData\Local\Temp\sc2k.obj
                 end_init                             47       47        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0

@@ -1,11 +1,15 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"16 main.c
+"41 main.h
 [v _init `(v ~T0 @X0 0 ef ]
-"17
+"45
 [v _loop `(v ~T0 @X0 0 ef ]
 "1662 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
+"2795
+[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
+"2846
+[v _ANSELB `Vuc ~T0 @X0 0 e@397 ]
 "1118
 [v _TRISA `Vuc ~T0 @X0 0 e@140 ]
 "1179
@@ -14,119 +18,54 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PORTA `Vuc ~T0 @X0 0 e@12 ]
 "473
 [v _PORTB `Vuc ~T0 @X0 0 e@13 ]
+"32 adcon.h
+[v _init_adcon `(v ~T0 @X0 0 ef2`i`i ]
+"15 pwm.h
+[v _init_PWM `(v ~T0 @X0 0 ef ]
+"17 I2C.h
+[v _init_I2C_master `(v ~T0 @X0 0 ef ]
+"42 main.h
+[v _init_Timer2 `(v ~T0 @X0 0 ef ]
+"43
+[v _init_Timer4 `(v ~T0 @X0 0 ef ]
+"44
+[v _init_interruption `(v ~T0 @X0 0 ef ]
+"7232 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
+[v _RB3 `Vb ~T0 @X0 0 e@107 ]
+"950
+[v _T2CON `Vuc ~T0 @X0 0 e@28 ]
+"912
+[v _TMR2 `Vuc ~T0 @X0 0 e@26 ]
+"7440
+[v _TMR2ON `Vb ~T0 @X0 0 e@226 ]
+"6219
+[v _T4CON `Vuc ~T0 @X0 0 e@1047 ]
+"6181
+[v _TMR4 `Vuc ~T0 @X0 0 e@1045 ]
+"7446
+[v _TMR4ON `Vb ~T0 @X0 0 e@8378 ]
+"7436
+[v _TMR2IE `Vb ~T0 @X0 0 e@1161 ]
+"7438
+[v _TMR2IF `Vb ~T0 @X0 0 e@137 ]
+"7442
+[v _TMR4IE `Vb ~T0 @X0 0 e@1177 ]
+"7444
+[v _TMR4IF `Vb ~T0 @X0 0 e@153 ]
 "6960
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
 "7182
 [v _PEIE `Vb ~T0 @X0 0 e@94 ]
-"17 I2C.h
-[v _init_I2C_master `(v ~T0 @X0 0 ef ]
-"34 adcon.h
-[v _init_adcon `(v ~T0 @X0 0 ef2`i`i ]
-"43 controller.h
-[v _init_PWM `(v ~T0 @X0 0 ef ]
-"7232 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
-[v _RB3 `Vb ~T0 @X0 0 e@107 ]
-"42 controller.h
-[v _interrupt_controller `(v ~T0 @X0 0 ef ]
-"21 I2C.h
-[v _interrupt_I2C `(v ~T0 @X0 0 ef ]
-[; ;stdio.h: 8: typedef int ptrdiff_t;
-[; ;stdio.h: 9: typedef unsigned size_t;
-[; ;stdio.h: 10: typedef unsigned short wchar_t;
-[; ;stdarg.h: 7: typedef void * va_list[1];
-[; ;stdarg.h: 10: extern void * __va_start(void);
-[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
-[; ;stdio.h: 23: extern int errno;
-[; ;stdio.h: 54: struct __prbuf
-[; ;stdio.h: 55: {
-[; ;stdio.h: 56: char * ptr;
-[; ;stdio.h: 57: void (* func)(char);
-[; ;stdio.h: 58: };
-[; ;conio.h: 17: extern int errno;
-[; ;conio.h: 20: extern void init_uart(void);
-[; ;conio.h: 22: extern char getch(void);
-[; ;conio.h: 23: extern char getche(void);
-[; ;conio.h: 24: extern void putch(char);
-[; ;conio.h: 25: extern void ungetch(char);
-[; ;conio.h: 27: extern __bit kbhit(void);
-[; ;conio.h: 31: extern char * cgets(char *);
-[; ;conio.h: 32: extern void cputs(const char *);
-[; ;stdio.h: 99: extern int cprintf(char *, ...);
-[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-[; ;stdio.h: 194: extern char * gets(char *);
-[; ;stdio.h: 195: extern int puts(const char *);
-[; ;stdio.h: 196: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-[; ;stdio.h: 198: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
-[; ;stdio.h: 206: extern int printf(const char *, ...);
-[; ;stdlib.h: 27: typedef struct {
-[; ;stdlib.h: 28: int rem;
-[; ;stdlib.h: 29: int quot;
-[; ;stdlib.h: 30: } div_t;
-[; ;stdlib.h: 31: typedef struct {
-[; ;stdlib.h: 32: unsigned rem;
-[; ;stdlib.h: 33: unsigned quot;
-[; ;stdlib.h: 34: } udiv_t;
-[; ;stdlib.h: 35: typedef struct {
-[; ;stdlib.h: 36: long quot;
-[; ;stdlib.h: 37: long rem;
-[; ;stdlib.h: 38: } ldiv_t;
-[; ;stdlib.h: 39: typedef struct {
-[; ;stdlib.h: 40: unsigned long quot;
-[; ;stdlib.h: 41: unsigned long rem;
-[; ;stdlib.h: 42: } uldiv_t;
-[; ;stdlib.h: 65: extern double atof(const char *);
-[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
-[; ;stdlib.h: 67: extern int atoi(const char *);
-[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
-[; ;stdlib.h: 69: extern long atol(const char *);
-[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
-[; ;stdlib.h: 72: extern int rand(void);
-[; ;stdlib.h: 73: extern void srand(unsigned int);
-[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
-[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
-[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
-[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
-[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
-[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
-[; ;stdlib.h: 87: extern void * malloc(size_t);
-[; ;stdlib.h: 88: extern void free(void *);
-[; ;stdlib.h: 89: extern void * realloc(void *, size_t);
-[; ;stdlib.h: 91: extern void abort(void);
-[; ;stdlib.h: 92: extern void exit(int);
-[; ;stdlib.h: 93: extern int atexit(void (*)(void));
-[; ;stdlib.h: 94: extern char * getenv(const char *);
-[; ;stdlib.h: 95: extern char ** environ;
-[; ;stdlib.h: 96: extern int system(char *);
-[; ;stdlib.h: 97: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-[; ;stdlib.h: 98: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-[; ;stdlib.h: 99: extern int abs(int);
-[; ;stdlib.h: 100: extern long labs(long);
-[; ;stdlib.h: 103: extern char * itoa(char * buf, int val, int base);
-[; ;stdlib.h: 104: extern char * utoa(char * buf, unsigned val, int base);
-[; ;stdlib.h: 109: extern char * ltoa(char * buf, long val, int base);
-[; ;stdlib.h: 110: extern char * ultoa(char * buf, unsigned long val, int base);
-[; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
-[; ;adcon.h: 33: int adconv(int pin_select);
-[; ;adcon.h: 34: void init_adcon(int anselA, int anselB);
-[; ;controller.h: 36: void measure(int* value, int pin_select);
-[; ;controller.h: 37: void calc(int ref, int mes,int *output);
-[; ;controller.h: 38: int P_calc(int res);
-[; ;controller.h: 39: int I_calc(int res);
-[; ;controller.h: 40: int D_calc(int res);
-[; ;controller.h: 41: void output(int out);
-[; ;controller.h: 42: void interrupt_controller(void);
-[; ;controller.h: 43: void init_PWM(void);
-[; ;controller.h: 46: int current_conversion(int measured_value);
-[; ;controller.h: 49: void set_current_limit(int current_limit);
-[; ;controller.h: 50: int get_current_limit(void);
+"29 controller.h
+[v _safety_check `(i ~T0 @X0 0 ef ]
+"30
+[v _measure `(v ~T0 @X0 0 ef2`*i`*f ]
+"31
+[v _PID `(v ~T0 @X0 0 ef3`i`i`*i ]
+"16 pwm.h
+[v _output_PWM `(v ~T0 @X0 0 ef1`i ]
+"20 I2C.h
+[v _I2C_send_data `(v ~T0 @X0 0 ef3`uc`*uc`i ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1827.h: 47: extern volatile unsigned char INDF0 @ 0x000;
@@ -2877,161 +2816,417 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
-"24 config.h
+[; ;stdio.h: 8: typedef int ptrdiff_t;
+[; ;stdio.h: 9: typedef unsigned size_t;
+[; ;stdio.h: 10: typedef unsigned short wchar_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 23: extern int errno;
+[; ;stdio.h: 54: struct __prbuf
+[; ;stdio.h: 55: {
+[; ;stdio.h: 56: char * ptr;
+[; ;stdio.h: 57: void (* func)(char);
+[; ;stdio.h: 58: };
+[; ;conio.h: 17: extern int errno;
+[; ;conio.h: 20: extern void init_uart(void);
+[; ;conio.h: 22: extern char getch(void);
+[; ;conio.h: 23: extern char getche(void);
+[; ;conio.h: 24: extern void putch(char);
+[; ;conio.h: 25: extern void ungetch(char);
+[; ;conio.h: 27: extern __bit kbhit(void);
+[; ;conio.h: 31: extern char * cgets(char *);
+[; ;conio.h: 32: extern void cputs(const char *);
+[; ;stdio.h: 99: extern int cprintf(char *, ...);
+[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 194: extern char * gets(char *);
+[; ;stdio.h: 195: extern int puts(const char *);
+[; ;stdio.h: 196: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 198: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 206: extern int printf(const char *, ...);
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: int rem;
+[; ;stdlib.h: 29: int quot;
+[; ;stdlib.h: 30: } div_t;
+[; ;stdlib.h: 31: typedef struct {
+[; ;stdlib.h: 32: unsigned rem;
+[; ;stdlib.h: 33: unsigned quot;
+[; ;stdlib.h: 34: } udiv_t;
+[; ;stdlib.h: 35: typedef struct {
+[; ;stdlib.h: 36: long quot;
+[; ;stdlib.h: 37: long rem;
+[; ;stdlib.h: 38: } ldiv_t;
+[; ;stdlib.h: 39: typedef struct {
+[; ;stdlib.h: 40: unsigned long quot;
+[; ;stdlib.h: 41: unsigned long rem;
+[; ;stdlib.h: 42: } uldiv_t;
+[; ;stdlib.h: 65: extern double atof(const char *);
+[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 67: extern int atoi(const char *);
+[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 69: extern long atol(const char *);
+[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 72: extern int rand(void);
+[; ;stdlib.h: 73: extern void srand(unsigned int);
+[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 87: extern void * malloc(size_t);
+[; ;stdlib.h: 88: extern void free(void *);
+[; ;stdlib.h: 89: extern void * realloc(void *, size_t);
+[; ;stdlib.h: 91: extern void abort(void);
+[; ;stdlib.h: 92: extern void exit(int);
+[; ;stdlib.h: 93: extern int atexit(void (*)(void));
+[; ;stdlib.h: 94: extern char * getenv(const char *);
+[; ;stdlib.h: 95: extern char ** environ;
+[; ;stdlib.h: 96: extern int system(char *);
+[; ;stdlib.h: 97: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 98: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 99: extern int abs(int);
+[; ;stdlib.h: 100: extern long labs(long);
+[; ;stdlib.h: 103: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 104: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 109: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 110: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
+"19 main.h
 [p x FOSC=INTOSC ]
-"25
+"20
 [p x WDTE=OFF ]
-"26
+"21
 [p x PWRTE=ON ]
-"27
+"22
 [p x MCLRE=OFF ]
-"28
+"23
 [p x CP=OFF ]
-"29
+"24
 [p x CPD=OFF ]
-"30
+"25
 [p x BOREN=ON ]
-"31
+"26
 [p x CLKOUTEN=OFF ]
-"32
+"27
 [p x IESO=OFF ]
-"33
+"28
 [p x FCMEN=OFF ]
-"36
+"31
 [p x WRT=OFF ]
-"37
+"32
 [p x PLLEN=OFF ]
-"38
+"33
 [p x STVREN=ON ]
-"39
+"34
 [p x BORV=HI ]
-"40
+"35
 [p x LVP=OFF ]
+[; ;main.h: 40: int main(void);
+[; ;main.h: 41: void init(void);
+[; ;main.h: 42: void init_Timer2(void);
+[; ;main.h: 43: void init_Timer4(void);
+[; ;main.h: 44: void init_interruption(void);
+[; ;main.h: 45: void loop(void);
+[; ;main.h: 46: void interrupt inter(void);
+[; ;adcon.h: 32: void init_adcon(int anselA, int anselB);
+[; ;adcon.h: 33: int adconv(int pin_select);
+[; ;pwm.h: 15: void init_PWM(void);
+[; ;pwm.h: 16: void output_PWM(int out);
 [; ;I2C.h: 17: void init_I2C_master(void);
 [; ;I2C.h: 18: void I2C_idle_check(void);
 [; ;I2C.h: 19: int I2C_ack_check(void);
-[; ;I2C.h: 20: void I2C_send_data(unsigned char addr, char *data, int length);
-[; ;I2C.h: 21: void interrupt_I2C(void);
-[; ;I2C.h: 24: void init_I2C_slave(unsigned char addr);
-[; ;I2C.h: 25: void I2C_slave_interrupt(char *received_datas);
-[; ;I2C.h: 28: void init_Timer4(void);
-[; ;main.c: 16: void init(void);
-[; ;main.c: 17: void loop(void);
-[; ;main.c: 18: void interrupt inter(void);
-"23 main.c
-[v _main `(i ~T0 @X0 1 ef2`i`**uc ]
-{
-[; ;main.c: 23: int main(int argc, char** argv) {
-[e :U _main ]
-[v _argc `i ~T0 @X0 1 r1 ]
-[v _argv `**uc ~T0 @X0 1 r2 ]
-[f ]
-[; ;main.c: 24: init();
+[; ;I2C.h: 20: void I2C_send_data(unsigned char addr, unsigned char *data, int length);
+[; ;controller.h: 29: int safety_check();
+[; ;controller.h: 30: void measure(int *volume, float *current);
+[; ;controller.h: 31: void PID(int ref, int mes, int *output);
+[; ;controller.h: 32: int calc_P(int res);
+[; ;controller.h: 33: int calc_I(int res);
+[; ;controller.h: 34: int calc_D(int res);
+"22 main.c
+[v _power `i ~T0 @X0 1 e ]
+[i _power
+-> 0 `i
+]
+[; ;main.c: 22: int power = 0;
+"23
+[v _volume `i ~T0 @X0 1 e ]
+[i _volume
+-> 0 `i
+]
+[; ;main.c: 23: int volume = 0;
 "24
+[v _current `f ~T0 @X0 1 e ]
+[i _current
+-> .0.0 `f
+]
+[; ;main.c: 24: float current = 0.0;
+"30
+[v _main `(i ~T0 @X0 1 ef ]
+{
+[; ;main.c: 30: int main(void) {
+[e :U _main ]
+[f ]
+[; ;main.c: 31: init();
+"31
 [e ( _init ..  ]
-[; ;main.c: 26: while(1) {
-"26
+[; ;main.c: 33: while(1) {
+"33
 [e :U 357 ]
 {
-[; ;main.c: 27: loop();
-"27
+[; ;main.c: 34: loop();
+"34
 [e ( _loop ..  ]
-"28
+"35
 }
 [e :U 356 ]
-"26
+"33
 [e $U 357  ]
 [e :U 358 ]
-[; ;main.c: 28: }
-[; ;main.c: 30: return (0);
-"30
+[; ;main.c: 35: }
+[; ;main.c: 37: return (0);
+"37
 [e ) -> 0 `i ]
 [e $UE 355  ]
-[; ;main.c: 31: }
-"31
+[; ;main.c: 38: }
+"38
 [e :UE 355 ]
 }
-"33
+"40
 [v _init `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 33: void init(void) {
+[; ;main.c: 40: void init(void) {
 [e :U _init ]
 [f ]
-[; ;main.c: 34: OSCCON = 0b01111010;
-"34
-[e = _OSCCON -> -> 122 `i `uc ]
-[; ;main.c: 35: TRISA = 0x03;
-"35
-[e = _TRISA -> -> 3 `i `uc ]
-[; ;main.c: 36: TRISB = 0x00;
-"36
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 37: PORTA = 0x00;
-"37
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;main.c: 38: PORTB = 0x00;
-"38
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;main.c: 39: for(unsigned char i = 0; i < 100; i++){}
-"39
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 100 `i 360  ]
-[e $U 361  ]
-[e :U 360 ]
-{
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 100 `i 360  ]
-[e :U 361 ]
-}
-[; ;main.c: 40: GIE = 1;
-"40
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 41: PEIE = 1;
+[; ;main.c: 41: OSCCON = 0b01111010;
 "41
-[e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 42: init_I2C_master();
+[e = _OSCCON -> -> 122 `i `uc ]
+[; ;main.c: 42: ANSELA = 0b00000011;
 "42
-[e ( _init_I2C_master ..  ]
-[; ;main.c: 43: init_adcon(0x03,0x00);
+[e = _ANSELA -> -> 3 `i `uc ]
+[; ;main.c: 43: ANSELB = 0b00000000;
 "43
-[e ( _init_adcon (2 , -> 3 `i -> 0 `i ]
-[; ;main.c: 44: init_PWM();
+[e = _ANSELB -> -> 0 `i `uc ]
+[; ;main.c: 44: TRISA = 0b11000011;
 "44
-[e ( _init_PWM ..  ]
-[; ;main.c: 45: RB3 = 1;
+[e = _TRISA -> -> 195 `i `uc ]
+[; ;main.c: 45: TRISB = 0b00010010;
 "45
-[e = _RB3 -> -> 1 `i `b ]
-[; ;main.c: 46: }
+[e = _TRISB -> -> 18 `i `uc ]
+[; ;main.c: 46: PORTA = 0b00000000;
 "46
-[e :UE 359 ]
-}
-"48
-[v _loop `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 48: void loop(void) {
-[e :U _loop ]
-[f ]
-[; ;main.c: 50: }
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;main.c: 47: PORTB = 0b00000000;
+"47
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 49: init_adcon(0b00000011, 0b00000000);
+"49
+[e ( _init_adcon (2 , -> 3 `i -> 0 `i ]
+[; ;main.c: 50: init_PWM();
 "50
-[e :UE 363 ]
-}
-[v F3005 `(v ~T0 @X0 1 tf ]
+[e ( _init_PWM ..  ]
+[; ;main.c: 51: init_I2C_master();
+"51
+[e ( _init_I2C_master ..  ]
+[; ;main.c: 52: init_Timer2();
+"52
+[e ( _init_Timer2 ..  ]
+[; ;main.c: 53: init_Timer4();
 "53
-[v _inter `IF3005 ~T0 @X0 1 e ]
-{
-[; ;main.c: 53: void interrupt inter(void) {
-[e :U _inter ]
-[f ]
-[; ;main.c: 54: interrupt_controller();
+[e ( _init_Timer4 ..  ]
+[; ;main.c: 54: init_interruption();
 "54
-[e ( _interrupt_controller ..  ]
-[; ;main.c: 55: interrupt_I2C();
-"55
-[e ( _interrupt_I2C ..  ]
+[e ( _init_interruption ..  ]
+[; ;main.c: 56: RB3 = 1;
+"56
+[e = _RB3 -> -> 1 `i `b ]
 [; ;main.c: 57: }
 "57
+[e :UE 359 ]
+}
+"62
+[v _init_Timer2 `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 62: void init_Timer2(void) {
+[e :U _init_Timer2 ]
+[f ]
+[; ;main.c: 63: T2CON = 0b00000000;
+"63
+[e = _T2CON -> -> 0 `i `uc ]
+[; ;main.c: 64: TMR2 = 0b00000000;
+"64
+[e = _TMR2 -> -> 0 `i `uc ]
+[; ;main.c: 65: TMR2ON = 1;
+"65
+[e = _TMR2ON -> -> 1 `i `b ]
+[; ;main.c: 66: }
+"66
+[e :UE 360 ]
+}
+"71
+[v _init_Timer4 `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 71: void init_Timer4(void) {
+[e :U _init_Timer4 ]
+[f ]
+[; ;main.c: 72: T4CON = 0b00000001;
+"72
+[e = _T4CON -> -> 1 `i `uc ]
+[; ;main.c: 73: TMR4 = 0b00000000;
+"73
+[e = _TMR4 -> -> 0 `i `uc ]
+[; ;main.c: 74: TMR4ON = 1;
+"74
+[e = _TMR4ON -> -> 1 `i `b ]
+[; ;main.c: 75: }
+"75
+[e :UE 361 ]
+}
+"77
+[v _init_interruption `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 77: void init_interruption(void) {
+[e :U _init_interruption ]
+[f ]
+[; ;main.c: 78: TMR2IE = 1;
+"78
+[e = _TMR2IE -> -> 1 `i `b ]
+[; ;main.c: 79: TMR2IF = 0;
+"79
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;main.c: 80: TMR4IE = 1;
+"80
+[e = _TMR4IE -> -> 1 `i `b ]
+[; ;main.c: 81: TMR4IF = 0;
+"81
+[e = _TMR4IF -> -> 0 `i `b ]
+[; ;main.c: 82: GIE = 1;
+"82
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 83: PEIE = 1;
+"83
+[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 84: }
+"84
+[e :UE 362 ]
+}
+"86
+[v _loop `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 86: void loop(void) {
+[e :U _loop ]
+[f ]
+[; ;main.c: 88: }
+"88
+[e :UE 363 ]
+}
+[v F2965 `(v ~T0 @X0 1 tf ]
+"90
+[v _inter `IF2965 ~T0 @X0 1 e ]
+{
+[; ;main.c: 90: void interrupt inter(void) {
+[e :U _inter ]
+[f ]
+"91
+[v F3010 `i ~T0 @X0 1 s cnt_tmr2 ]
+[i F3010
+-> 0 `i
+]
+"92
+[v F3011 `i ~T0 @X0 1 s cnt_tmr4 ]
+[i F3011
+-> 0 `i
+]
+[; ;main.c: 91: static int cnt_tmr2 = 0;
+[; ;main.c: 92: static int cnt_tmr4 = 0;
+[; ;main.c: 94: if (TMR2IF == 1) {
+"94
+[e $ ! == -> _TMR2IF `i -> 1 `i 365  ]
+{
+[; ;main.c: 95: if (cnt_tmr2++ > 8) {
+"95
+[e $ ! > ++ F3010 -> 1 `i -> 8 `i 366  ]
+{
+[; ;main.c: 96: cnt_tmr2 = 0;
+"96
+[e = F3010 -> 0 `i ]
+[; ;main.c: 97: if (safety_check()) {
+"97
+[e $ ! != ( _safety_check ..  -> 0 `i 367  ]
+{
+[; ;main.c: 99: measure(&volume, &current);
+"99
+[e ( _measure (2 , &U _volume &U _current ]
+[; ;main.c: 100: PID(volume, 0, &power);
+"100
+[e ( _PID (3 , , _volume -> 0 `i &U _power ]
+"101
+}
+[; ;main.c: 101: }
+[e $U 368  ]
+"102
+[e :U 367 ]
+[; ;main.c: 102: else {
+{
+[; ;main.c: 104: power = 0;
+"104
+[e = _power -> 0 `i ]
+"105
+}
+[e :U 368 ]
+[; ;main.c: 105: }
+[; ;main.c: 106: output_PWM(power);
+"106
+[e ( _output_PWM (1 _power ]
+"107
+}
+[e :U 366 ]
+[; ;main.c: 107: }
+[; ;main.c: 108: TMR2IF = 0;
+"108
+[e = _TMR2IF -> -> 0 `i `b ]
+"109
+}
+[e :U 365 ]
+[; ;main.c: 109: }
+[; ;main.c: 111: if (TMR4IF == 1) {
+"111
+[e $ ! == -> _TMR4IF `i -> 1 `i 369  ]
+{
+[; ;main.c: 112: if (cnt_tmr4++ > 1024) {
+"112
+[e $ ! > ++ F3011 -> 1 `i -> 1024 `i 370  ]
+{
+[; ;main.c: 113: cnt_tmr4 = 0;
+"113
+[e = F3011 -> 0 `i ]
+"114
+[v _data `uc ~T0 @X0 1 a ]
+[; ;main.c: 114: char data = (power >> 2) & 0xFF;
+[e = _data -> & >> _power -> 2 `i -> 255 `i `uc ]
+[; ;main.c: 115: I2C_send_data((0x02), &data, 1);
+"115
+[e ( _I2C_send_data (3 , , -> -> 2 `i `uc &U _data -> 1 `i ]
+"116
+}
+[e :U 370 ]
+[; ;main.c: 116: }
+[; ;main.c: 117: TMR4IF = 0;
+"117
+[e = _TMR4IF -> -> 0 `i `b ]
+"118
+}
+[e :U 369 ]
+[; ;main.c: 118: }
+[; ;main.c: 119: }
+"119
 [e :UE 364 ]
 }

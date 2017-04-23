@@ -2,7 +2,7 @@
  * File:   adcon.h
  * Author: isaka-PC
  *
- * Created on 2017/04/17, 15:56
+ * Created on 2017/04/23, 18:58
  */
 
 #ifndef ADCON_H
@@ -11,7 +11,6 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
 
 /**
  * ADCON0 pin_select data
@@ -29,10 +28,9 @@ extern "C" {
 #define ADCON_RB5 0b00011101         //AN7
 #define ADCON_RB6 0b00010101         //AN5
 #define ADCON_RB7 0b00011001         //AN6
-    
-int adconv(int pin_select);
-void init_adcon(int anselA, int anselB);
 
+void init_adcon(int anselA, int anselB);
+int adconv(int pin_select);
 
 #ifdef	__cplusplus
 }

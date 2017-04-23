@@ -1,22 +1,18 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1838 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
-[v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
-[v F2764 `(v ~T0 @X0 1 tf1`ul ]
-"154 C:\isaka\application\compiler\xc\xc8\include\pic.h
-[v __delay `JF2764 ~T0 @X0 0 e ]
-[p i __delay ]
-"6964 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
-[v _GO_nDONE `Vb ~T0 @X0 0 e@1257 ]
-"1819
-[v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
-"1800
-[v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
-"2795
+"2795 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
 [v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
 "2846
 [v _ANSELB `Vuc ~T0 @X0 0 e@397 ]
 "1917
 [v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
+"1838
+[v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
+"6964
+[v _GO_nDONE `Vb ~T0 @X0 0 e@1257 ]
+"1819
+[v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
+"1800
+[v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1827.h: 47: extern volatile unsigned char INDF0 @ 0x000;
@@ -2767,99 +2763,79 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
+[; ;adcon.h: 32: void init_adcon(int anselA, int anselB);
 [; ;adcon.h: 33: int adconv(int pin_select);
-[; ;adcon.h: 34: void init_adcon(int anselA, int anselB);
-"24 config.h
-[p x FOSC=INTOSC ]
-"25
-[p x WDTE=OFF ]
-"26
-[p x PWRTE=ON ]
-"27
-[p x MCLRE=OFF ]
-"28
-[p x CP=OFF ]
-"29
-[p x CPD=OFF ]
-"30
-[p x BOREN=ON ]
-"31
-[p x CLKOUTEN=OFF ]
-"32
-[p x IESO=OFF ]
-"33
-[p x FCMEN=OFF ]
-"36
-[p x WRT=OFF ]
-"37
-[p x PLLEN=OFF ]
-"38
-[p x STVREN=ON ]
-"39
-[p x BORV=HI ]
-"40
-[p x LVP=OFF ]
-"13 adcon.c
-[v _adconv `(i ~T0 @X0 1 ef1`i ]
-{
-[; ;adcon.c: 13: int adconv(int pin_select){
-[e :U _adconv ]
-[v _pin_select `i ~T0 @X0 1 r1 ]
-[f ]
-"14
-[v _temp `i ~T0 @X0 1 a ]
-[; ;adcon.c: 14: int temp;
-[; ;adcon.c: 16: ADCON0 = pin_select;
-"16
-[e = _ADCON0 -> _pin_select `uc ]
-[; ;adcon.c: 17: _delay((unsigned long)((1)*(16000000/4000000.0)));
-"17
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
-[; ;adcon.c: 18: GO_nDONE = 1;
-"18
-[e = _GO_nDONE -> -> 1 `i `b ]
-[; ;adcon.c: 19: while(GO_nDONE);
-"19
-[e $U 351  ]
-[e :U 352 ]
-[e :U 351 ]
-[e $ _GO_nDONE 352  ]
-[e :U 353 ]
-[; ;adcon.c: 20: temp = ADRESH;
-"20
-[e = _temp -> _ADRESH `i ]
-[; ;adcon.c: 21: temp = (temp << 8) | ADRESL;
-"21
-[e = _temp | << _temp -> 8 `i -> _ADRESL `i ]
-[; ;adcon.c: 22: return temp;
-"22
-[e ) _temp ]
-[e $UE 350  ]
-[; ;adcon.c: 23: }
-"23
-[e :UE 350 ]
-}
-"25
+"12 adcon.c
 [v _init_adcon `(v ~T0 @X0 1 ef2`i`i ]
 {
-[; ;adcon.c: 25: void init_adcon(int anselA, int anselB){
+[; ;adcon.c: 12: void init_adcon(int anselA, int anselB){
 [e :U _init_adcon ]
 [v _anselA `i ~T0 @X0 1 r1 ]
 [v _anselB `i ~T0 @X0 1 r2 ]
 [f ]
-[; ;adcon.c: 26: ANSELA = anselA;
-"26
+[; ;adcon.c: 13: ANSELA = anselA;
+"13
 [e = _ANSELA -> _anselA `uc ]
-[; ;adcon.c: 27: ANSELB = anselB;
-"27
+[; ;adcon.c: 14: ANSELB = anselB;
+"14
 [e = _ANSELB -> _anselB `uc ]
-[; ;adcon.c: 28: ADCON1 = 0b10010000;
-"28
+[; ;adcon.c: 21: ADCON1 = 0b10010000;
+"21
 [e = _ADCON1 -> -> 144 `i `uc ]
-[; ;adcon.c: 29: ADCON0 = 0b00000001;
-"29
+[; ;adcon.c: 26: ADCON0 = 0b00000001;
+"26
 [e = _ADCON0 -> -> 1 `i `uc ]
-[; ;adcon.c: 30: }
+[; ;adcon.c: 27: }
+"27
+[e :UE 350 ]
+}
+"29
+[v _adconv `(i ~T0 @X0 1 ef1`i ]
+{
+[; ;adcon.c: 29: int adconv(int pin_select){
+[e :U _adconv ]
+[v _pin_select `i ~T0 @X0 1 r1 ]
+[f ]
 "30
-[e :UE 354 ]
+[v _temp `i ~T0 @X0 1 a ]
+[; ;adcon.c: 30: int temp;
+[; ;adcon.c: 33: ADCON0 = pin_select;
+"33
+[e = _ADCON0 -> _pin_select `uc ]
+[; ;adcon.c: 36: for (temp = 0; temp < 10; temp++) { }
+"36
+{
+[e = _temp -> 0 `i ]
+[e $ < _temp -> 10 `i 352  ]
+[e $U 353  ]
+[e :U 352 ]
+{
+}
+[e ++ _temp -> 1 `i ]
+[e $ < _temp -> 10 `i 352  ]
+[e :U 353 ]
+}
+[; ;adcon.c: 38: GO_nDONE = 1;
+"38
+[e = _GO_nDONE -> -> 1 `i `b ]
+[; ;adcon.c: 39: while(GO_nDONE);
+"39
+[e $U 355  ]
+[e :U 356 ]
+[e :U 355 ]
+[e $ _GO_nDONE 356  ]
+[e :U 357 ]
+[; ;adcon.c: 40: temp = ADRESH;
+"40
+[e = _temp -> _ADRESH `i ]
+[; ;adcon.c: 41: temp = (temp << 8) | ADRESL;
+"41
+[e = _temp | << _temp -> 8 `i -> _ADRESL `i ]
+[; ;adcon.c: 42: return temp;
+"42
+[e ) _temp ]
+[e $UE 351  ]
+[; ;adcon.c: 43: }
+"43
+[e :UE 351 ]
 }

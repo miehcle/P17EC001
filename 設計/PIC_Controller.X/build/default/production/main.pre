@@ -1,163 +1,6 @@
 
 # 1 "main.c"
 
-# 8 "C:\isaka\application\compiler\xc\xc8\include\stdio.h"
-typedef int ptrdiff_t;
-typedef unsigned size_t;
-typedef unsigned short wchar_t;
-
-# 7 "C:\isaka\application\compiler\xc\xc8\include\stdarg.h"
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-
-# 23 "C:\isaka\application\compiler\xc\xc8\include\stdio.h"
-extern int errno;
-
-# 54
-struct __prbuf
-{
-char * ptr;
-void (* func)(char);
-};
-
-# 17 "C:\isaka\application\compiler\xc\xc8\include\conio.h"
-extern int errno;
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-# 31
-extern char * cgets(char *);
-extern void cputs(const char *);
-
-# 99 "C:\isaka\application\compiler\xc\xc8\include\stdio.h"
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-
-
-# 191
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-
-# 27 "C:\isaka\application\compiler\xc\xc8\include\stdlib.h"
-typedef struct {
-int rem;
-int quot;
-} div_t;
-typedef struct {
-unsigned rem;
-unsigned quot;
-} udiv_t;
-typedef struct {
-long quot;
-long rem;
-} ldiv_t;
-typedef struct {
-unsigned long quot;
-unsigned long rem;
-} uldiv_t;
-
-# 65
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
-
-
-
-
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
-
-extern void abort(void);
-extern void exit(int);
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
-
-
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
-
-
-
-
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
-
-extern char * ftoa(float f, int * status);
-
-# 33 "adcon.h"
-int adconv(int pin_select);
-void init_adcon(int anselA, int anselB);
-
-# 36 "controller.h"
-void measure(int* value, int pin_select);
-void calc(int ref, int mes,int *output);
-int P_calc(int res);
-int I_calc(int res);
-int D_calc(int res);
-void output(int out);
-void interrupt_controller(void);
-void init_PWM(void);
-
-
-int current_conversion(int measured_value);
-
-
-void set_current_limit(int current_limit);
-int get_current_limit(void);
-
 # 21 "C:\isaka\application\compiler\xc\xc8\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -3866,8 +3709,144 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
+# 8 "C:\isaka\application\compiler\xc\xc8\include\stdio.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
 
-# 24 "config.h"
+# 7 "C:\isaka\application\compiler\xc\xc8\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 23 "C:\isaka\application\compiler\xc\xc8\include\stdio.h"
+extern int errno;
+
+# 54
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 17 "C:\isaka\application\compiler\xc\xc8\include\conio.h"
+extern int errno;
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 31
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 99 "C:\isaka\application\compiler\xc\xc8\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 191
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 27 "C:\isaka\application\compiler\xc\xc8\include\stdlib.h"
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 65
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+extern void abort(void);
+extern void exit(int);
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+
+
+# 19 "main.h"
 #pragma config FOSC = INTOSC
 #pragma config WDTE = OFF
 #pragma config PWRTE = ON
@@ -3886,27 +3865,46 @@ extern __nonreentrant void _delay(unsigned long);
 #pragma config BORV = HI
 #pragma config LVP = OFF
 
+
+
+
+int main(void);
+void init(void);
+void init_Timer2(void);
+void init_Timer4(void);
+void init_interruption(void);
+void loop(void);
+void interrupt inter(void);
+
+# 32 "adcon.h"
+void init_adcon(int anselA, int anselB);
+int adconv(int pin_select);
+
+# 15 "pwm.h"
+void init_PWM(void);
+void output_PWM(int out);
+
 # 17 "I2C.h"
 void init_I2C_master(void);
 void I2C_idle_check(void);
 int I2C_ack_check(void);
-void I2C_send_data(unsigned char addr, char *data, int length);
-void interrupt_I2C(void);
+void I2C_send_data(unsigned char addr, unsigned char *data, int length);
 
+# 29 "controller.h"
+int safety_check();
+void measure(int *volume, float *current);
+void PID(int ref, int mes, int *output);
+int calc_P(int res);
+int calc_I(int res);
+int calc_D(int res);
 
-void init_I2C_slave(unsigned char addr);
-void I2C_slave_interrupt(char *received_datas);
+# 22 "main.c"
+int power = 0;
+int volume = 0;
+float current = 0.0;
 
-
-void init_Timer4(void);
-
-# 16 "main.c"
-void init(void);
-void loop(void);
-void interrupt inter(void);
-
-# 23
-int main(int argc, char** argv) {
+# 30
+int main(void) {
 init();
 
 while(1) {
@@ -3918,26 +3916,78 @@ return (0);
 
 void init(void) {
 OSCCON = 0b01111010;
-TRISA = 0x03;
-TRISB = 0x00;
-PORTA = 0x00;
-PORTB = 0x00;
-for(unsigned char i = 0; i < 100; i++){}
+ANSELA = 0b00000011;
+ANSELB = 0b00000000;
+TRISA = 0b11000011;
+TRISB = 0b00010010;
+PORTA = 0b00000000;
+PORTB = 0b00000000;
+
+init_adcon(0b00000011, 0b00000000);
+init_PWM();
+init_I2C_master();
+init_Timer2();
+init_Timer4();
+init_interruption();
+
+RB3 = 1;
+}
+
+# 62
+void init_Timer2(void) {
+T2CON = 0b00000000;
+TMR2 = 0b00000000;
+TMR2ON = 1;
+}
+
+# 71
+void init_Timer4(void) {
+T4CON = 0b00000001;
+TMR4 = 0b00000000;
+TMR4ON = 1;
+}
+
+void init_interruption(void) {
+TMR2IE = 1;
+TMR2IF = 0;
+TMR4IE = 1;
+TMR4IF = 0;
 GIE = 1;
 PEIE = 1;
-init_I2C_master();
-init_adcon(0x03,0x00);
-init_PWM();
-RB3 = 1;
 }
 
 void loop(void) {
 
 }
 
-
 void interrupt inter(void) {
-interrupt_controller();
-interrupt_I2C();
+static int cnt_tmr2 = 0;
+static int cnt_tmr4 = 0;
 
+if (TMR2IF == 1) {
+if (cnt_tmr2++ > 8) {
+cnt_tmr2 = 0;
+if (safety_check()) {
+
+measure(&volume, &current);
+PID(volume, 0, &power);
 }
+else {
+
+power = 0;
+}
+output_PWM(power);
+}
+TMR2IF = 0;
+}
+
+if (TMR4IF == 1) {
+if (cnt_tmr4++ > 1024) {
+cnt_tmr4 = 0;
+char data = (power >> 2) & 0xFF;
+I2C_send_data((0x02), &data, 1);
+}
+TMR4IF = 0;
+}
+}
+

@@ -3709,46 +3709,36 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 33 "adcon.h"
-int adconv(int pin_select);
+# 32 "adcon.h"
 void init_adcon(int anselA, int anselB);
+int adconv(int pin_select);
+
+# 12 "adcon.c"
+void init_adcon(int anselA, int anselB){
+ANSELA = anselA;
+ANSELB = anselB;
+
+# 21
+ADCON1 = 0b10010000;
 
 
-# 24 "config.h"
-#pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
-#pragma config PWRTE = ON
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = ON
-#pragma config CLKOUTEN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
 
 
-#pragma config WRT = OFF
-#pragma config PLLEN = OFF
-#pragma config STVREN = ON
-#pragma config BORV = HI
-#pragma config LVP = OFF
+ADCON0 = 0b00000001;
+}
 
-# 13 "adcon.c"
 int adconv(int pin_select){
 int temp;
 
+
 ADCON0 = pin_select;
-_delay((unsigned long)((1)*(16000000/4000000.0)));
+
+
+for (temp = 0; temp < 10; temp++) { }
+
 GO_nDONE = 1;
 while(GO_nDONE);
 temp = ADRESH;
 temp = (temp << 8) | ADRESL;
 return temp;
-}
-
-void init_adcon(int anselA, int anselB){
-ANSELA = anselA;
-ANSELB = anselB;
-ADCON1 = 0b10010000;
-ADCON0 = 0b00000001;
 }

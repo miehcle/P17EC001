@@ -1,58 +1,14 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"7222 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
+[v _RA6 `Vb ~T0 @X0 0 e@102 ]
 "33 adcon.h
 [v _adconv `(i ~T0 @X0 0 ef1`i ]
-"38 controller.h
-[v _P_calc `(i ~T0 @X0 0 ef1`i ]
-"39
-[v _I_calc `(i ~T0 @X0 0 ef1`i ]
-"5461 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
-[v _CCPR3L `Vuc ~T0 @X0 0 e@785 ]
-"5505
-[s S282 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S282 . CCP3M0 CCP3M1 CCP3M2 CCP3M3 DC3B0 DC3B1 ]
-"5513
-[s S283 :4 `uc 1 :2 `uc 1 ]
-[n S283 . CCP3M DC3B ]
-"5504
-[u S281 `S282 1 `S283 1 ]
-[n S281 . . . ]
-"5518
-[v _CCP3CONbits `VS281 ~T0 @X0 0 e@787 ]
-"7438
-[v _TMR2IF `Vb ~T0 @X0 0 e@137 ]
-"46 controller.h
-[v _current_conversion `(i ~T0 @X0 0 ef1`i ]
-"49
-[v _set_current_limit `(v ~T0 @X0 0 ef1`i ]
-"5282 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
-[v _CCPTMRS `Vuc ~T0 @X0 0 e@670 ]
-"5499
-[v _CCP3CON `Vuc ~T0 @X0 0 e@787 ]
-"950
-[v _T2CON `Vuc ~T0 @X0 0 e@28 ]
-"7436
-[v _TMR2IE `Vb ~T0 @X0 0 e@1161 ]
-"931
-[v _PR2 `Vuc ~T0 @X0 0 e@27 ]
-"5480
-[v _CCPR3H `Vuc ~T0 @X0 0 e@786 ]
-"912
-[v _TMR2 `Vuc ~T0 @X0 0 e@26 ]
-"7440
-[v _TMR2ON `Vb ~T0 @X0 0 e@226 ]
-[; ;adcon.h: 33: int adconv(int pin_select);
-[; ;adcon.h: 34: void init_adcon(int anselA, int anselB);
-[; ;controller.h: 36: void measure(int* value, int pin_select);
-[; ;controller.h: 37: void calc(int ref, int mes,int *output);
-[; ;controller.h: 38: int P_calc(int res);
-[; ;controller.h: 39: int I_calc(int res);
-[; ;controller.h: 40: int D_calc(int res);
-[; ;controller.h: 41: void output(int out);
-[; ;controller.h: 42: void interrupt_controller(void);
-[; ;controller.h: 43: void init_PWM(void);
-[; ;controller.h: 46: int current_conversion(int measured_value);
-[; ;controller.h: 49: void set_current_limit(int current_limit);
-[; ;controller.h: 50: int get_current_limit(void);
+"32 controller.h
+[v _calc_P `(i ~T0 @X0 0 ef1`i ]
+"33
+[v _calc_I `(i ~T0 @X0 0 ef1`i ]
+"34
+[v _calc_D `(i ~T0 @X0 0 ef1`i ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1827.h: 47: extern volatile unsigned char INDF0 @ 0x000;
@@ -2803,318 +2759,182 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
-"24 config.h
-[p x FOSC=INTOSC ]
-"25
-[p x WDTE=OFF ]
-"26
-[p x PWRTE=ON ]
-"27
-[p x MCLRE=OFF ]
-"28
-[p x CP=OFF ]
-"29
-[p x CPD=OFF ]
-"30
-[p x BOREN=ON ]
-"31
-[p x CLKOUTEN=OFF ]
-"32
-[p x IESO=OFF ]
-"33
-[p x FCMEN=OFF ]
-"36
-[p x WRT=OFF ]
-"37
-[p x PLLEN=OFF ]
-"38
-[p x STVREN=ON ]
-"39
-[p x BORV=HI ]
-"40
-[p x LVP=OFF ]
-"14 controller.c
-[v _controller_current_limit `i ~T0 @X0 1 e ]
-[i _controller_current_limit
--> 0 `i
-]
-[; ;controller.c: 14: int controller_current_limit = 0;
-"17
-[v _measure `(v ~T0 @X0 1 ef2`*i`i ]
+[; ;controller.h: 29: int safety_check();
+[; ;controller.h: 30: void measure(int *volume, float *current);
+[; ;controller.h: 31: void PID(int ref, int mes, int *output);
+[; ;controller.h: 32: int calc_P(int res);
+[; ;controller.h: 33: int calc_I(int res);
+[; ;controller.h: 34: int calc_D(int res);
+[; ;adcon.h: 32: void init_adcon(int anselA, int anselB);
+[; ;adcon.h: 33: int adconv(int pin_select);
+"18 controller.c
+[v _safety_check `(i ~T0 @X0 1 ef ]
 {
-[; ;controller.c: 17: void measure(int *value, int pin_select) {
-[e :U _measure ]
-[v _value `*i ~T0 @X0 1 r1 ]
-[v _pin_select `i ~T0 @X0 1 r2 ]
+[; ;controller.c: 18: int safety_check() {
+[e :U _safety_check ]
 [f ]
-[; ;controller.c: 18: *value = adconv(pin_select);
-"18
-[e = *U _value ( _adconv (1 _pin_select ]
-[; ;controller.c: 19: }
-"19
+[; ;controller.c: 20: if (RA6 == 1) {
+"20
+[e $ ! == -> _RA6 `i -> 1 `i 351  ]
+{
+[; ;controller.c: 21: return 0;
+"21
+[e ) -> 0 `i ]
+[e $UE 350  ]
+"22
+}
+[; ;controller.c: 22: }
+[e $U 352  ]
+"23
+[e :U 351 ]
+[; ;controller.c: 23: else {
+{
+[; ;controller.c: 24: return 1;
+"24
+[e ) -> 1 `i ]
+[e $UE 350  ]
+"25
+}
+[e :U 352 ]
+[; ;controller.c: 25: }
+[; ;controller.c: 26: }
+"26
 [e :UE 350 ]
 }
-"22
-[v _calc `(v ~T0 @X0 1 ef3`i`i`*i ]
-{
-[; ;controller.c: 22: void calc(int ref, int mes,int *output){
-[e :U _calc ]
-[v _ref `i ~T0 @X0 1 r1 ]
-[v _mes `i ~T0 @X0 1 r2 ]
-[v _output `*i ~T0 @X0 1 r3 ]
-[f ]
-"23
-[v _res `i ~T0 @X0 1 a ]
-[; ;controller.c: 23: int res;
-[; ;controller.c: 25: *output = 0;
-"25
-[e = *U _output -> 0 `i ]
-[; ;controller.c: 26: res = ref - mes;
-"26
-[e = _res - _ref _mes ]
-[; ;controller.c: 27: *output += P_calc(res);
-"27
-[e =+ *U _output ( _P_calc (1 _res ]
-[; ;controller.c: 28: *output += I_calc(res);
-"28
-[e =+ *U _output ( _I_calc (1 _res ]
-[; ;controller.c: 30: *output = ((((*output>=0) ? (*output) : (0))<=1023) ? (((*output>=0) ? (*output) : (0))) : (1023));
-"30
-[e = *U _output ? <= ? >= *U _output -> 0 `i : *U _output -> 0 `i -> 1023 `i : ? >= *U _output -> 0 `i : *U _output -> 0 `i -> 1023 `i ]
-[; ;controller.c: 31: }
-"31
-[e :UE 351 ]
-}
-"34
-[v _P_calc `(i ~T0 @X0 1 ef1`i ]
-{
-[; ;controller.c: 34: int P_calc(int res) {
-[e :U _P_calc ]
-[v _res `i ~T0 @X0 1 r1 ]
-[f ]
 "35
-[v _temp `i ~T0 @X0 1 a ]
-[; ;controller.c: 35: int temp;
-[; ;controller.c: 37: temp = (int) (res * 1.0);
-"37
-[e = _temp -> * -> _res `d .1.0 `i ]
-[; ;controller.c: 38: return temp;
-"38
-[e ) _temp ]
-[e $UE 352  ]
-[; ;controller.c: 39: }
-"39
-[e :UE 352 ]
-}
-"41
-[v _I_calc `(i ~T0 @X0 1 ef1`i ]
+[v _measure `(v ~T0 @X0 1 ef2`*i`*f ]
 {
-[; ;controller.c: 41: int I_calc(int res) {
-[e :U _I_calc ]
-[v _res `i ~T0 @X0 1 r1 ]
+[; ;controller.c: 35: void measure(int *volume, float *current) {
+[e :U _measure ]
+[v _volume `*i ~T0 @X0 1 r1 ]
+[v _current `*f ~T0 @X0 1 r2 ]
 [f ]
+[; ;controller.c: 36: *volume = adconv(0b00000001);
+"36
+[e = *U _volume ( _adconv (1 -> 1 `i ]
+"37
+[v _current_sens `i ~T0 @X0 1 a ]
+[; ;controller.c: 37: int current_sens = adconv(0b00000101);
+[e = _current_sens ( _adconv (1 -> 5 `i ]
+[; ;controller.c: 40: *current = 0 * current_sens;
+"40
+[e = *U _current -> * -> 0 `i _current_sens `f ]
+[; ;controller.c: 42: }
 "42
-[v _temp `i ~T0 @X0 1 a ]
-"43
-[v F2807 `i ~T0 @X0 1 s sum ]
-[i F2807
--> 0 `i
-]
-[; ;controller.c: 42: int temp;
-[; ;controller.c: 43: static int sum = 0;
-[; ;controller.c: 45: sum += res;
-"45
-[e =+ F2807 _res ]
-[; ;controller.c: 46: sum = ((((sum>=0) ? (sum) : (0))<=1023) ? (((sum>=0) ? (sum) : (0))) : (1023));
-"46
-[e = F2807 ? <= ? >= F2807 -> 0 `i : F2807 -> 0 `i -> 1023 `i : ? >= F2807 -> 0 `i : F2807 -> 0 `i -> 1023 `i ]
-[; ;controller.c: 47: temp = (int) (sum * 0.01);
-"47
-[e = _temp -> * -> F2807 `d .0.01 `i ]
-[; ;controller.c: 48: return temp;
-"48
-[e ) _temp ]
-[e $UE 353  ]
-[; ;controller.c: 49: }
-"49
 [e :UE 353 ]
 }
-"51
-[v _D_calc `(i ~T0 @X0 1 ef1`i ]
+"44
+[v _PID `(v ~T0 @X0 1 ef3`i`i`*i ]
 {
-[; ;controller.c: 51: int D_calc(int res) {
-[e :U _D_calc ]
-[v _res `i ~T0 @X0 1 r1 ]
+[; ;controller.c: 44: void PID(int ref, int mes, int *power) {
+[e :U _PID ]
+[v _ref `i ~T0 @X0 1 r1 ]
+[v _mes `i ~T0 @X0 1 r2 ]
+[v _power `*i ~T0 @X0 1 r3 ]
 [f ]
-"52
+"45
 [v _temp `i ~T0 @X0 1 a ]
+[; ;controller.c: 45: int temp = 0;
+[e = _temp -> 0 `i ]
+"46
+[v _res `i ~T0 @X0 1 a ]
+[; ;controller.c: 46: int res = ref - mes;
+[e = _res - _ref _mes ]
+[; ;controller.c: 48: temp = calc_P(res) + calc_I(res) + calc_D(res);
+"48
+[e = _temp + + ( _calc_P (1 _res ( _calc_I (1 _res ( _calc_D (1 _res ]
+[; ;controller.c: 50: *power = ((((((temp)) > ((255)) ? ((255)):((temp)))) > ((0)) ? ((((temp)) > ((255)) ? ((255)):((temp)))):((0))));
+"50
+[e = *U _power ? > ? > _temp -> 255 `i : -> 255 `i _temp -> 0 `i : ? > _temp -> 255 `i : -> 255 `i _temp -> 0 `i ]
+[; ;controller.c: 53: *power = ref;
 "53
-[v F2811 `i ~T0 @X0 1 s previous ]
-[i F2811
--> 0 `i
-]
-[; ;controller.c: 52: int temp;
-[; ;controller.c: 53: static int previous = 0;
-[; ;controller.c: 55: temp = (int) ((res - previous) * 0.0);
+[e = *U _power _ref ]
+[; ;controller.c: 55: }
 "55
-[e = _temp -> * -> - _res F2811 `d .0.0 `i ]
-[; ;controller.c: 56: previous = res;
-"56
-[e = F2811 _res ]
-[; ;controller.c: 57: return temp;
-"57
-[e ) _temp ]
-[e $UE 354  ]
-[; ;controller.c: 58: }
-"58
 [e :UE 354 ]
 }
-"61
-[v _output `(v ~T0 @X0 1 ef1`i ]
+"57
+[v _calc_P `(i ~T0 @X0 1 ef1`i ]
 {
-[; ;controller.c: 61: void output(int out) {
-[e :U _output ]
-[v _out `i ~T0 @X0 1 r1 ]
+[; ;controller.c: 57: int calc_P(int res) {
+[e :U _calc_P ]
+[v _res `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;controller.c: 62: CCPR3L = out >> 2;
-"62
-[e = _CCPR3L -> >> _out -> 2 `i `uc ]
-[; ;controller.c: 63: CCP3CONbits.DC3B = out & 0x03;
-"63
-[e = . . _CCP3CONbits 1 1 -> & _out -> 3 `i `uc ]
-[; ;controller.c: 64: }
-"64
+"58
+[v _p `i ~T0 @X0 1 a ]
+[; ;controller.c: 58: int p = res * 7;
+[e = _p * _res -> 7 `i ]
+[; ;controller.c: 60: return p;
+"60
+[e ) _p ]
+[e $UE 355  ]
+[; ;controller.c: 61: }
+"61
 [e :UE 355 ]
 }
-"67
-[v _interrupt_controller `(v ~T0 @X0 1 ef ]
+"63
+[v _calc_I `(i ~T0 @X0 1 ef1`i ]
 {
-[; ;controller.c: 67: void interrupt_controller(void) {
-[e :U _interrupt_controller ]
+[; ;controller.c: 63: int calc_I(int res) {
+[e :U _calc_I ]
+[v _res `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;controller.c: 68: if(TMR2IF == 1) {
+"64
+[v F2795 `l ~T0 @X0 1 s i ]
+[i F2795
+-> -> 0 `i `l
+]
+[; ;controller.c: 64: static long long int i = 0;
+[; ;controller.c: 66: i += res * 0;
+"66
+[e =+ F2795 -> * _res -> 0 `i `l ]
+[; ;controller.c: 68: return i;
 "68
-[e $ ! == -> _TMR2IF `i -> 1 `i 357  ]
-{
+[e ) -> F2795 `i ]
+[e $UE 356  ]
+[; ;controller.c: 69: }
 "69
-[v _current `i ~T0 @X0 1 a ]
-"70
-[v _volume `i ~T0 @X0 1 a ]
-"71
-[v _out `i ~T0 @X0 1 a ]
-[; ;controller.c: 69: int current;
-[; ;controller.c: 70: int volume;
-[; ;controller.c: 71: int out;
-[; ;controller.c: 72: measure(&current, 0b00000101);
-"72
-[e ( _measure (2 , &U _current -> 5 `i ]
-[; ;controller.c: 73: measure(&volume, 0b00000001);
-"73
-[e ( _measure (2 , &U _volume -> 1 `i ]
-[; ;controller.c: 74: current = current_conversion(current);
-"74
-[e = _current ( _current_conversion (1 _current ]
-[; ;controller.c: 75: set_current_limit(volume);
-"75
-[e ( _set_current_limit (1 _volume ]
-[; ;controller.c: 76: calc(current,volume,&out);
-"76
-[e ( _calc (3 , , _current _volume &U _out ]
-[; ;controller.c: 77: output(out);
-"77
-[e ( _output (1 _out ]
-[; ;controller.c: 78: TMR2IF = 0;
-"78
-[e = _TMR2IF -> -> 0 `i `b ]
-"79
-}
-[e :U 357 ]
-[; ;controller.c: 79: }
-[; ;controller.c: 80: }
-"80
 [e :UE 356 ]
 }
-"82
-[v _init_PWM `(v ~T0 @X0 1 ef ]
+"71
+[v _calc_D `(i ~T0 @X0 1 ef1`i ]
 {
-[; ;controller.c: 82: void init_PWM(void) {
-[e :U _init_PWM ]
+[; ;controller.c: 71: int calc_D(int res) {
+[e :U _calc_D ]
+[v _res `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;controller.c: 83: CCPTMRS = 0b00000000;
-"83
-[e = _CCPTMRS -> -> 0 `i `uc ]
-[; ;controller.c: 84: CCP3CON = 0b00001100;
-"84
-[e = _CCP3CON -> -> 12 `i `uc ]
-[; ;controller.c: 85: T2CON = 0b00000000;
-"85
-[e = _T2CON -> -> 0 `i `uc ]
-[; ;controller.c: 86: TMR2IE = 1;
-"86
-[e = _TMR2IE -> -> 1 `i `b ]
-[; ;controller.c: 87: PR2 = 255;
-"87
-[e = _PR2 -> -> 255 `i `uc ]
-[; ;controller.c: 88: CCPR3L = 0;
-"88
-[e = _CCPR3L -> -> 0 `i `uc ]
-[; ;controller.c: 89: CCPR3H = 0;
-"89
-[e = _CCPR3H -> -> 0 `i `uc ]
-[; ;controller.c: 90: TMR2 = 0;
-"90
-[e = _TMR2 -> -> 0 `i `uc ]
-[; ;controller.c: 91: TMR2ON = 1;
-"91
-[e = _TMR2ON -> -> 1 `i `b ]
-[; ;controller.c: 92: }
-"92
-[e :UE 358 ]
-}
-"99
-[v _current_conversion `(i ~T0 @X0 1 ef1`i ]
-{
-[; ;controller.c: 99: int current_conversion(int measured_value) {
-[e :U _current_conversion ]
-[v _measured_value `i ~T0 @X0 1 r1 ]
-[f ]
-"104
-[v _current `i ~T0 @X0 1 a ]
-[; ;controller.c: 104: int current = (((long) (measured_value - 0x0200)) * ((long) 1000) * ((long) 20)) >> 10;
-[e = _current -> >> * * -> - _measured_value -> 512 `i `l -> -> 1000 `i `l -> -> 20 `i `l -> 10 `i `i ]
-[; ;controller.c: 106: return ((((long) current) * ((long) 12000)) >> 10);
-"106
-[e ) -> >> * -> _current `l -> -> 12000 `i `l -> 10 `i `i ]
-[e $UE 359  ]
-[; ;controller.c: 107: }
-"107
-[e :UE 359 ]
-}
-"109
-[v _set_current_limit `(v ~T0 @X0 1 ef1`i ]
-{
-[; ;controller.c: 109: void set_current_limit(int current_limit) {
-[e :U _set_current_limit ]
-[v _current_limit `i ~T0 @X0 1 r1 ]
-[f ]
-[; ;controller.c: 110: controller_current_limit = current_limit;
-"110
-[e = _controller_current_limit _current_limit ]
-[; ;controller.c: 111: }
-"111
-[e :UE 360 ]
-}
-"113
-[v _get_current_limit `(i ~T0 @X0 1 ef ]
-{
-[; ;controller.c: 113: int get_current_limit(void) {
-[e :U _get_current_limit ]
-[f ]
-[; ;controller.c: 114: return controller_current_limit;
-"114
-[e ) _controller_current_limit ]
-[e $UE 361  ]
-[; ;controller.c: 115: }
-"115
-[e :UE 361 ]
+"72
+[v F2797 `i ~T0 @X0 1 s d ]
+[i F2797
+-> 0 `i
+]
+"73
+[v F2798 `i ~T0 @X0 1 s d_bef ]
+[i F2798
+-> 0 `i
+]
+"74
+[v F2799 `i ~T0 @X0 1 s d_sum ]
+[i F2799
+-> 0 `i
+]
+[; ;controller.c: 72: static int d = 0;
+[; ;controller.c: 73: static int d_bef = 0;
+[; ;controller.c: 74: static int d_sum = 0;
+[; ;controller.c: 76: d_sum = d_sum + d_bef;
+"76
+[e = F2799 + F2799 F2798 ]
+[; ;controller.c: 77: d = (res * 0 - d_sum) * 5;
+"77
+[e = F2797 * - * _res -> 0 `i F2799 -> 5 `i ]
+[; ;controller.c: 78: d_bef = d;
+"78
+[e = F2798 F2797 ]
+[; ;controller.c: 80: return d;
+"80
+[e ) F2797 ]
+[e $UE 357  ]
+[; ;controller.c: 81: }
+"81
+[e :UE 357 ]
 }

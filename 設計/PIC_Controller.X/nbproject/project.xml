@@ -2,8 +2,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>PIC_Controller</name>
-            <creation-uuid>b84a2f09-4338-4827-86a7-c3c7f9d5be25</creation-uuid>
+            <name>pic_controller</name>
+            <creation-uuid>be210279-efe9-48e7-8f8a-11cec7d2f440</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>

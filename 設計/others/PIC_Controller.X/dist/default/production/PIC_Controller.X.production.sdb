@@ -1,0 +1,501 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"13 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\adcon.c
+[v _adconv adconv `(i  1 e 2 0 ]
+"25
+[v _init_adcon init_adcon `(v  1 e 0 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"33 C:\isaka\application\compiler\xc\xc8\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\isaka\application\compiler\xc\xc8\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"42 C:\isaka\application\compiler\xc\xc8\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 C:\isaka\application\compiler\xc\xc8\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\isaka\application\compiler\xc\xc8\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 C:\isaka\application\compiler\xc\xc8\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\isaka\application\compiler\xc\xc8\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\isaka\application\compiler\xc\xc8\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 C:\isaka\application\compiler\xc\xc8\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\isaka\application\compiler\xc\xc8\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\isaka\application\compiler\xc\xc8\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\isaka\application\compiler\xc\xc8\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\isaka\application\compiler\xc\xc8\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\isaka\application\compiler\xc\xc8\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\isaka\application\compiler\xc\xc8\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\isaka\application\compiler\xc\xc8\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"48
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+"56
+[v ___eetoi __eetoi `(ui  1 e 2 0 ]
+"64
+[v ___eetom __eetom `(um  1 e 3 0 ]
+"72
+[v ___eetol __eetol `(ul  1 e 4 0 ]
+"80
+[v ___ctoee __ctoee `(uc  1 e 1 0 ]
+"87
+[v ___itoee __itoee `(ui  1 e 2 0 ]
+"94
+[v ___mtoee __mtoee `(um  1 e 3 0 ]
+"101
+[v ___ltoee __ltoee `(ul  1 e 4 0 ]
+"108
+[v ___eetoft __eetoft `(f  1 e 3 0 ]
+"116
+[v ___eetofl __eetofl `(d  1 e 3 0 ]
+"124
+[v ___fttoee __fttoee `(f  1 e 3 0 ]
+"131
+[v ___fltoee __fltoee `(d  1 e 3 0 ]
+"49 C:\isaka\application\compiler\xc\xc8\sources\pic\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"16 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\controller.c
+[v _measure measure `(v  1 e 0 0 ]
+"21
+[v _calc calc `(v  1 e 0 0 ]
+"33
+[v _P_calc P_calc `(i  1 e 2 0 ]
+"40
+[v _I_calc I_calc `(i  1 e 2 0 ]
+"50
+[v _D_calc D_calc `(i  1 e 2 0 ]
+"60
+[v _output output `(v  1 e 0 0 ]
+"66
+[v _interrupt_controller interrupt_controller `(v  1 e 0 0 ]
+"82
+[v _init_PWM init_PWM `(v  1 e 0 0 ]
+"99
+[v _current_conversion current_conversion `(i  1 e 2 0 ]
+"107
+[v _set_current_limit set_current_limit `(v  1 e 0 0 ]
+"111
+[v _get_current_limit get_current_limit `(i  1 e 2 0 ]
+"24 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\I2C.c
+[v _init_I2C_master init_I2C_master `(v  1 e 0 0 ]
+"39
+[v _I2C_idle_check I2C_idle_check `(v  1 e 0 0 ]
+"49
+[v _I2C_ack_check I2C_ack_check `(i  1 e 2 0 ]
+"65
+[v _I2C_send_data I2C_send_data `(v  1 e 0 0 ]
+"89
+[v _interrupt_I2C interrupt_I2C `(v  1 e 0 0 ]
+"117
+[v _init_I2C_slave init_I2C_slave `(v  1 e 0 0 ]
+"131
+[v _I2C_slave_interrupt I2C_slave_interrupt `(v  1 e 0 0 ]
+"156
+[v _init_Timer4 init_Timer4 `(v  1 e 0 0 ]
+"164
+[v _call_send call_send `(v  1 e 0 0 ]
+"24 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"34
+[v _init init `(v  1 e 0 0 ]
+"49
+[v _loop loop `(v  1 e 0 0 ]
+"54
+[v _inter inter `II(v  1 e 0 0 ]
+"412 C:\isaka\application\compiler\xc\xc8\include\pic16f1827.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"473
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"912
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"931
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"950
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
+"1118
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1179
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1662
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1800
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1819
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1838
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+"1917
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2795
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2846
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2910
+[v _EEADR EEADR `VEus  1 e 2 @401 ]
+"2965
+[v _EEDATA EEDATA `VEuc  1 e 1 @403 ]
+"3016
+[v _EECON1 EECON1 `VEuc  1 e 1 @405 ]
+"3077
+[v _EECON2 EECON2 `VEuc  1 e 1 @406 ]
+"3500
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3537
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3611
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S198 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"3633
+[u S207 . 1 `S198 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES207  1 e 1 @532 ]
+"3732
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+"3935
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+"3957
+[v _SSP1CON2bits SSP1CON2bits `VES207  1 e 1 @534 ]
+"5282
+[v _CCPTMRS CCPTMRS `VEuc  1 e 1 @670 ]
+"5461
+[v _CCPR3L CCPR3L `VEuc  1 e 1 @785 ]
+"5480
+[v _CCPR3H CCPR3H `VEuc  1 e 1 @786 ]
+"5499
+[v _CCP3CON CCP3CON `VEuc  1 e 1 @787 ]
+[s S77 . 1 `uc 1 CCP3M0 1 0 :1:0 
+`uc 1 CCP3M1 1 0 :1:1 
+`uc 1 CCP3M2 1 0 :1:2 
+`uc 1 CCP3M3 1 0 :1:3 
+`uc 1 DC3B0 1 0 :1:4 
+`uc 1 DC3B1 1 0 :1:5 
+]
+"5518
+[s S84 . 1 `uc 1 CCP3M 1 0 :4:0 
+`uc 1 DC3B 1 0 :2:4 
+]
+[u S87 . 1 `S77 1 . 1 0 `S84 1 . 1 0 ]
+[v _CCP3CONbits CCP3CONbits `VES87  1 e 1 @787 ]
+"6181
+[v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
+"6200
+[v _PR4 PR4 `VEuc  1 e 1 @1046 ]
+"6219
+[v _T4CON T4CON `VEuc  1 e 1 @1047 ]
+"6680
+[v _BCL1IE BCL1IE `VEb  1 e 0 @1171 ]
+"6682
+[v _BCL1IF BCL1IF `VEb  1 e 0 @147 ]
+"6780
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"6960
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"6964
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
+"7182
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"7232
+[v _RB3 RB3 `VEb  1 e 0 @107 ]
+"7248
+[v _RD RD `VEb  1 e 0 @3240 ]
+"7308
+[v _SSP1IE SSP1IE `VEb  1 e 0 @1163 ]
+"7310
+[v _SSP1IF SSP1IF `VEb  1 e 0 @139 ]
+"7436
+[v _TMR2IE TMR2IE `VEb  1 e 0 @1161 ]
+"7438
+[v _TMR2IF TMR2IF `VEb  1 e 0 @137 ]
+"7440
+[v _TMR2ON TMR2ON `VEb  1 e 0 @226 ]
+"7442
+[v _TMR4IE TMR4IE `VEb  1 e 0 @1177 ]
+"7444
+[v _TMR4IF TMR4IF `VEb  1 e 0 @153 ]
+"7446
+[v _TMR4ON TMR4ON `VEb  1 e 0 @8378 ]
+"7544
+[v _WR WR `VEb  1 e 0 @3241 ]
+"7546
+[v _WREN WREN `VEb  1 e 0 @3242 ]
+"13 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\controller.c
+[v _controller_current_limit controller_current_limit `i  1 e 2 0 ]
+"24 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+[v main@argc argc `i  1 p 2 6 ]
+[v main@argv argv `*.1*.1uc  1 p 2 8 ]
+"32
+} 0
+"49
+[v _loop loop `(v  1 e 0 0 ]
+{
+"51
+} 0
+"34
+[v _init init `(v  1 e 0 0 ]
+{
+"40
+[v init@i i `uc  1 a 1 5 ]
+"47
+} 0
+"25 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\adcon.c
+[v _init_adcon init_adcon `(v  1 e 0 0 ]
+{
+[v init_adcon@anselA anselA `i  1 p 2 0 ]
+[v init_adcon@anselB anselB `i  1 p 2 2 ]
+"30
+} 0
+"82 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\controller.c
+[v _init_PWM init_PWM `(v  1 e 0 0 ]
+{
+"92
+} 0
+"24 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\I2C.c
+[v _init_I2C_master init_I2C_master `(v  1 e 0 0 ]
+{
+"34
+} 0
+"156
+[v _init_Timer4 init_Timer4 `(v  1 e 0 0 ]
+{
+"162
+} 0
+"54 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\main.c
+[v _inter inter `II(v  1 e 0 0 ]
+{
+"57
+} 0
+"66 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\controller.c
+[v _interrupt_controller interrupt_controller `(v  1 e 0 0 ]
+{
+"70
+[v interrupt_controller@out out `i  1 a 2 59 ]
+"68
+[v interrupt_controller@current current `i  1 a 2 57 ]
+"69
+[v interrupt_controller@volume volume `i  1 a 2 55 ]
+"80
+} 0
+"107
+[v _set_current_limit set_current_limit `(v  1 e 0 0 ]
+{
+[v set_current_limit@current_limit current_limit `i  1 p 2 0 ]
+"109
+} 0
+"60
+[v _output output `(v  1 e 0 0 ]
+{
+[v output@out out `i  1 p 2 0 ]
+"63
+} 0
+"16
+[v _measure measure `(v  1 e 0 0 ]
+{
+[v measure@value value `*.4i  1 a 1 wreg ]
+[v measure@value value `*.4i  1 a 1 wreg ]
+[v measure@pin_select pin_select `i  1 p 2 11 ]
+[v measure@value value `*.4i  1 a 1 13 ]
+"18
+} 0
+"13 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\adcon.c
+[v _adconv adconv `(i  1 e 2 0 ]
+{
+"14
+[v adconv@temp temp `i  1 a 2 9 ]
+"13
+[v adconv@pin_select pin_select `i  1 p 2 0 ]
+"23
+} 0
+"99 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\controller.c
+[v _current_conversion current_conversion `(i  1 e 2 0 ]
+{
+"103
+[v current_conversion@current current `i  1 a 2 5 ]
+"99
+[v current_conversion@measured_value measured_value `i  1 p 2 12 ]
+"105
+} 0
+"15 C:\isaka\application\compiler\xc\xc8\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"164 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\I2C.c
+[v _call_send call_send `(v  1 e 0 0 ]
+{
+"165
+[v call_send@data data `i  1 a 2 0 ]
+"166
+[v call_send@send_data send_data `uc  1 a 1 2 ]
+"168
+} 0
+"111 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\controller.c
+[v _get_current_limit get_current_limit `(i  1 e 2 0 ]
+{
+"113
+} 0
+"65 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\I2C.c
+[v _I2C_send_data I2C_send_data `(v  1 e 0 0 ]
+{
+[v I2C_send_data@addr addr `uc  1 a 1 wreg ]
+"74
+[v I2C_send_data@i i `i  1 a 2 9 ]
+"65
+[v I2C_send_data@addr addr `uc  1 a 1 wreg ]
+[v I2C_send_data@data data `*.4uc  1 p 1 4 ]
+[v I2C_send_data@length length `i  1 p 2 5 ]
+[v I2C_send_data@addr addr `uc  1 a 1 8 ]
+"84
+} 0
+"39
+[v _I2C_idle_check I2C_idle_check `(v  1 e 0 0 ]
+{
+"41
+} 0
+"49
+[v _I2C_ack_check I2C_ack_check `(i  1 e 2 0 ]
+{
+"50
+[v I2C_ack_check@i i `ui  1 a 2 2 ]
+"57
+} 0
+"21 C:\isaka\share\miehcle\git\2017\P17EC001_PIC_CONTROLLER\P17EC001\P17EC001\設計\PIC_Controller.X\controller.c
+[v _calc calc `(v  1 e 0 0 ]
+{
+"22
+[v calc@res res `i  1 a 2 52 ]
+"21
+[v calc@ref ref `i  1 p 2 39 ]
+[v calc@mes mes `i  1 p 2 41 ]
+[v calc@output output `*.4i  1 p 1 43 ]
+"30
+} 0
+"33
+[v _P_calc P_calc `(i  1 e 2 0 ]
+{
+"34
+[v P_calc@temp temp `i  1 a 2 32 ]
+"33
+[v P_calc@res res `i  1 p 2 30 ]
+"38
+} 0
+"40
+[v _I_calc I_calc `(i  1 e 2 0 ]
+{
+"41
+[v I_calc@temp temp `i  1 a 2 33 ]
+"40
+[v I_calc@res res `i  1 p 2 30 ]
+"42
+[v I_calc@sum sum `i  1 s 2 sum ]
+"48
+} 0
+"44 C:\isaka\application\compiler\xc\xc8\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 25 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 29 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 24 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 16 ]
+"73
+} 0
+"62 C:\isaka\application\compiler\xc\xc8\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"32 C:\isaka\application\compiler\xc\xc8\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 C:\isaka\application\compiler\xc\xc8\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0

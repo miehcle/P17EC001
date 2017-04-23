@@ -2,7 +2,7 @@
  * File:   controller.h
  * Author: isaka-PC
  *
- * Created on 2017/04/17
+ * Created on 2017/04/23, 21:50
  */
 
 #ifndef CONTROLLER_H
@@ -12,42 +12,26 @@
 extern "C" {
 #endif
 
-/* controler value */
-#define KP 1.0       //proportional controler value
-#define KI 0.01      //integral controler value
-#define KD 0.0       //differential controler value
+// Macro
+#define MAX(a,b) ((a) > (b) ? (a):(b))                              // Return bigger one
+#define MIN(a,b) ((a) > (b) ? (b):(a))                              // Return smaller one
+#define CLIP(bottom,x,top) (MAX( MIN( (x) , (top) ), (bottom) ))    // Return bottom <= x <= top
 
-#define CURRENT_MAX_A 12000        //[mA]
-#define CURRENT_LIMIT_A 5000       //[mA]
-#define CURRENT_MAX_BIN AMPARE_TO_BINARY(CURRENT_MAX_A)     //Binary
-#define CURRENT_LIMIT_BIN AMPARE_TO_BINARY(CURRENT_LIMIT_A) //Binary
+#define KP 7
+#define KI 0
+#define KD 0
+#define FILTER_ORDER 5
 
+#define SAFETY_PIN RA6
+#define VOLUME_PIN ADCON_RA0    // Volume ADC pin
+#define CURRENT_PIN ADCON_RA1   // Current ADC pin
 
-#define MAX(A, B) ((A>=B) ? (A) : (B))
-#define MIN(A, B) ((A<=B) ? (A) : (B))
-#define CLIP(x, TOP, BOTTOM) MIN(MAX(x, BOTTOM), TOP)       //BOTTOM <= x <= TOP calculation
-
-/* current[mA] = current(binary) * CURRENT_MAX / 0x0400 */
-#define AMPARE_TO_BINARY(current) ((((long) current) * ((long) CURRENT_MAX_A)) >> 10)
-/* For Display */
-#define BINARY_TO_BINARY(binary) ((int) (binary * ((float) CURRENT_MAX_BIN / CURRENT_LIMIT_BIN)))
-
-
-void measure(int* value, int pin_select);
-void calc(int ref, int mes,int *output);
-int P_calc(int res);
-int I_calc(int res);
-int D_calc(int res);
-void output(int out);
-void interrupt_controller(void);
-void init_PWM(void);
-
-// current conversion (Depend on Current Sensor)
-int current_conversion(int measured_value);
-
-// getter/setter
-void set_current_limit(int current_limit);
-int get_current_limit(void);
+int safety_check();
+void measure(int *volume, float *current);
+void PID(int ref, int mes, int *output);
+int calc_P(int res);
+int calc_I(int res);
+int calc_D(int res);
 
 #ifdef	__cplusplus
 }

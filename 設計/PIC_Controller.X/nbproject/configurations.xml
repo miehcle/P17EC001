@@ -4,10 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>controller.h</itemPath>
-      <itemPath>I2C.h</itemPath>
+      <itemPath>main.h</itemPath>
       <itemPath>adcon.h</itemPath>
-      <itemPath>config.h</itemPath>
+      <itemPath>pwm.h</itemPath>
+      <itemPath>I2C.h</itemPath>
+      <itemPath>controller.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,9 +18,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>main.c</itemPath>
-      <itemPath>controller.c</itemPath>
       <itemPath>adcon.c</itemPath>
+      <itemPath>pwm.c</itemPath>
       <itemPath>I2C.c</itemPath>
+      <itemPath>controller.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -133,6 +135,7 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -159,7 +162,7 @@
         <property key="programoptions.testmodeentrymethod" value="VPPFirst"/>
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="false"/>
-        <property key="voltagevalue" value="4.925"/>
+        <property key="voltagevalue" value="5.05"/>
       </PICkit3PlatformTool>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>

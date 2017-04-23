@@ -1,37 +1,6 @@
 
 # 1 "I2C.c"
 
-# 17 "I2C.h"
-void init_I2C_master(void);
-void I2C_idle_check(void);
-int I2C_ack_check(void);
-void I2C_send_data(unsigned char addr, char *data, int length);
-void interrupt_I2C(void);
-
-
-void init_I2C_slave(unsigned char addr);
-void I2C_slave_interrupt(char *received_datas);
-
-
-void init_Timer4(void);
-
-# 36 "controller.h"
-void measure(int* value, int pin_select);
-void calc(int ref, int mes,int *output);
-int P_calc(int res);
-int I_calc(int res);
-int D_calc(int res);
-void output(int out);
-void interrupt_controller(void);
-void init_PWM(void);
-
-
-int current_conversion(int measured_value);
-
-
-void set_current_limit(int current_limit);
-int get_current_limit(void);
-
 # 21 "C:\isaka\application\compiler\xc\xc8\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -3740,27 +3709,13 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
+# 17 "I2C.h"
+void init_I2C_master(void);
+void I2C_idle_check(void);
+int I2C_ack_check(void);
+void I2C_send_data(unsigned char addr, unsigned char *data, int length);
 
-# 24 "config.h"
-#pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
-#pragma config PWRTE = ON
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = ON
-#pragma config CLKOUTEN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-
-
-#pragma config WRT = OFF
-#pragma config PLLEN = OFF
-#pragma config STVREN = ON
-#pragma config BORV = HI
-#pragma config LVP = OFF
-
-# 24 "I2C.c"
+# 15 "I2C.c"
 void init_I2C_master(void) {
 SSP1STAT = 0b10000000;
 SSP1CON1 = 0b00101000;
@@ -3769,100 +3724,45 @@ SSP1IE = 1;
 BCL1IE = 1;
 SSP1IF = 0;
 BCL1IF = 0;
-
-init_Timer4();
 }
 
-# 39
+# 28
 void I2C_idle_check(void) {
 while (( SSP1CON2 & 0x1F ) | (SSP1STAT & 0x05)) ;
 }
 
-# 49
+# 38
 int I2C_ack_check(void) {
 unsigned int i;
 for (i = 0; i < 65535; i++) {
-if (SSP1CON2bits.ACKSTAT == 1) {
+if (SSP1CON2bits.ACKSTAT == 0) {
 return 1;
 }
 }
 return 0;
 }
 
-# 65
-void I2C_send_data(unsigned char addr, char *data, int length) {
+void I2C_send_data(unsigned char addr, unsigned char *data, int length) {
+int i;
+
 I2C_idle_check();
 SSP1CON2bits.SEN = 1;
 
 I2C_idle_check();
 SSP1BUF = addr << 1;
 
-if (!I2C_ack_check()) { return; }
 
-for(int i = 0; i < length; i++) {
+for (i=0; i<length; i++) {
+if (!I2C_ack_check()) { return; }
 I2C_idle_check();
 SSP1BUF = *data;
 data++;
-
 if (!I2C_ack_check()) { return; }
 }
 
+
 I2C_idle_check();
 SSP1CON2bits.PEN = 1;
-}
 
-# 89
-void interrupt_I2C(void) {
-static int counter = 0;
-if (TMR4IF == 1) {
-if(counter < 250) {
-counter++;
-} else {
-
-int data = get_current_limit();
-char send_data = data >> 2;
-I2C_send_data((0x02), &send_data, 1);
-counter = 0;
-}
-TMR4IF = 0;
-}
-}
-
-# 117
-void init_I2C_slave(unsigned char addr) {
-SSP1STAT = 0b10000000;
-SSP1CON1 = 0b00100110;
-SSP1CON2bits.SEN = 1;
-SSP1ADD = addr << 1;
-SSP1IE = 1;
-BCL1IE = 1;
-SSP1IF = 0;
-BCL1IF = 0;
-}
-
-# 131
-void I2C_slave_interrupt(char *received_datas) {
-char x;
-static char *data_ptr;
-if(SSP1STATbits.R_nW == 0) {
-
-if(SSP1STATbits.D_nA == 0) {
-
-data_ptr = received_datas;
-x = SSP1BUF;
-} else {
-
-*data_ptr = SSP1BUF;
-data_ptr++;
-}
-}
-}
-
-# 156
-void init_Timer4(void) {
-T4CON = 0b00000010;
-PR4 = 249;
-TMR4IE = 1;
-TMR4 = 0;
-TMR4ON = 1;
+RA2 = 1;
 }
